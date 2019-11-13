@@ -3,6 +3,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using OntoSemStatsWeb.Utils;
 using OntoSemStatsWeb.Utils.Vocabularies;
+using VDS.RDF;
 using VDS.RDF.Query;
 using Xunit;
 
@@ -24,9 +25,23 @@ namespace UnitTests
 
             var results = await SparqlUtils.Select(queryString.ToString());
             var funcProps = results.Results.Select(r => r["s"]).ToHashSet();
-            foreach (var result in results)
+
+            foreach (var func in funcProps)
             {
-                Console.WriteLine(result.ToString());
+                queryString = new SparqlParameterizedString();
+                queryString.CommandText = @"
+                    SELECT DISTINCT ?s WHERE 
+                    { 
+                        ?s (@property)+ @value 
+                    }";
+                queryString.SetUri("value", new Uri(func.ToString()));
+                queryString.SetUri("property", RDFS.PropertySubPropertyOf);
+                results = await SparqlUtils.Select(queryString.ToString());
+                if (results.Any())
+                {
+                    var newFuncProps = results.Results.Select(r => r["s"]).ToHashSet();
+                }
+
             }
         }
     }
