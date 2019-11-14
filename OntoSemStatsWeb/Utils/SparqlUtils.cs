@@ -12,7 +12,7 @@ namespace OntoSemStatsWeb.Utils
         }
         public static async Task<SparqlResultSet> Select(string selectQuery)
         {
-            var endpoint = new SparqlRemoteEndpoint(new Uri("http://dbpedia.org/sparql"), "http://dbpedia.org");
+            var endpoint = new SparqlRemoteEndpoint(new Uri("http://live.dbpedia.org/sparql"), "http://dbpedia.org");
             var results = await Task<SparqlResultSet>.Factory.StartNew(() => endpoint.QueryWithResultSet(selectQuery));
             return results;
         }
