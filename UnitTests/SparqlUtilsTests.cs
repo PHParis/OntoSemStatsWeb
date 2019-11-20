@@ -103,6 +103,38 @@ namespace UnitTests
         }
 
         [Fact]
+        public async Task CheckIfResultsAreAlwaysInTheSameOrder()
+        {
+            // oui
+            var rnd = new Random();
+            var queryString = new SparqlParameterizedString();
+            var lists = new List<SparqlResult[]>();
+            foreach (var i in Enumerable.Range(0, 100))
+            {
+                var limit = rnd.Next(3, 20);
+                queryString.CommandText = @"
+                SELECT * WHERE 
+                { 
+                    ?s ?p ?o 
+                }
+                LIMIT " + limit;
+                var results = await SparqlUtils.Select(queryString.ToString());
+                lists.Add(results.Take(3).ToArray());
+            }
+            Assert.True(lists.Select(sr => sr.FirstOrDefault()["s"]).Distinct().Count() == 1);
+            Assert.True(lists.Select(sr => sr.FirstOrDefault()["p"]).Distinct().Count() == 1);
+            Assert.True(lists.Select(sr => sr.FirstOrDefault()["o"]).Distinct().Count() == 1);
+
+            Assert.True(lists.Select(sr => sr.Skip(1).FirstOrDefault()["s"]).Distinct().Count() == 1);
+            Assert.True(lists.Select(sr => sr.Skip(1).FirstOrDefault()["p"]).Distinct().Count() == 1);
+            Assert.True(lists.Select(sr => sr.Skip(1).FirstOrDefault()["o"]).Distinct().Count() == 1);
+
+            Assert.True(lists.Select(sr => sr.Skip(2).FirstOrDefault()["s"]).Distinct().Count() == 1);
+            Assert.True(lists.Select(sr => sr.Skip(2).FirstOrDefault()["p"]).Distinct().Count() == 1);
+            Assert.True(lists.Select(sr => sr.Skip(2).FirstOrDefault()["o"]).Distinct().Count() == 1);
+        }
+
+        [Fact]
         public async Task FunctionalStatsOnDbpedia()
         {
             var queryString = new SparqlParameterizedString();
