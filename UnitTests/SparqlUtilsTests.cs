@@ -64,34 +64,66 @@ namespace UnitTests
             Console.WriteLine(g2.Triples.Count);
         }
         [Fact]
-        public async Task GetAllProp()
+        public async Task GetAllUsedPropAndClasses()
         {
-            var usedProps = new List<string>();
+            var usedPropertyCount = new Dictionary<string, int>();
+            var usedClassCount = new Dictionary<string, int>();
             var offset = 0;
-            var step = 1000;
+            var nbRows = 10000;
+            var nbResults = 0;
             while (true)
             {
                 var queryString = new SparqlParameterizedString();
                 queryString.CommandText = @"
-                SELECT ?p WHERE 
+                SELECT * WHERE 
                 { 
                     ?s ?p ?o 
                 }
-                LIMIT 1000                
+                LIMIT 10000                
                 OFFSET " + offset;
                 // queryString.SetVariable("offset", 0);
 
                 try
                 {
                     var results = await SparqlUtils.Select(queryString.ToString());
-                    usedProps.AddRange(results.Select(x => x["p"].ToString()));
+                    nbResults += results.Count;
+                    if (results.IsEmpty)
+                    {
+                        Console.WriteLine($"{nbResults} results collected!");
+                        break;
+                    }
+                    foreach (var r in results)
+                    {
+                        var p = r["p"].ToString();
+                        if (usedPropertyCount.ContainsKey(p))
+                        {
+                            usedPropertyCount[p] += usedPropertyCount[p];
+                        }
+                        else
+                        {
+                            usedPropertyCount[p] = 1;
+                        }
+                        if (p == RDF.PropertyType.ToString())
+                        {
+                            var o = r["o"].ToString();
+                            if (usedClassCount.ContainsKey(o))
+                            {
+                                usedClassCount[o] += usedClassCount[o];
+                            }
+                            else
+                            {
+                                usedClassCount[o] = 1;
+                            }
+                        }
+                    }
+                    // usedProps.AddRange(results.Select(x => x["p"].ToString()));
                     // Console.WriteLine(results?.FirstOrDefault()?["p"].ToString() ?? "0");
                 }
                 catch (Exception e)
                 {
                     Console.WriteLine(e.InnerException);
                 }
-                offset += step;
+                offset += nbRows;
                 if (usedProps.Count > 9_000_000)
                 {
                     break;
