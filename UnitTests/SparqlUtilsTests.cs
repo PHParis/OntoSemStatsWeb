@@ -63,6 +63,44 @@ namespace UnitTests
             }
             Console.WriteLine(g2.Triples.Count);
         }
+        [Fact]
+        public async Task GetAllProp()
+        {
+            var usedProps = new List<string>();
+            var offset = 0;
+            var step = 1000;
+            while (true)
+            {
+                var queryString = new SparqlParameterizedString();
+                queryString.CommandText = @"
+                SELECT ?p WHERE 
+                { 
+                    ?s ?p ?o 
+                }
+                LIMIT 1000                
+                OFFSET " + offset;
+                // queryString.SetVariable("offset", 0);
+
+                try
+                {
+                    var results = await SparqlUtils.Select(queryString.ToString());
+                    usedProps.AddRange(results.Select(x => x["p"].ToString()));
+                    // Console.WriteLine(results?.FirstOrDefault()?["p"].ToString() ?? "0");
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e.InnerException);
+                }
+                offset += step;
+                if (usedProps.Count > 9_000_000)
+                {
+                    break;
+                }
+            }
+            // Console.WriteLine(string.Join(Environment.NewLine, usedProps));
+            Console.WriteLine(usedProps.Count);
+            Console.WriteLine(usedProps.Distinct().Count());
+        }
 
         [Fact]
         public async Task FunctionalStatsOnDbpedia()
