@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using OntoSemStatsLib.ProcessResult;
 using OntoSemStatsLib.Utils;
 using OntoSemStatsLib.Utils.Vocabularies;
 using VDS.RDF;
@@ -101,6 +102,7 @@ namespace UnitTests
                 try
                 {
                     var results = await SparqlUtils.Select(queryString.ToString());
+                    results.ProcessSparqlResultSet();
                     nbResults += results.Count;
                     if (results.IsEmpty)
                     {
@@ -130,6 +132,13 @@ namespace UnitTests
             }
             // Console.WriteLine(string.Join(Environment.NewLine, usedProps));
             Console.WriteLine(usedPropertyCount.Count);
+        }
+
+        [Fact]
+        public void PipelineTest()
+        {
+            var t = new Trpl("Instance", RDF.PropertyType.ToString(), OWL.ClassFunctionalProperty.ToString());
+
         }
 
         [Fact]
