@@ -117,7 +117,7 @@ namespace UnitTests
         [Fact]
         public void Stats()
         {
-            var stats = new ComplexStat(YieldTriples().Select(x => new BasicStat(x.ToTrpl())));
+            var stats = new ComplexStat(YieldTriples().Select(x => new BasicStat(x.ToTrpl())).ToList());
             Console.WriteLine(stats.FunctionalPropertyDefinedCount);
             Assert.True(stats.FunctionalPropertyDefinedCount == 30);
         }
