@@ -53,23 +53,23 @@ namespace OntoSemStatsLib.ProcessResult
         /// Number of triples.
         /// </summary>
         /// <value></value>
-        public int Triples { get; }
+        public int TripleCount { get; }
         /// <summary>
         /// Number of distinct subjects.
         /// </summary>
         /// <value></value>
-        public int DistinctSubjects { get; }
+        public int DistinctSubjectCount { get; }
         /// <summary>
         /// Number of distinct subject with at least one explicit type.
         /// </summary>
         /// <value></value>
-        public int SubjectWithExplicitType { get; }
+        public int DistinctSubjectWithExplicitTypeCount { get; }
 
         /// <summary>
         /// Number of distinct predicates used.
         /// </summary>
         /// <value></value>
-        public int UsedPredicates { get; }
+        public int DistinctUsedPredicatesCount { get; }
 
         /// <summary>
         /// Number of defined properties, i.e. subject of type rdf:Property, owl:ObjectProperty, owl:DatatypeProperty.
@@ -81,28 +81,56 @@ namespace OntoSemStatsLib.ProcessResult
         /// Number of distinct properties with at least one range.
         /// </summary>
         /// <value></value>
-        public int PropertyRange { get; }
+        public int DistinctPropertyRangeCount { get; }
 
         /// <summary>
         /// Number of distinct properties with at least one domain.
         /// </summary>
         /// <value></value>
-        public int PropertyDomain { get; }
+        public int DistinctPropertyDomainCount { get; }
+
+        /// <summary>
+        /// Number of triples with owl:equivalentProperty used as a predicate.
+        /// </summary>
+        /// <value></value>
+        public int EquivalentPropertyCount { get; }
+        public int InverseOfCount { get; }
+        public int SameAsCount { get; }
+        public int DifferentFromCount { get; }
+        public int AllDifferentCount { get; }
+
+        public int FunctionalPropertyDefinedCount { get; }
+        public int FunctionalPropertyTripleCount { get; }
+        public int FunctionalPropertySubjectCount { get; }
 
         public ComplexStat(IEnumerable<BasicStat> basicStats)
         {
-            Triples = basicStats.Count();
-            DistinctSubjects = basicStats.Select(x => x.Subject).Distinct().Count();
-            SubjectWithExplicitType = basicStats.Where(x => x.Typed.IsSome)
+            TripleCount = basicStats.Count();
+            DistinctSubjectCount = basicStats.Select(x => x.Subject).Distinct().Count();
+            DistinctSubjectWithExplicitTypeCount = basicStats.Where(x => x.Typed.IsSome)
                 .Select(x => x.Typed)
                 .Distinct().Count();
-            UsedPredicates = basicStats.Select(x => x.Property).Distinct().Count();
-            PropertyRange = basicStats.Where(x => x.Ranged.IsSome)
+            DistinctUsedPredicatesCount = basicStats.Select(x => x.Property).Distinct().Count();
+            DistinctPropertyRangeCount = basicStats.Where(x => x.Ranged.IsSome)
                 .Select(x => x.Ranged)
                 .Distinct().Count();
-            PropertyDomain = basicStats.Where(x => x.Domained.IsSome)
+            DistinctPropertyDomainCount = basicStats.Where(x => x.Domained.IsSome)
                 .Select(x => x.Domained)
                 .Distinct().Count();
+            EquivalentPropertyCount = basicStats.Count(x =>
+                x.Property == OntologyHelper.PropertyEquivalentProperty);
+            InverseOfCount = basicStats.Count(x =>
+                x.Property == OntologyHelper.PropertyInverseOf);
+            SameAsCount = basicStats.Count(x =>
+                x.Property == OntologyHelper.PropertySameAs);
+
+            DifferentFromCount = basicStats.Count(x =>
+                x.Property == OntologyHelper.PropertyDifferentFrom);
+
+            AllDifferentCount = basicStats.Where(x => x.UsedClass.IsSome).Count(x =>
+                x.UsedClass == OntologyHelper.PropertyDifferentFrom);
+            FunctionalPropertyDefinedCount = basicStats.Where(x => x.UsedClass.IsSome).Count(x =>
+                x.UsedClass == OWL.ClassFunctionalProperty.ToString());
         }
     }
 

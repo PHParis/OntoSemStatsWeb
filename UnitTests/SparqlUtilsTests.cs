@@ -78,6 +78,50 @@ namespace UnitTests
             return dict;
         }
 
+        public IEnumerable<SparqlResult> YieldTriples()
+        {
+            var offset = 0;
+            var nbRows = 10000;
+            var nbResults = 0;
+            while (true)
+            {
+                var queryString = new SparqlParameterizedString();
+                queryString.CommandText = @"
+                SELECT * WHERE 
+                { 
+                    ?s ?p ?o 
+                }
+                LIMIT 10000                
+                OFFSET " + offset;
+                // queryString.SetVariable("offset", 0);
+                SparqlResultSet results = null;
+                try
+                {
+                    results = SparqlUtils.Select(queryString.ToString()).Result;
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e.InnerException);
+                }
+                if (results == null || results.IsEmpty)
+                    break;
+
+                offset += nbRows;
+                foreach (var result in results)
+                {
+                    yield return result;
+                }
+            }
+        }
+
+        [Fact]
+        public void Stats()
+        {
+            var stats = new ComplexStat(YieldTriples().Select(x => new BasicStat(x.ToTrpl())));
+            Console.WriteLine(stats.FunctionalPropertyDefinedCount);
+            Assert.True(stats.FunctionalPropertyDefinedCount == 30);
+        }
+
         [Fact]
         public async Task GetAllUsedPropAndClasses()
         {
