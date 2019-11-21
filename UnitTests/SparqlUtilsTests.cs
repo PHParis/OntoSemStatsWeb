@@ -137,7 +137,10 @@ namespace UnitTests
         [Fact]
         public void PipelineTest()
         {
-            var t = new Trpl("Instance", RDF.PropertyType.ToString(), OWL.ClassFunctionalProperty.ToString());
+            var t = new Trpl<string>(
+                "Instance",
+                RDF.PropertyType.ToString(),
+                OWL.ClassFunctionalProperty.ToString());
 
         }
 
