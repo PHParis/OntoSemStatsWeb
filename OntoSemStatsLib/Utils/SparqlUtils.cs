@@ -2,7 +2,7 @@ using System;
 using System.Threading.Tasks;
 using VDS.RDF.Query;
 
-namespace OntoSemStatsWeb.Utils
+namespace OntoSemStatsLib.Utils
 {
     public class SparqlUtils
     {

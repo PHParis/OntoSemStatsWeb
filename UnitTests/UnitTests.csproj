@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\OntoSemStatsWeb\OntoSemStatsWeb.csproj" />
+    <ProjectReference Include="..\OntoSemStatsLib\OntoSemStatsLib.csproj" />
   </ItemGroup>
 
 </Project>

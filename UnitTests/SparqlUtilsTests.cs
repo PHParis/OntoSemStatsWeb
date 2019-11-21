@@ -2,8 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using OntoSemStatsWeb.Utils;
-using OntoSemStatsWeb.Utils.Vocabularies;
+using OntoSemStatsLib.Utils;
+using OntoSemStatsLib.Utils.Vocabularies;
 using VDS.RDF;
 using VDS.RDF.Parsing;
 using VDS.RDF.Query;
@@ -63,11 +63,26 @@ namespace UnitTests
             }
             Console.WriteLine(g2.Triples.Count);
         }
+
+        public static Dictionary<string, int> IncrementDictDictionary(string value, Dictionary<string, int> dict)
+        {
+            if (dict.ContainsKey(value))
+            {
+                dict[value]++;
+            }
+            else
+            {
+                dict[value] = 1;
+            }
+            return dict;
+        }
+
         [Fact]
         public async Task GetAllUsedPropAndClasses()
         {
             var usedPropertyCount = new Dictionary<string, int>();
             var usedClassCount = new Dictionary<string, int>();
+
             var offset = 0;
             var nbRows = 10000;
             var nbResults = 0;
@@ -95,43 +110,26 @@ namespace UnitTests
                     foreach (var r in results)
                     {
                         var p = r["p"].ToString();
-                        if (usedPropertyCount.ContainsKey(p))
-                        {
-                            usedPropertyCount[p] += usedPropertyCount[p];
-                        }
-                        else
-                        {
-                            usedPropertyCount[p] = 1;
-                        }
+                        IncrementDictDictionary(p, usedPropertyCount);
                         if (p == RDF.PropertyType.ToString())
                         {
                             var o = r["o"].ToString();
-                            if (usedClassCount.ContainsKey(o))
-                            {
-                                usedClassCount[o] += usedClassCount[o];
-                            }
-                            else
-                            {
-                                usedClassCount[o] = 1;
-                            }
+                            IncrementDictDictionary(o, usedClassCount);
                         }
                     }
-                    // usedProps.AddRange(results.Select(x => x["p"].ToString()));
-                    // Console.WriteLine(results?.FirstOrDefault()?["p"].ToString() ?? "0");
                 }
                 catch (Exception e)
                 {
                     Console.WriteLine(e.InnerException);
                 }
                 offset += nbRows;
-                if (usedProps.Count > 9_000_000)
+                if (usedPropertyCount.Count > 9_000_000)
                 {
                     break;
                 }
             }
             // Console.WriteLine(string.Join(Environment.NewLine, usedProps));
-            Console.WriteLine(usedProps.Count);
-            Console.WriteLine(usedProps.Distinct().Count());
+            Console.WriteLine(usedPropertyCount.Count);
         }
 
         [Fact]

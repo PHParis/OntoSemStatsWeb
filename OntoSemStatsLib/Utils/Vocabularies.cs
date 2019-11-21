@@ -2,7 +2,7 @@ using System;
 using VDS.RDF;
 using VDS.RDF.Ontology;
 
-namespace OntoSemStatsWeb.Utils.Vocabularies
+namespace OntoSemStatsLib.Utils.Vocabularies
 {
     public static class XSD
     {
