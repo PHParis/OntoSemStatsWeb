@@ -9,7 +9,6 @@ namespace UnitTests
 {
     public class UnitTest2
     {
-        [Obsolete]
         [Fact]
         public void TestName()
         {
@@ -37,6 +36,13 @@ namespace UnitTests
             };
             Assert.True(basicStat3.IsSome);
 
+        }
+
+        [Fact]
+        public void SomeEquality()
+        {
+            var t = "s" == "s" ? Some("string") : None;
+            Assert.True(t == "string");
         }
 
     }
