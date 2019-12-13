@@ -1,0 +1,49 @@
+PREFIX :<http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#>
+PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl:<http://www.w3.org/2002/07/owl#>
+PREFIX void:<http://rdfs.org/ns/void#>
+CONSTRUCT 
+{
+    _:b0 a void:Dataset ; :hasStat [
+        a :Stat ; :hasSemanticFeature :OwlTransitiveProperty ;
+        :definitionCount ?definitionsCount ; 
+        :usageCount ?triples ]
+}
+WHERE
+{
+    {
+        SELECT (COUNT (DISTINCT ?p) as ?definitionsCount)
+        WHERE 
+        {
+            {
+                ?p a owl:TransitiveProperty .
+            } 
+            UNION
+            {
+                ?p2 a owl:TransitiveProperty .
+                ?p (rdfs:subPropertyOf|owl:equivalentProperty)+ ?p2 .
+            }
+        }
+    }
+    {
+        SELECT (COUNT (*) as ?triples)
+        WHERE
+        {
+            {
+                SELECT DISTINCT ?p
+                WHERE 
+                {
+                    {
+                        ?p a owl:TransitiveProperty .
+                    } 
+                    UNION
+                    {
+                        ?p2 a owl:TransitiveProperty .
+                        ?p (rdfs:subPropertyOf|owl:equivalentProperty)+ ?p2 .                        
+                    } 
+                }
+            }
+            ?s ?p ?o .
+        }
+    }
+}

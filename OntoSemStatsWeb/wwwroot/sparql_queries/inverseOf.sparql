@@ -1,0 +1,22 @@
+PREFIX :<http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#>
+PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl:<http://www.w3.org/2002/07/owl#>
+PREFIX void:<http://rdfs.org/ns/void#>
+CONSTRUCT 
+{
+    _:b0 a void:Dataset ; :hasStat [
+        a :Stat ; :hasSemanticFeature :OwlInverseOf ;
+        :definitionCount ?definitionsCount ]
+}
+WHERE
+{
+    {
+        SELECT (COUNT (*) as ?definitionsCount)
+        WHERE 
+        {
+            {
+                ?p owl:inverseOf ?p2 .
+            } 
+        }
+    }
+}

@@ -1,5 +1,40 @@
 ﻿@page "/"
 
-<h1>Hello, world!</h1>
+@using OntoSemStatsWeb.Data
+@inject SparqlService SparqlService
 
-Welcome to your new app.
+<h1>Enter your endpoint</h1>
+<!-- 
+<p>This component demonstrates fetching data from a service.</p>
+
+<button class="btn btn-primary" @onclick="IncrementCount">Click me</button> -->
+
+<EditForm Model="@ontologyResult" OnValidSubmit="@HandleValidSubmit">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+    <p>
+    <label for="SparqlEndpointUri">Sparql Endpoint Uri: </label>
+    <InputText id="SparqlEndpointUri" @bind-Value="ontologyResult.SparqlEndpointUri" />
+    </p>
+    <button type="submit">Submit</button>
+</EditForm>
+
+<div>
+    @ontologyResult.Result
+</div>
+
+
+@code {
+
+    /*protected override async Task OnInitializedAsync()
+    {
+        forecasts = await SparqlService.GetDataAsync("http://dbpedia.org/sparql");
+    } */
+    private OntologyResult ontologyResult = new OntologyResult();
+
+    private async Task HandleValidSubmit()
+    {
+        Console.WriteLine("OnValidSubmit");
+        await SparqlService.GetDataAsync(ontologyResult);
+    }
+}

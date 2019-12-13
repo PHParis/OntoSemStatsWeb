@@ -8,4 +8,8 @@
     <ProjectReference Include="..\OntoSemStatsLib\OntoSemStatsLib.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="dotNetRDF" Version="2.3.0" />
+  </ItemGroup>
+
 </Project>

@@ -1,0 +1,35 @@
+PREFIX :<http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#>
+PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl:<http://www.w3.org/2002/07/owl#>
+PREFIX void:<http://rdfs.org/ns/void#>
+CONSTRUCT 
+{
+    _:b0 a void:Dataset ; :hasStat [
+        a :Stat ; :hasSemanticFeature :OwlComplementOf ;
+        :definitionCount ?definitionsCount ; 
+        :usageCount ?triples ]
+}
+WHERE
+{
+    {
+        SELECT (COUNT (*) as ?definitionsCount)
+        WHERE 
+        {
+            ?c owl:complementOf ?c1 .
+        }
+    }
+    {
+        SELECT (COUNT (*) as ?triples)
+        WHERE
+        {
+            {
+                SELECT DISTINCT ?node
+                WHERE 
+                {
+                    ?node owl:complementOf ?other .
+                }
+            }
+            ?s a [ owl:intersectionOf ?node ]
+        }
+    }
+}

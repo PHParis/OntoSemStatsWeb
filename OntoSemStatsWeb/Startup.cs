@@ -29,6 +29,8 @@ namespace OntoSemStatsWeb
             services.AddRazorPages();
             services.AddServerSideBlazor();
             services.AddSingleton<WeatherForecastService>();
+            services.AddSingleton<SparqlService>();
+            // services.AddRazorPages().AddRazorRuntimeCompilation(); https://docs.microsoft.com/en-us/aspnet/core/mvc/views/view-compilation?view=aspnetcore-3.0#runtime-compilation
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
