@@ -2,25 +2,27 @@ PREFIX :<http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#>
 PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#>
 PREFIX owl:<http://www.w3.org/2002/07/owl#>
 PREFIX void:<http://rdfs.org/ns/void#>
-CONSTRUCT 
-{
-    _:b0 a void:Dataset ; :hasStat [
-        a :Stat ; :hasSemanticFeature :OwlTransitiveProperty ;
-        :definitionCount ?definitionsCount ; 
-        :usageCount ?triples ]
-}
+# CONSTRUCT 
+# {
+#     _:b0 a void:Dataset ; :hasStat [
+#         a :Stat ; :hasSemanticFeature :OwlIrreflexiveProperty ;
+#         :definitionCount ?definitionsCount ; 
+#         :usageCount ?triples ]
+# }
+SELECT ?definitionsCount ?triples ?feature
 WHERE
 {
+    values ?feature { :OwlIrreflexiveProperty }
     {
         SELECT (COUNT (DISTINCT ?p) as ?definitionsCount)
         WHERE 
         {
             {
-                ?p a owl:TransitiveProperty .
+                ?p a owl:IrreflexiveProperty .
             } 
             UNION
             {
-                ?p2 a owl:TransitiveProperty .
+                ?p2 a owl:IrreflexiveProperty .
                 ?p (rdfs:subPropertyOf|owl:equivalentProperty)+ ?p2 .
             }
         }
@@ -34,11 +36,11 @@ WHERE
                 WHERE 
                 {
                     {
-                        ?p a owl:TransitiveProperty .
+                        ?p a owl:IrreflexiveProperty .
                     } 
                     UNION
                     {
-                        ?p2 a owl:TransitiveProperty .
+                        ?p2 a owl:IrreflexiveProperty .
                         ?p (rdfs:subPropertyOf|owl:equivalentProperty)+ ?p2 .                        
                     } 
                 }

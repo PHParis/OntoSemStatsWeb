@@ -2,25 +2,27 @@ PREFIX :<http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#>
 PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#>
 PREFIX owl:<http://www.w3.org/2002/07/owl#>
 PREFIX void:<http://rdfs.org/ns/void#>
-CONSTRUCT 
-{
-    _:b0 a void:Dataset ; :hasStat [
-        a :Stat ; :hasSemanticFeature :OwlInverseFunctionalProperty ;
-        :definitionCount ?definitionsCount ; 
-        :usageCount ?triples ]
-}
+# CONSTRUCT 
+# {
+#     _:b0 a void:Dataset ; :hasStat [
+#         a :Stat ; :hasSemanticFeature :OwlSymmetricProperty ;
+#         :definitionCount ?definitionsCount ; 
+#         :usageCount ?triples ]
+# }
+SELECT ?definitionsCount ?triples ?feature
 WHERE
 {
+    values ?feature { :OwlSymmetricProperty }
     {
         SELECT (COUNT (DISTINCT ?p) as ?definitionsCount)
         WHERE 
         {
             {
-                ?p a owl:InverseFunctionalProperty .
+                ?p a owl:SymmetricProperty .
             } 
             UNION
             {
-                ?p2 a owl:InverseFunctionalProperty .
+                ?p2 a owl:SymmetricProperty .
                 ?p (rdfs:subPropertyOf|owl:equivalentProperty)+ ?p2 .
             }
         }
@@ -34,11 +36,11 @@ WHERE
                 WHERE 
                 {
                     {
-                        ?p a owl:InverseFunctionalProperty .
+                        ?p a owl:SymmetricProperty .
                     } 
                     UNION
                     {
-                        ?p2 a owl:InverseFunctionalProperty .
+                        ?p2 a owl:SymmetricProperty .
                         ?p (rdfs:subPropertyOf|owl:equivalentProperty)+ ?p2 .                        
                     } 
                 }
