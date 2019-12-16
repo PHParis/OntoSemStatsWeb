@@ -26,10 +26,25 @@
 <div>
     @if (ontologyResult.Result != null && ontologyResult.Result.Any())
     {
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Feature</th>
+                <th scope="col">Definition count</th>
+                <th scope="col">Usage</th>
+              </tr>
+            </thead>
+            <tbody>
         @foreach (var result in ontologyResult.Result)
         {
-
+            <tr>
+                <td>@result.Key</td>
+                <td>@result.Value["definitionsCount"]</td>
+                <td>@(result.Value.Keys.Contains("triples") ? result.Value["triples"] : "NA")</td>
+            </tr>
         }
+        </tbody>
+        </table>
     }
     
 </div>
