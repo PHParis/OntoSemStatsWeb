@@ -20,7 +20,18 @@
 </EditForm>
 
 <div>
-    @ontologyResult.Result
+    @Message
+</div>
+
+<div>
+    @if (ontologyResult.Result != null && ontologyResult.Result.Any())
+    {
+        @foreach (var result in ontologyResult.Result)
+        {
+
+        }
+    }
+    
 </div>
 
 
@@ -31,10 +42,12 @@
         forecasts = await SparqlService.GetDataAsync("http://dbpedia.org/sparql");
     } */
     private OntologyResult ontologyResult = new OntologyResult();
-
+    private string Message = "";
     private async Task HandleValidSubmit()
     {
+        Message = "Please wait while processing...";
         Console.WriteLine("OnValidSubmit");
         await SparqlService.GetDataAsync(ontologyResult);
+        Message = "";
     }
 }

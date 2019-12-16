@@ -14,6 +14,7 @@ namespace OntoSemStatsWeb.Data
 
         public async Task<OntologyResult> GetDataAsync(OntologyResult ontologyResult)
         {
+            ontologyResult.Result = new Dictionary<string, Dictionary<string, string>>();
             var endpoint = new SparqlRemoteEndpoint(new Uri(ontologyResult.SparqlEndpointUri));
             var resultsVoid = await Task<SparqlResultSet>.Factory.StartNew(() => endpoint.QueryWithResultSet(@"
             PREFIX void:<http://rdfs.org/ns/void#>
