@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>OntoSemStats</title>
+    <script src="http://rdf.js.org/comunica-browser/versions/1/packages/actor-init-sparql/comunica-browser.js"></script>
+  </head>
+
+  <body>
+      <script src="app.js"></script>
+    <!-- <script>
+      var endpoint = "http://dbpedia.org/sparql";
+      var sourceType = "sparql";
+      // var endpoint = 'http://fragments.dbpedia.org/2015/en';
+      //var sourceType = 'hypermedia';
+      console.log("endpoint: " + endpoint);
+      const myEngine = Comunica.newEngine();
+      myEngine
+        .query(
+          `SELECT * { ?s ?p <http://dbpedia.org/resource/Belgium>. ?s ?p ?o } LIMIT 100`,
+          {
+            sources: [
+              {
+                type: sourceType,
+                value: endpoint
+              }
+            ]
+          }
+        )
+        .then(function(result) {
+          result.bindingsStream.on("data", function(data) {
+            console.log(data.toObject());
+          });
+        });
+    </script> -->
+  </body>
+</html>
