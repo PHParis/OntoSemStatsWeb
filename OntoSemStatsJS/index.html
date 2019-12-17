@@ -4,36 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <title>OntoSemStats</title>
-    <script src="http://rdf.js.org/comunica-browser/versions/1/packages/actor-init-sparql/comunica-browser.js"></script>
   </head>
-
   <body>
+      <h1>OntoSemStats</h1>
+      <form action="">
+          <div class="form-group">
+              <label for="endpoint">Enter the SPARQL endpoint URI: </label>
+              <input type="url" class="form-control" name="endpoint" id="endpoint" required placeholder="http://dbpedia.org/sparql">
+          </div>
+          <button id="queryEndpoint" type="submit" class="btn btn-primary">Let's go!</button>
+      </form>
+      <script src="http://rdf.js.org/comunica-browser/versions/1/packages/actor-init-sparql/comunica-browser.js"></script>
       <script src="app.js"></script>
-    <!-- <script>
-      var endpoint = "http://dbpedia.org/sparql";
-      var sourceType = "sparql";
-      // var endpoint = 'http://fragments.dbpedia.org/2015/en';
-      //var sourceType = 'hypermedia';
-      console.log("endpoint: " + endpoint);
-      const myEngine = Comunica.newEngine();
-      myEngine
-        .query(
-          `SELECT * { ?s ?p <http://dbpedia.org/resource/Belgium>. ?s ?p ?o } LIMIT 100`,
-          {
-            sources: [
-              {
-                type: sourceType,
-                value: endpoint
-              }
-            ]
-          }
-        )
-        .then(function(result) {
-          result.bindingsStream.on("data", function(data) {
-            console.log(data.toObject());
-          });
-        });
-    </script> -->
   </body>
 </html>
