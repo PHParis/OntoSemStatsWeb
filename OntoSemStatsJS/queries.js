@@ -339,5 +339,236 @@ WHERE
             } 
         }
     }
+}`,
+`PREFIX :<http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#>
+PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl:<http://www.w3.org/2002/07/owl#>
+SELECT ?definitionsCount ?triples ?feature
+WHERE
+{
+    values ?feature { :OwlAsymmetricProperty }
+    {
+        SELECT (COUNT (DISTINCT ?p) as ?definitionsCount)
+        WHERE 
+        {
+            {
+                ?p a owl:AsymmetricProperty .
+            } 
+        }
+    }
+    {
+        SELECT (COUNT (*) as ?triples)
+        WHERE
+        {
+            {
+                SELECT DISTINCT ?p
+                WHERE 
+                {
+                    {
+                        ?p a owl:AsymmetricProperty .
+                    } 
+                }
+            }
+            ?s ?p ?o .
+        }
+    }
+}`,
+`PREFIX :<http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#>
+PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl:<http://www.w3.org/2002/07/owl#>
+SELECT ?definitionsCount ?triples ?feature
+WHERE
+{
+    values ?feature { :OwlFunctionalProperty }
+    {
+        SELECT (COUNT (DISTINCT ?p) as ?definitionsCount)
+        WHERE 
+        {
+            {
+                ?p a owl:FunctionalProperty .
+            } 
+        }
+    }
+    {
+        SELECT (COUNT (*) as ?triples)
+        WHERE
+        {
+            {
+                SELECT DISTINCT ?p
+                WHERE 
+                {
+                    {
+                        ?p a owl:FunctionalProperty .
+                    } 
+                }
+            }
+            ?s ?p ?o .
+        }
+    }
+}`,
+`PREFIX :<http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#>
+PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl:<http://www.w3.org/2002/07/owl#>
+SELECT ?definitionsCount ?triples ?feature
+WHERE
+{
+    values ?feature { :OwlInverseFunctionalProperty }
+    {
+        SELECT (COUNT (DISTINCT ?p) as ?definitionsCount)
+        WHERE 
+        {
+            {
+                ?p a owl:InverseFunctionalProperty .
+            } 
+        }
+    }
+    {
+        SELECT (COUNT (*) as ?triples)
+        WHERE
+        {
+            {
+                SELECT DISTINCT ?p
+                WHERE 
+                {
+                    {
+                        ?p a owl:InverseFunctionalProperty .
+                    } 
+                }
+            }
+            ?s ?p ?o .
+        }
+    }
+}`,
+`PREFIX :<http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#>
+PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl:<http://www.w3.org/2002/07/owl#>
+SELECT ?definitionsCount ?triples ?feature
+WHERE
+{
+    values ?feature { :OwlIrreflexiveProperty }
+    {
+        SELECT (COUNT (DISTINCT ?p) as ?definitionsCount)
+        WHERE 
+        {
+            {
+                ?p a owl:IrreflexiveProperty .
+            } 
+        }
+    }
+    {
+        SELECT (COUNT (*) as ?triples)
+        WHERE
+        {
+            {
+                SELECT DISTINCT ?p
+                WHERE 
+                {
+                    {
+                        ?p a owl:IrreflexiveProperty .
+                    } 
+                }
+            }
+            ?s ?p ?o .
+        }
+    }
+}`,
+`PREFIX :<http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#>
+PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl:<http://www.w3.org/2002/07/owl#>
+SELECT ?definitionsCount ?triples ?feature
+WHERE
+{
+    values ?feature { :OwlReflexiveProperty }
+    {
+        SELECT (COUNT (DISTINCT ?p) as ?definitionsCount)
+        WHERE 
+        {
+            {
+                ?p a owl:ReflexiveProperty .
+            } 
+        }
+    }
+    {
+        SELECT (COUNT (*) as ?triples)
+        WHERE
+        {
+            {
+                SELECT DISTINCT ?p
+                WHERE 
+                {
+                    {
+                        ?p a owl:ReflexiveProperty .
+                    } 
+                }
+            }
+            ?s ?p ?o .
+        }
+    }
+}`,
+`PREFIX :<http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#>
+PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl:<http://www.w3.org/2002/07/owl#>
+SELECT ?definitionsCount ?triples ?feature
+WHERE
+{
+    values ?feature { :OwlSymmetricProperty }
+    {
+        SELECT (COUNT (DISTINCT ?p) as ?definitionsCount)
+        WHERE 
+        {
+            {
+                ?p a owl:SymmetricProperty .
+            } 
+        }
+    }
+    {
+        SELECT (COUNT (*) as ?triples)
+        WHERE
+        {
+            {
+                SELECT DISTINCT ?p
+                WHERE 
+                {
+                    {
+                        ?p a owl:SymmetricProperty .
+                    } 
+                }
+            }
+            ?s ?p ?o .
+        }
+    }
+}`,
+`PREFIX :<http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#>
+PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl:<http://www.w3.org/2002/07/owl#>
+SELECT ?definitionsCount ?triples ?feature
+WHERE
+{
+    values ?feature { :OwlTransitiveProperty }
+    {
+        SELECT (COUNT (DISTINCT ?p) as ?definitionsCount)
+        WHERE 
+        {
+            {
+                ?p a owl:TransitiveProperty .
+            } 
+        }
+    }
+    {
+        SELECT (COUNT (*) as ?triples)
+        WHERE
+        {
+            {
+                SELECT DISTINCT ?p
+                WHERE 
+                {
+                    {
+                        ?p a owl:TransitiveProperty .
+                    } 
+                }
+            }
+            ?s ?p ?o .
+        }
+    }
 }`
 ];

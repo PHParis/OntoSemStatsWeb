@@ -14,10 +14,10 @@ function getDatasetName(endpoint) {
 function displayQuery() {
     var endpointInput = document.getElementById("endpoint");
     var isValidEndpoint = endpointInput.checkValidity();
-    console.log("test");
     if (isValidEndpoint) {
         var endpoint = endpointInput.value;
         
+        console.log("Querying: " + endpoint);
         execQuery(endpoint);
     }   
     return false; 
