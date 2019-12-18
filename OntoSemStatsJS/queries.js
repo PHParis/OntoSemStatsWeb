@@ -505,39 +505,40 @@ WHERE
         }
     }
 }`,
-`PREFIX :<http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#>
-PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#>
-PREFIX owl:<http://www.w3.org/2002/07/owl#>
-SELECT ?definitionsCount ?triples ?feature
-WHERE
+`PREFIX :<http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#> 
+PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX owl:<http://www.w3.org/2002/07/owl#> 
+SELECT ?definitionsCount ?triples ?feature 
+WHERE 
 {
-    values ?feature { :OwlSymmetricProperty }
+    values ?feature { :OwlSymmetricProperty } 
     {
-        SELECT (COUNT (DISTINCT ?p) as ?definitionsCount)
+        SELECT (COUNT (DISTINCT ?p) as ?definitionsCount) 
         WHERE 
         {
             {
-                ?p a owl:SymmetricProperty .
+                ?p a owl:SymmetricProperty . 
             } 
         }
     }
     {
-        SELECT (COUNT (*) as ?triples)
-        WHERE
+        SELECT (COUNT (*) as ?triples) 
+        WHERE 
         {
             {
-                SELECT DISTINCT ?p
+                SELECT DISTINCT ?p 
                 WHERE 
                 {
                     {
-                        ?p a owl:SymmetricProperty .
+                        ?p a owl:SymmetricProperty . 
                     } 
                 }
             }
-            ?s ?p ?o .
+            ?s ?p ?o . 
         }
     }
-}`,
+}`
+,
 `PREFIX :<http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#>
 PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#>
 PREFIX owl:<http://www.w3.org/2002/07/owl#>

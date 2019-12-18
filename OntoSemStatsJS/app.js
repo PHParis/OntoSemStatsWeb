@@ -7,8 +7,17 @@ document.addEventListener("DOMContentLoaded", function() {
     queryEndpoint.onclick = displayQuery;
 });
 
-function getDatasetName(endpoint) {
-    return "_:b0"
+async function getDatasetName(endpoint) {
+    var result = await myEngine.query('PREFIX void:<http://rdfs.org/ns/void#> SELECT ?ds WHERE { ?ds a void:Dataset . }',
+    {
+      sources: [ { type: sourceType, value: endpoint } ]
+    });
+    // return "_:b0"
+    result.bindingsStream.on('data', function (data) {
+      console.log(data.toObject());      
+      console.log("ds: " + data.toObject()["?ds"].value);
+      return data.toObject()["?ds"].value;
+    });
 }
 
 function displayQuery() {
@@ -16,6 +25,8 @@ function displayQuery() {
     var isValidEndpoint = endpointInput.checkValidity();
     if (isValidEndpoint) {
         var endpoint = endpointInput.value;
+
+        var ds = getDatasetName(endpoint);
         
         console.log("Querying: " + endpoint);
         execQuery(endpoint);
