@@ -1,6 +1,7 @@
 const myEngine = Comunica.newEngine();
 const sourceType = "sparql";
 var results = new Array();
+// var ds;
 
 document.addEventListener("DOMContentLoaded", function() {
     var queryEndpoint = document.getElementById("queryEndpoint");
@@ -13,11 +14,15 @@ async function getDatasetName(endpoint) {
       sources: [ { type: sourceType, value: endpoint } ]
     });
     // return "_:b0"
+    // var test = await 
     result.bindingsStream.on('data', function (data) {
       console.log(data.toObject());      
       console.log("ds: " + data.toObject()["?ds"].value);
-      return data.toObject()["?ds"].value;
+      var ds = data.toObject()["?ds"].value;
+      console.log(ds);  
+      execQuery(endpoint, ds);
     });
+
 }
 
 function displayQuery() {
@@ -26,15 +31,21 @@ function displayQuery() {
     if (isValidEndpoint) {
         var endpoint = endpointInput.value;
 
-        var ds = getDatasetName(endpoint);
+        getDatasetName(endpoint);
+        // console.log(ds);  
+        // while (typeof ds === 'undefined') {
+            
+        // }
+        // console.log(ds);      
+        // console.log("Querying: " + endpoint);
         
-        console.log("Querying: " + endpoint);
-        execQuery(endpoint);
+        // execQuery(endpoint, ds);
     }   
     return false; 
 }
 
 function execQuery(endpoint) {
+    console.log(ds);  
     console.log("test2");
     results.length = 0;    
     document.getElementById('table_result').getElementsByTagName('tbody')[0].innerHTML = "";
