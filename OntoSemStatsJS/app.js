@@ -9,19 +9,53 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 async function getDatasetName(endpoint) {
-    var result = await myEngine.query('PREFIX void:<http://rdfs.org/ns/void#> SELECT ?ds WHERE { ?ds a void:Dataset . }',
+    var askResult = await myEngine.query('PREFIX void:<http://rdfs.org/ns/void#> ASK { ?ds a void:Dataset . }',
     {
       sources: [ { type: sourceType, value: endpoint } ]
     });
+    var isPresent = await askResult.booleanResult;
+    console.log("ASK dataset: " + isPresent);
+    if (isPresent) {
+        myEngine.query('PREFIX void:<http://rdfs.org/ns/void#> SELECT ?ds WHERE { ?ds a void:Dataset . }',
+        {
+          sources: [ { type: sourceType, value: endpoint } ]
+        }).then(function(result) {
+            result.bindingsStream.on('data', function (data) {
+                var ds = data.toObject()["?ds"].value;
+                execQuery(endpoint, ds);         
+            });
+        }).catch(function() {
+          // An error occurred
+        });
+    } else {
+        execQuery(endpoint, "_:b0");
+    }
+    // myEngine.query('PREFIX void:<http://rdfs.org/ns/void#> SELECT ?ds WHERE { ?ds a void:Dataset . }',
+    // {
+    //   sources: [ { type: sourceType, value: endpoint } ]
+    // }).then(function(result) {
+    //     console.log(result);
+    //     console.log(result.booleanResult);
+    //     console.log(result.bindingsStream);
+    //     console.log(result.bindingsStream._events);
+    //     result.bindingsStream.on('data', function (data) {
+    //         console.log(result.bindingsStream._events);
+    //         resultsFound = false;
+    //         var ds = data.toObject()["?ds"].value;
+    //         console.log("ds 2 : " + ds);  
+    //         execQuery(endpoint, ds);         
+    //     });        
+    //     console.log(result.bindingsStream._events.readable);
+    // }).catch(function() {
+    //   // An error occurred
+    // });
     // return "_:b0"
-    // var test = await 
-    result.bindingsStream.on('data', function (data) {
-      console.log(data.toObject());      
-      console.log("ds: " + data.toObject()["?ds"].value);
-      var ds = data.toObject()["?ds"].value;
-      console.log(ds);  
-      execQuery(endpoint, ds);
-    });
+    
+    // result.bindingsStream.on('data', function (data) {
+    //   var ds = data.toObject()["?ds"].value;
+    //   console.log("ds 2 : " + ds);  
+    // //   execQuery(endpoint, ds);
+    // });
 
 }
 
@@ -32,25 +66,18 @@ function displayQuery() {
         var endpoint = endpointInput.value;
 
         getDatasetName(endpoint);
-        // console.log(ds);  
-        // while (typeof ds === 'undefined') {
-            
-        // }
-        // console.log(ds);      
-        // console.log("Querying: " + endpoint);
         
-        // execQuery(endpoint, ds);
+        // execQuery(endpoint, "_:b0");
     }   
     return false; 
 }
 
-function execQuery(endpoint) {
+function execQuery(endpoint, ds) {
     console.log(ds);  
     console.log("test2");
     results.length = 0;    
     document.getElementById('table_result').getElementsByTagName('tbody')[0].innerHTML = "";
     document.getElementById('n_triples_results').innerHTML = "";
-
     queries.forEach((query, i) =>    
         myEngine
         .query(
@@ -70,7 +97,7 @@ function execQuery(endpoint) {
             console.log(dataObj);
             results.push(dataObj);
             addNewLineInTable(dataObj);
-            displayNTriples(dataObj, i);
+            displayNTriples(dataObj, i + 1);
         });
         })
     );
