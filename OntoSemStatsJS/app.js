@@ -2,6 +2,10 @@ const myEngine = Comunica.newEngine();
 const sourceType = "sparql";
 var results = new Array();
 
+// TODO: add copy to clipboard for output graph
+// TODO: add information for user while querying and if errors are raised
+// TODO: add autocomplete for input field
+
 document.addEventListener("DOMContentLoaded", function() {
     var queryEndpoint = document.getElementById("queryEndpoint");
     queryEndpoint.onclick = displayQuery;
