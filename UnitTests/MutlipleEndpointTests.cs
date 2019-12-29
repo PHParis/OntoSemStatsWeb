@@ -740,6 +740,33 @@ namespace UnitTests
             {
                 Console.WriteLine($"{q.Key} : {q.definition}");
             }
+            // 95
+            // http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#RdfType : 6520629404
+            // http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#OwlSameAs : 239059721
+            // http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#RdfsSubClassOf : 70336931
+            // http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#OwlEquivalentClass : 2435379
+            // http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#RdfsRange : 420953
+            // http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#RdfsDomain : 227241
+            // http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#OwlDifferentFrom : 105677
+            // http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#OwlEquivalentProperty : 45131
+            // http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#OwlDisjointWith : 36667
+            // http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#OwlFunctionalProperty : 23133
+            // http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#OwlInverseOf : 17824
+            // http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#OwlPropertyChainAxiom : 7430
+            // http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#OwlWithRestrictions : 5243
+            // http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#OwlAllDisjointClasses : 1751
+            // http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#OwlTransitiveProperty : 1334
+            // http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#OwlSymmetricProperty : 1073
+            // http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#OwlPropertyDisjointWith : 1054
+            // http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#OwlAllDifferent : 1051
+            // http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#OwlInverseFunctionalProperty : 640
+            // http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#OwlAsymmetricProperty : 334
+            // http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#OwlIrreflexiveProperty : 320
+            // http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#OwlDisjointUnionOf : 226
+            // http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#RdfsSubProperty : 98
+            // http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#OwlReflexiveProperty : 94
+            // http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#OwlAllDisjointProperties : 16
+
         }
     }
 }
