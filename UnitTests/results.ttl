@@ -5,265 +5,32 @@
 @prefix void: <http://rdfs.org/ns/void#>.
 
 _:autos1 semstat:hasStat [semstat:hasSemanticFeature semstat:RdfType ; 
-                          semstat:definitionCount 24010130 ],
+                          semstat:definitionCount 787115 ],
                          [semstat:hasSemanticFeature semstat:OwlFunctionalProperty ; 
-                          semstat:definitionCount 2 ],
-                         [semstat:hasSemanticFeature semstat:OwlInverseFunctionalProperty ; 
-                          semstat:definitionCount 5  ; 
-                          semstat:usageCount 12789 ],
-                         [semstat:hasSemanticFeature semstat:OwlDisjointWith ; 
-                          semstat:definitionCount 8 ],
+                          semstat:definitionCount 10  ; 
+                          semstat:usageCount 273296 ],
                          [semstat:hasSemanticFeature semstat:OwlSymmetricProperty ; 
                           semstat:definitionCount 10  ; 
-                          semstat:usageCount 25382 ],
-                         [semstat:hasSemanticFeature semstat:RdfsDomain ; 
-                          semstat:definitionCount 814 ],
+                          semstat:usageCount 147967 ],
                          [semstat:hasSemanticFeature semstat:OwlTransitiveProperty ; 
-                          semstat:definitionCount 35  ; 
-                          semstat:usageCount 2648893 ],
-                         [semstat:hasSemanticFeature semstat:OwlEquivalentClass ; 
-                          semstat:definitionCount 71 ],
-                         [semstat:hasSemanticFeature semstat:OwlEquivalentProperty ; 
-                          semstat:definitionCount 194 ],
-                         [semstat:hasSemanticFeature semstat:OwlInverseOf ; 
-                          semstat:definitionCount 446 ],
-                         [semstat:hasSemanticFeature semstat:OwlPropertyChainAxiom ; 
-                          semstat:definitionCount 42 ],
-                         [semstat:hasSemanticFeature semstat:OwlSameAs ; 
-                          semstat:definitionCount 570651 ],
-                         [semstat:hasSemanticFeature semstat:RdfsRange ; 
-                          semstat:definitionCount 741 ],
-                         [semstat:hasSemanticFeature semstat:RdfsSubClassOf ; 
-                          semstat:definitionCount 464 ];
-         void:sparqlEndpoint <http://data.doremus.org/sparql>.
-_:autos101 semstat:hasStat [semstat:hasSemanticFeature semstat:OwlSameAs ; 
-                            semstat:definitionCount 17356 ],
-                           [semstat:hasSemanticFeature semstat:RdfsDomain ; 
-                            semstat:definitionCount 279 ],
-                           [semstat:hasSemanticFeature semstat:OwlEquivalentClass ; 
-                            semstat:definitionCount 64 ],
-                           [semstat:hasSemanticFeature semstat:OwlEquivalentProperty ; 
-                            semstat:definitionCount 193 ],
-                           [semstat:hasSemanticFeature semstat:RdfsRange ; 
-                            semstat:definitionCount 167 ],
-                           [semstat:hasSemanticFeature semstat:RdfsSubClassOf ; 
-                            semstat:definitionCount 78 ],
-                           [semstat:hasSemanticFeature semstat:RdfType ; 
-                            semstat:definitionCount 2222755 ],
-                           [semstat:hasSemanticFeature semstat:OwlInverseFunctionalProperty ; 
-                            semstat:definitionCount 3 ];
-           void:sparqlEndpoint <https://data.gov.cz/sparql>.
-_:autos104 semstat:hasStat [semstat:hasSemanticFeature semstat:RdfsDomain ; 
-                            semstat:definitionCount 21 ],
-                           [semstat:hasSemanticFeature semstat:RdfsRange ; 
-                            semstat:definitionCount 20 ],
-                           [semstat:hasSemanticFeature semstat:RdfsSubClassOf ; 
-                            semstat:definitionCount 15 ],
-                           [semstat:hasSemanticFeature semstat:RdfType ; 
-                            semstat:definitionCount 102146 ];
-           void:sparqlEndpoint <http://sparql.lynx-project.eu/>.
-_:autos108 semstat:hasStat [semstat:hasSemanticFeature semstat:OwlSameAs ; 
-                            semstat:definitionCount 200 ],
-                           [semstat:hasSemanticFeature semstat:RdfsDomain ; 
-                            semstat:definitionCount 21 ],
-                           [semstat:hasSemanticFeature semstat:RdfsRange ; 
-                            semstat:definitionCount 20 ],
-                           [semstat:hasSemanticFeature semstat:RdfsSubClassOf ; 
-                            semstat:definitionCount 15 ],
-                           [semstat:hasSemanticFeature semstat:RdfType ; 
-                            semstat:definitionCount 1936640 ];
-           void:sparqlEndpoint <https://data.gesis.org/claimskg/sparql>.
-_:autos11 semstat:hasStat [semstat:hasSemanticFeature semstat:RdfType ; 
-                           semstat:definitionCount 475831762 ];
-          void:sparqlEndpoint <http://opencitations.net/index/sparql>.
-_:autos118 semstat:hasStat [semstat:hasSemanticFeature semstat:OwlSameAs ; 
-                            semstat:definitionCount 25261 ],
-                           [semstat:hasSemanticFeature semstat:RdfsDomain ; 
-                            semstat:definitionCount 21 ],
-                           [semstat:hasSemanticFeature semstat:RdfsRange ; 
-                            semstat:definitionCount 20 ],
-                           [semstat:hasSemanticFeature semstat:RdfsSubClassOf ; 
-                            semstat:definitionCount 15 ],
-                           [semstat:hasSemanticFeature semstat:RdfType ; 
-                            semstat:definitionCount 744154334 ];
-           void:sparqlEndpoint <http://ma-graph.org/sparql>.
-_:autos126 semstat:hasStat [semstat:hasSemanticFeature semstat:OwlSameAs ; 
-                            semstat:definitionCount 887424 ],
-                           [semstat:hasSemanticFeature semstat:RdfsDomain ; 
-                            semstat:definitionCount 21 ],
-                           [semstat:hasSemanticFeature semstat:RdfsRange ; 
-                            semstat:definitionCount 20 ],
-                           [semstat:hasSemanticFeature semstat:RdfsSubClassOf ; 
-                            semstat:definitionCount 15 ];
-           void:sparqlEndpoint <https://bmrbpub.pdbj.org/search/rdf>.
-_:autos143 semstat:hasStat [semstat:hasSemanticFeature semstat:OwlAllDisjointClasses ; 
-                            semstat:definitionCount 5 ],
-                           [semstat:hasSemanticFeature semstat:OwlSameAs ; 
-                            semstat:definitionCount 214606404 ],
-                           [semstat:hasSemanticFeature semstat:OwlDisjointUnionOf ; 
-                            semstat:definitionCount 4 ],
-                           [semstat:hasSemanticFeature semstat:OwlDisjointWith ; 
-                            semstat:definitionCount 52 ],
-                           [semstat:hasSemanticFeature semstat:RdfsDomain ; 
-                            semstat:definitionCount 1371 ],
-                           [semstat:hasSemanticFeature semstat:OwlEquivalentClass ; 
-                            semstat:definitionCount 237 ],
-                           [semstat:hasSemanticFeature semstat:OwlEquivalentProperty ; 
-                            semstat:definitionCount 11 ],
-                           [semstat:hasSemanticFeature semstat:OwlInverseOf ; 
-                            semstat:definitionCount 285 ],
-                           [semstat:hasSemanticFeature semstat:OwlPropertyChainAxiom ; 
-                            semstat:definitionCount 6 ],
-                           [semstat:hasSemanticFeature semstat:RdfsRange ; 
-                            semstat:definitionCount 1428 ],
-                           [semstat:hasSemanticFeature semstat:RdfsSubClassOf ; 
-                            semstat:definitionCount 1131 ],
-                           [semstat:hasSemanticFeature semstat:RdfType ; 
-                            semstat:definitionCount 124355447 ],
-                           [semstat:hasSemanticFeature semstat:OwlWithRestrictions ; 
-                            semstat:definitionCount 2 ],
-                           [semstat:hasSemanticFeature semstat:OwlAsymmetricProperty ; 
-                            semstat:definitionCount 3 ],
-                           [semstat:hasSemanticFeature semstat:OwlFunctionalProperty ; 
-                            semstat:definitionCount 15  ; 
-                            semstat:usageCount 26080972 ],
-                           [semstat:hasSemanticFeature semstat:OwlInverseFunctionalProperty ; 
-                            semstat:definitionCount 2 ],
-                           [semstat:hasSemanticFeature semstat:OwlIrreflexiveProperty ; 
-                            semstat:definitionCount 2 ],
-                           [semstat:hasSemanticFeature semstat:OwlSymmetricProperty ; 
-                            semstat:definitionCount 14  ; 
-                            semstat:usageCount 112579 ],
-                           [semstat:hasSemanticFeature semstat:OwlTransitiveProperty ; 
-                            semstat:definitionCount 4  ; 
-                            semstat:usageCount 16095 ];
-           void:sparqlEndpoint <http://publications.europa.eu/webapi/rdf/sparql>.
-_:autos15 semstat:hasStat [semstat:hasSemanticFeature semstat:RdfsRange ; 
-                           semstat:definitionCount 14 ],
-                          [semstat:hasSemanticFeature semstat:RdfsSubClassOf ; 
-                           semstat:definitionCount 111537 ],
-                          [semstat:hasSemanticFeature semstat:RdfType ; 
-                           semstat:definitionCount 513808 ],
-                          [semstat:hasSemanticFeature semstat:OwlAsymmetricProperty ; 
-                           semstat:definitionCount 12 ],
-                          [semstat:hasSemanticFeature semstat:OwlIrreflexiveProperty ; 
-                           semstat:definitionCount 12 ],
-                          [semstat:hasSemanticFeature semstat:OwlDisjointWith ; 
-                           semstat:definitionCount 2 ],
-                          [semstat:hasSemanticFeature semstat:RdfsDomain ; 
-                           semstat:definitionCount 14 ],
-                          [semstat:hasSemanticFeature semstat:OwlEquivalentClass ; 
-                           semstat:definitionCount 58275 ],
-                          [semstat:hasSemanticFeature semstat:OwlInverseOf ; 
-                           semstat:definitionCount 6 ];
-          void:sparqlEndpoint <https://www.orpha.net/sparql>.
-_:autos159 semstat:hasStat [semstat:hasSemanticFeature semstat:RdfsSubClassOf ; 
-                            semstat:definitionCount 3 ],
-                           [semstat:hasSemanticFeature semstat:RdfType ; 
-                            semstat:definitionCount 30688663 ];
-           void:sparqlEndpoint <https://hub-rnsr.idref.fr/sparql>.
-_:autos170 semstat:hasStat [semstat:hasSemanticFeature semstat:OwlSameAs ; 
-                            semstat:definitionCount 6775 ];
-           void:sparqlEndpoint <http://datos.bcn.cl/sparql>.
-_:autos171 semstat:hasStat [semstat:hasSemanticFeature semstat:OwlSameAs ; 
-                            semstat:definitionCount 99929 ],
-                           [semstat:hasSemanticFeature semstat:RdfsDomain ; 
-                            semstat:definitionCount 21 ],
-                           [semstat:hasSemanticFeature semstat:OwlEquivalentClass ; 
-                            semstat:definitionCount 1 ],
-                           [semstat:hasSemanticFeature semstat:OwlEquivalentProperty ; 
-                            semstat:definitionCount 1 ],
-                           [semstat:hasSemanticFeature semstat:RdfsRange ; 
-                            semstat:definitionCount 20 ],
-                           [semstat:hasSemanticFeature semstat:RdfsSubClassOf ; 
-                            semstat:definitionCount 132 ],
-                           [semstat:hasSemanticFeature semstat:RdfType ; 
-                            semstat:definitionCount 55120218 ];
-           void:sparqlEndpoint <https://jpsearch.go.jp/rdf/sparql>.
-_:autos179 semstat:hasStat [semstat:hasSemanticFeature semstat:RdfType ; 
-                            semstat:definitionCount 59316 ];
-           void:sparqlEndpoint <http://www.imagesnippets.com/sparql/images>.
-_:autos190 semstat:hasStat [semstat:hasSemanticFeature semstat:OwlSameAs ; 
-                            semstat:definitionCount 27472 ],
-                           [semstat:hasSemanticFeature semstat:OwlDisjointWith ; 
-                            semstat:definitionCount 1 ],
-                           [semstat:hasSemanticFeature semstat:RdfsDomain ; 
-                            semstat:definitionCount 254 ],
-                           [semstat:hasSemanticFeature semstat:OwlEquivalentClass ; 
-                            semstat:definitionCount 93 ],
-                           [semstat:hasSemanticFeature semstat:OwlInverseOf ; 
-                            semstat:definitionCount 6 ],
-                           [semstat:hasSemanticFeature semstat:RdfsRange ; 
-                            semstat:definitionCount 859 ],
-                           [semstat:hasSemanticFeature semstat:RdfsSubClassOf ; 
-                            semstat:definitionCount 91 ],
-                           [semstat:hasSemanticFeature semstat:RdfType ; 
-                            semstat:definitionCount 36931642 ],
-                           [semstat:hasSemanticFeature semstat:OwlFunctionalProperty ; 
-                            semstat:definitionCount 2 ];
-           void:sparqlEndpoint <https://opendata.aragon.es/sparql>.
-_:autos191 semstat:hasStat [semstat:hasSemanticFeature semstat:OwlSameAs ; 
-                            semstat:definitionCount 794356 ],
-                           [semstat:hasSemanticFeature semstat:RdfsDomain ; 
-                            semstat:definitionCount 21 ],
-                           [semstat:hasSemanticFeature semstat:RdfsRange ; 
-                            semstat:definitionCount 20 ],
-                           [semstat:hasSemanticFeature semstat:RdfsSubClassOf ; 
-                            semstat:definitionCount 15 ],
-                           [semstat:hasSemanticFeature semstat:RdfType ; 
-                            semstat:definitionCount 16832820 ];
-           void:sparqlEndpoint <http://sparql.archives-ouvertes.fr/sparql>.
-_:autos2 semstat:hasStat [semstat:hasSemanticFeature semstat:OwlWithRestrictions ; 
-                          semstat:definitionCount 6 ],
-                         [semstat:hasSemanticFeature semstat:OwlAsymmetricProperty ; 
-                          semstat:definitionCount 15  ; 
-                          semstat:usageCount 175 ],
-                         [semstat:hasSemanticFeature semstat:OwlFunctionalProperty ; 
-                          semstat:definitionCount 18  ; 
-                          semstat:usageCount 634 ],
-                         [semstat:hasSemanticFeature semstat:OwlInverseFunctionalProperty ; 
-                          semstat:definitionCount 15  ; 
-                          semstat:usageCount 424829 ],
-                         [semstat:hasSemanticFeature semstat:OwlDifferentFrom ; 
-                          semstat:definitionCount 32 ],
-                         [semstat:hasSemanticFeature semstat:OwlIrreflexiveProperty ; 
-                          semstat:definitionCount 15  ; 
-                          semstat:usageCount 175 ],
-                         [semstat:hasSemanticFeature semstat:OwlDisjointWith ; 
-                          semstat:definitionCount 90 ],
-                         [semstat:hasSemanticFeature semstat:OwlSymmetricProperty ; 
-                          semstat:definitionCount 15  ; 
-                          semstat:usageCount 23705769 ],
-                         [semstat:hasSemanticFeature semstat:OwlTransitiveProperty ; 
-                          semstat:definitionCount 20  ; 
-                          semstat:usageCount 23705913 ],
+                          semstat:definitionCount 2  ; 
+                          semstat:usageCount 70 ],
                          [semstat:hasSemanticFeature semstat:RdfsDomain ; 
-                          semstat:definitionCount 1019 ],
-                         [semstat:hasSemanticFeature semstat:OwlEquivalentClass ; 
-                          semstat:definitionCount 90 ],
-                         [semstat:hasSemanticFeature semstat:OwlEquivalentProperty ; 
-                          semstat:definitionCount 32 ],
+                          semstat:definitionCount 54 ],
                          [semstat:hasSemanticFeature semstat:OwlInverseOf ; 
-                          semstat:definitionCount 150 ],
-                         [semstat:hasSemanticFeature semstat:OwlAllDisjointClasses ; 
-                          semstat:definitionCount 1 ],
-                         [semstat:hasSemanticFeature semstat:OwlPropertyChainAxiom ; 
-                          semstat:definitionCount 14 ],
+                          semstat:definitionCount 144 ],
                          [semstat:hasSemanticFeature semstat:RdfsRange ; 
-                          semstat:definitionCount 1147 ],
+                          semstat:definitionCount 48 ],
                          [semstat:hasSemanticFeature semstat:RdfsSubClassOf ; 
-                          semstat:definitionCount 2397 ],
-                         [semstat:hasSemanticFeature semstat:OwlSameAs ; 
-                          semstat:definitionCount 23718443 ],
-                         [semstat:hasSemanticFeature semstat:RdfType ; 
-                          semstat:definitionCount 271630 ];
-         void:sparqlEndpoint <http://data.plan4all.eu/sparql>.
-_:autos20 semstat:hasStat [semstat:hasSemanticFeature semstat:RdfType ; 
-                           semstat:definitionCount 2444319 ],
-                          [semstat:hasSemanticFeature semstat:OwlSameAs ; 
-                           semstat:definitionCount 130778 ];
-          void:sparqlEndpoint <https://id.ndl.go.jp/auth/ndla/sparql>.
-_:autos217 semstat:hasStat [semstat:hasSemanticFeature semstat:OwlSameAs ; 
+                          semstat:definitionCount 19 ];
+         void:sparqlEndpoint <http://agrovoc.uniroma2.it/sparql>.
+_:autos119 semstat:hasStat [semstat:hasSemanticFeature semstat:RdfType ; 
+                            semstat:definitionCount 541873 ];
+           void:sparqlEndpoint <https://www.nakala.fr/sparql>.
+_:autos12 semstat:hasStat [semstat:hasSemanticFeature semstat:OwlAllDisjointClasses ; 
+                           semstat:definitionCount 5 ];
+          void:sparqlEndpoint <http://publications.europa.eu/webapi/rdf/sparql>.
+_:autos121 semstat:hasStat [semstat:hasSemanticFeature semstat:OwlSameAs ; 
                             semstat:definitionCount 3880 ],
                            [semstat:hasSemanticFeature semstat:OwlDisjointWith ; 
                             semstat:definitionCount 12 ],
@@ -282,7 +49,837 @@ _:autos217 semstat:hasStat [semstat:hasSemanticFeature semstat:OwlSameAs ;
                            [semstat:hasSemanticFeature semstat:RdfType ; 
                             semstat:definitionCount 1718234 ];
            void:sparqlEndpoint <http://data.legilux.public.lu/sparql>.
-_:autos221 semstat:hasStat [semstat:hasSemanticFeature semstat:OwlAllDisjointClasses ; 
+_:autos138 semstat:hasStat [semstat:hasSemanticFeature semstat:OwlSameAs ; 
+                            semstat:definitionCount 16039 ],
+                           [semstat:hasSemanticFeature semstat:OwlDifferentFrom ; 
+                            semstat:definitionCount 983 ],
+                           [semstat:hasSemanticFeature semstat:RdfsDomain ; 
+                            semstat:definitionCount 21 ],
+                           [semstat:hasSemanticFeature semstat:RdfsRange ; 
+                            semstat:definitionCount 20 ],
+                           [semstat:hasSemanticFeature semstat:RdfsSubClassOf ; 
+                            semstat:definitionCount 15 ],
+                           [semstat:hasSemanticFeature semstat:RdfType ; 
+                            semstat:definitionCount 58477 ];
+           void:sparqlEndpoint <https://sparql.dl.itc.u-tokyo.ac.jp/>.
+_:autos153 semstat:hasStat [semstat:hasSemanticFeature semstat:OwlDisjointWith ; 
+                            semstat:definitionCount 2 ],
+                           [semstat:hasSemanticFeature semstat:RdfsDomain ; 
+                            semstat:definitionCount 14 ],
+                           [semstat:hasSemanticFeature semstat:OwlEquivalentClass ; 
+                            semstat:definitionCount 58275 ],
+                           [semstat:hasSemanticFeature semstat:OwlInverseOf ; 
+                            semstat:definitionCount 6 ],
+                           [semstat:hasSemanticFeature semstat:RdfsRange ; 
+                            semstat:definitionCount 14 ],
+                           [semstat:hasSemanticFeature semstat:RdfsSubClassOf ; 
+                            semstat:definitionCount 111537 ],
+                           [semstat:hasSemanticFeature semstat:RdfType ; 
+                            semstat:definitionCount 513808 ],
+                           [semstat:hasSemanticFeature semstat:OwlAsymmetricProperty ; 
+                            semstat:definitionCount 12 ],
+                           [semstat:hasSemanticFeature semstat:OwlIrreflexiveProperty ; 
+                            semstat:definitionCount 12 ];
+           void:sparqlEndpoint <https://www.orpha.net/sparql>.
+_:autos163 semstat:hasStat [semstat:hasSemanticFeature semstat:RdfsDomain ; 
+                            semstat:definitionCount 21 ],
+                           [semstat:hasSemanticFeature semstat:RdfsRange ; 
+                            semstat:definitionCount 20 ],
+                           [semstat:hasSemanticFeature semstat:RdfsSubClassOf ; 
+                            semstat:definitionCount 15 ],
+                           [semstat:hasSemanticFeature semstat:RdfType ; 
+                            semstat:definitionCount 102146 ];
+           void:sparqlEndpoint <http://sparql.lynx-project.eu/>.
+_:autos17 semstat:hasStat [semstat:hasSemanticFeature semstat:OwlEquivalentProperty ; 
+                           semstat:definitionCount 1 ],
+                          [semstat:hasSemanticFeature semstat:RdfsRange ; 
+                           semstat:definitionCount 20 ],
+                          [semstat:hasSemanticFeature semstat:RdfsSubClassOf ; 
+                           semstat:definitionCount 132 ],
+                          [semstat:hasSemanticFeature semstat:RdfType ; 
+                           semstat:definitionCount 55120218 ],
+                          [semstat:hasSemanticFeature semstat:OwlSameAs ; 
+                           semstat:definitionCount 99929 ],
+                          [semstat:hasSemanticFeature semstat:RdfsDomain ; 
+                           semstat:definitionCount 21 ],
+                          [semstat:hasSemanticFeature semstat:OwlEquivalentClass ; 
+                           semstat:definitionCount 1 ];
+          void:sparqlEndpoint <https://jpsearch.go.jp/rdf/sparql>.
+_:autos19 semstat:hasStat [semstat:hasSemanticFeature semstat:RdfsRange ; 
+                           semstat:definitionCount 20 ],
+                          [semstat:hasSemanticFeature semstat:RdfsSubClassOf ; 
+                           semstat:definitionCount 15 ],
+                          [semstat:hasSemanticFeature semstat:RdfType ; 
+                           semstat:definitionCount 39005369 ],
+                          [semstat:hasSemanticFeature semstat:OwlSameAs ; 
+                           semstat:definitionCount 866885 ],
+                          [semstat:hasSemanticFeature semstat:RdfsDomain ; 
+                           semstat:definitionCount 21 ],
+                          [semstat:hasSemanticFeature semstat:OwlEquivalentClass ; 
+                           semstat:definitionCount 37 ];
+          void:sparqlEndpoint <https://isidore.science/sparql>.
+_:autos191 semstat:hasStat [semstat:hasSemanticFeature semstat:RdfsDomain ; 
+                            semstat:definitionCount 21 ],
+                           [semstat:hasSemanticFeature semstat:RdfsRange ; 
+                            semstat:definitionCount 20 ],
+                           [semstat:hasSemanticFeature semstat:RdfsSubClassOf ; 
+                            semstat:definitionCount 15 ],
+                           [semstat:hasSemanticFeature semstat:RdfType ; 
+                            semstat:definitionCount 884 ];
+           void:sparqlEndpoint <https://io.datascience-paris-saclay.fr/sparql>.
+_:autos2 semstat:hasStat [semstat:hasSemanticFeature semstat:RdfType ; 
+                          semstat:definitionCount 59316 ];
+         void:sparqlEndpoint <http://www.imagesnippets.com/sparql/images>.
+_:autos207 semstat:hasStat [semstat:hasSemanticFeature semstat:OwlSameAs ; 
+                            semstat:definitionCount 205458 ],
+                           [semstat:hasSemanticFeature semstat:RdfsDomain ; 
+                            semstat:definitionCount 21 ],
+                           [semstat:hasSemanticFeature semstat:RdfsRange ; 
+                            semstat:definitionCount 20 ],
+                           [semstat:hasSemanticFeature semstat:RdfsSubClassOf ; 
+                            semstat:definitionCount 15 ],
+                           [semstat:hasSemanticFeature semstat:RdfType ; 
+                            semstat:definitionCount 248979238 ];
+           void:sparqlEndpoint <https://babelnet.org/sparql/>.
+_:autos22 semstat:hasStat [semstat:hasSemanticFeature semstat:OwlEquivalentProperty ; 
+                           semstat:definitionCount 32 ],
+                          [semstat:hasSemanticFeature semstat:OwlInverseOf ; 
+                           semstat:definitionCount 150 ],
+                          [semstat:hasSemanticFeature semstat:OwlPropertyChainAxiom ; 
+                           semstat:definitionCount 14 ],
+                          [semstat:hasSemanticFeature semstat:RdfsRange ; 
+                           semstat:definitionCount 1147 ],
+                          [semstat:hasSemanticFeature semstat:RdfsSubClassOf ; 
+                           semstat:definitionCount 2397 ],
+                          [semstat:hasSemanticFeature semstat:RdfType ; 
+                           semstat:definitionCount 271630 ],
+                          [semstat:hasSemanticFeature semstat:OwlWithRestrictions ; 
+                           semstat:definitionCount 6 ],
+                          [semstat:hasSemanticFeature semstat:OwlAsymmetricProperty ; 
+                           semstat:definitionCount 15  ; 
+                           semstat:usageCount 175 ],
+                          [semstat:hasSemanticFeature semstat:OwlFunctionalProperty ; 
+                           semstat:definitionCount 18  ; 
+                           semstat:usageCount 634 ],
+                          [semstat:hasSemanticFeature semstat:OwlInverseFunctionalProperty ; 
+                           semstat:definitionCount 15  ; 
+                           semstat:usageCount 424829 ],
+                          [semstat:hasSemanticFeature semstat:OwlIrreflexiveProperty ; 
+                           semstat:definitionCount 15  ; 
+                           semstat:usageCount 175 ],
+                          [semstat:hasSemanticFeature semstat:OwlSymmetricProperty ; 
+                           semstat:definitionCount 15  ; 
+                           semstat:usageCount 23705769 ],
+                          [semstat:hasSemanticFeature semstat:OwlAllDisjointClasses ; 
+                           semstat:definitionCount 1 ],
+                          [semstat:hasSemanticFeature semstat:OwlTransitiveProperty ; 
+                           semstat:definitionCount 20  ; 
+                           semstat:usageCount 23705913 ],
+                          [semstat:hasSemanticFeature semstat:OwlSameAs ; 
+                           semstat:definitionCount 23718443 ],
+                          [semstat:hasSemanticFeature semstat:OwlDifferentFrom ; 
+                           semstat:definitionCount 32 ],
+                          [semstat:hasSemanticFeature semstat:OwlDisjointWith ; 
+                           semstat:definitionCount 90 ],
+                          [semstat:hasSemanticFeature semstat:RdfsDomain ; 
+                           semstat:definitionCount 1019 ],
+                          [semstat:hasSemanticFeature semstat:OwlEquivalentClass ; 
+                           semstat:definitionCount 90 ];
+          void:sparqlEndpoint <http://data.plan4all.eu/sparql>.
+_:autos23 semstat:hasStat [semstat:hasSemanticFeature semstat:OwlEquivalentClass ; 
+                           semstat:definitionCount 93 ],
+                          [semstat:hasSemanticFeature semstat:OwlInverseOf ; 
+                           semstat:definitionCount 6 ],
+                          [semstat:hasSemanticFeature semstat:RdfsRange ; 
+                           semstat:definitionCount 859 ],
+                          [semstat:hasSemanticFeature semstat:RdfsSubClassOf ; 
+                           semstat:definitionCount 91 ],
+                          [semstat:hasSemanticFeature semstat:RdfType ; 
+                           semstat:definitionCount 36930723 ],
+                          [semstat:hasSemanticFeature semstat:OwlFunctionalProperty ; 
+                           semstat:definitionCount 2 ],
+                          [semstat:hasSemanticFeature semstat:OwlSameAs ; 
+                           semstat:definitionCount 27472 ],
+                          [semstat:hasSemanticFeature semstat:OwlDisjointWith ; 
+                           semstat:definitionCount 1 ],
+                          [semstat:hasSemanticFeature semstat:RdfsDomain ; 
+                           semstat:definitionCount 254 ];
+          void:sparqlEndpoint <https://opendata.aragon.es/sparql>.
+_:autos231 semstat:hasStat [semstat:hasSemanticFeature semstat:OwlSameAs ; 
+                            semstat:definitionCount 200 ],
+                           [semstat:hasSemanticFeature semstat:RdfsDomain ; 
+                            semstat:definitionCount 21 ],
+                           [semstat:hasSemanticFeature semstat:RdfsRange ; 
+                            semstat:definitionCount 20 ],
+                           [semstat:hasSemanticFeature semstat:RdfsSubClassOf ; 
+                            semstat:definitionCount 15 ],
+                           [semstat:hasSemanticFeature semstat:RdfType ; 
+                            semstat:definitionCount 1936640 ];
+           void:sparqlEndpoint <https://data.gesis.org/claimskg/sparql>.
+_:autos234 semstat:hasStat [semstat:hasSemanticFeature semstat:OwlSameAs ; 
+                            semstat:definitionCount 887424 ],
+                           [semstat:hasSemanticFeature semstat:RdfsDomain ; 
+                            semstat:definitionCount 21 ],
+                           [semstat:hasSemanticFeature semstat:RdfsRange ; 
+                            semstat:definitionCount 20 ],
+                           [semstat:hasSemanticFeature semstat:RdfsSubClassOf ; 
+                            semstat:definitionCount 15 ];
+           void:sparqlEndpoint <https://bmrbpub.pdbj.org/search/rdf>.
+_:autos25 semstat:hasStat [semstat:hasSemanticFeature semstat:OwlAllDisjointClasses ; 
+                           semstat:definitionCount 3 ],
+                          [semstat:hasSemanticFeature semstat:OwlSameAs ; 
+                           semstat:definitionCount 17851 ];
+          void:sparqlEndpoint <http://dati.camera.it/sparql>.
+_:autos263 semstat:hasStat [semstat:hasSemanticFeature semstat:RdfType ; 
+                            semstat:definitionCount 110555519 ];
+           void:sparqlEndpoint <http://opencitations.net/sparql>.
+_:autos264 semstat:hasStat [semstat:hasSemanticFeature semstat:RdfType ; 
+                            semstat:definitionCount 475831762 ];
+           void:sparqlEndpoint <http://opencitations.net/index/sparql>.
+_:autos311 semstat:hasStat [semstat:hasSemanticFeature semstat:OwlSameAs ; 
+                            semstat:definitionCount 56479 ],
+                           [semstat:hasSemanticFeature semstat:RdfsDomain ; 
+                            semstat:definitionCount 16 ],
+                           [semstat:hasSemanticFeature semstat:RdfsRange ; 
+                            semstat:definitionCount 16 ],
+                           [semstat:hasSemanticFeature semstat:RdfsSubClassOf ; 
+                            semstat:definitionCount 47 ],
+                           [semstat:hasSemanticFeature semstat:RdfType ; 
+                            semstat:definitionCount 218376 ];
+           void:sparqlEndpoint <http://data.rism.info/sparql>.
+_:autos312 semstat:hasStat [semstat:hasSemanticFeature semstat:OwlSameAs ; 
+                            semstat:definitionCount 208 ],
+                           [semstat:hasSemanticFeature semstat:RdfsDomain ; 
+                            semstat:definitionCount 279 ],
+                           [semstat:hasSemanticFeature semstat:OwlEquivalentClass ; 
+                            semstat:definitionCount 63 ],
+                           [semstat:hasSemanticFeature semstat:OwlEquivalentProperty ; 
+                            semstat:definitionCount 192 ],
+                           [semstat:hasSemanticFeature semstat:RdfsRange ; 
+                            semstat:definitionCount 167 ],
+                           [semstat:hasSemanticFeature semstat:RdfsSubClassOf ; 
+                            semstat:definitionCount 78 ],
+                           [semstat:hasSemanticFeature semstat:RdfType ; 
+                            semstat:definitionCount 28983090 ],
+                           [semstat:hasSemanticFeature semstat:OwlInverseFunctionalProperty ; 
+                            semstat:definitionCount 3 ];
+           void:sparqlEndpoint <http://eventmedia.eurecom.fr/sparql>.
+_:autos325 semstat:hasStat [semstat:hasSemanticFeature semstat:OwlSameAs ; 
+                            semstat:definitionCount 6881 ],
+                           [semstat:hasSemanticFeature semstat:OwlDisjointWith ; 
+                            semstat:definitionCount 27 ],
+                           [semstat:hasSemanticFeature semstat:RdfsDomain ; 
+                            semstat:definitionCount 2478 ],
+                           [semstat:hasSemanticFeature semstat:OwlEquivalentClass ; 
+                            semstat:definitionCount 397 ],
+                           [semstat:hasSemanticFeature semstat:OwlEquivalentProperty ; 
+                            semstat:definitionCount 240 ],
+                           [semstat:hasSemanticFeature semstat:RdfsRange ; 
+                            semstat:definitionCount 2685 ],
+                           [semstat:hasSemanticFeature semstat:RdfsSubClassOf ; 
+                            semstat:definitionCount 802 ],
+                           [semstat:hasSemanticFeature semstat:RdfType ; 
+                            semstat:definitionCount 16529686 ],
+                           [semstat:hasSemanticFeature semstat:OwlFunctionalProperty ; 
+                            semstat:definitionCount 30  ; 
+                            semstat:usageCount 449215 ];
+           void:sparqlEndpoint <http://nl.dbpedia.org/sparql>.
+_:autos367 semstat:hasStat [semstat:hasSemanticFeature semstat:OwlSameAs ; 
+                            semstat:definitionCount 16289 ],
+                           [semstat:hasSemanticFeature semstat:RdfsDomain ; 
+                            semstat:definitionCount 279 ],
+                           [semstat:hasSemanticFeature semstat:OwlEquivalentClass ; 
+                            semstat:definitionCount 63 ],
+                           [semstat:hasSemanticFeature semstat:OwlEquivalentProperty ; 
+                            semstat:definitionCount 192 ],
+                           [semstat:hasSemanticFeature semstat:RdfsRange ; 
+                            semstat:definitionCount 167 ],
+                           [semstat:hasSemanticFeature semstat:RdfsSubClassOf ; 
+                            semstat:definitionCount 78 ],
+                           [semstat:hasSemanticFeature semstat:RdfType ; 
+                            semstat:definitionCount 320835 ],
+                           [semstat:hasSemanticFeature semstat:OwlInverseFunctionalProperty ; 
+                            semstat:definitionCount 3 ];
+           void:sparqlEndpoint <http://data.logainm.ie/sparql>.
+_:autos380 semstat:hasStat [semstat:hasSemanticFeature semstat:OwlSameAs ; 
+                            semstat:definitionCount 122951 ],
+                           [semstat:hasSemanticFeature semstat:OwlDisjointWith ; 
+                            semstat:definitionCount 277 ],
+                           [semstat:hasSemanticFeature semstat:RdfsDomain ; 
+                            semstat:definitionCount 625 ],
+                           [semstat:hasSemanticFeature semstat:OwlEquivalentClass ; 
+                            semstat:definitionCount 20 ],
+                           [semstat:hasSemanticFeature semstat:OwlEquivalentProperty ; 
+                            semstat:definitionCount 9 ],
+                           [semstat:hasSemanticFeature semstat:OwlInverseOf ; 
+                            semstat:definitionCount 42 ],
+                           [semstat:hasSemanticFeature semstat:OwlPropertyChainAxiom ; 
+                            semstat:definitionCount 2 ],
+                           [semstat:hasSemanticFeature semstat:RdfsRange ; 
+                            semstat:definitionCount 654 ],
+                           [semstat:hasSemanticFeature semstat:RdfsSubClassOf ; 
+                            semstat:definitionCount 162 ],
+                           [semstat:hasSemanticFeature semstat:RdfType ; 
+                            semstat:definitionCount 870687 ],
+                           [semstat:hasSemanticFeature semstat:OwlFunctionalProperty ; 
+                            semstat:definitionCount 33  ; 
+                            semstat:usageCount 20781 ],
+                           [semstat:hasSemanticFeature semstat:OwlInverseFunctionalProperty ; 
+                            semstat:definitionCount 12  ; 
+                            semstat:usageCount 36 ],
+                           [semstat:hasSemanticFeature semstat:OwlSymmetricProperty ; 
+                            semstat:definitionCount 7  ; 
+                            semstat:usageCount 7 ],
+                           [semstat:hasSemanticFeature semstat:OwlTransitiveProperty ; 
+                            semstat:definitionCount 12  ; 
+                            semstat:usageCount 7 ];
+           void:sparqlEndpoint <http://dati.isprambiente.it/sparql>.
+_:autos382 semstat:hasStat [semstat:hasSemanticFeature semstat:OwlDisjointUnionOf ; 
+                            semstat:definitionCount 3 ],
+                           [semstat:hasSemanticFeature semstat:OwlDisjointWith ; 
+                            semstat:definitionCount 3 ],
+                           [semstat:hasSemanticFeature semstat:RdfsDomain ; 
+                            semstat:definitionCount 4 ],
+                           [semstat:hasSemanticFeature semstat:OwlEquivalentClass ; 
+                            semstat:definitionCount 13 ],
+                           [semstat:hasSemanticFeature semstat:RdfsRange ; 
+                            semstat:definitionCount 4 ],
+                           [semstat:hasSemanticFeature semstat:RdfsSubClassOf ; 
+                            semstat:definitionCount 3476 ],
+                           [semstat:hasSemanticFeature semstat:RdfType ; 
+                            semstat:definitionCount 3745 ],
+                           [semstat:hasSemanticFeature semstat:OwlAsymmetricProperty ; 
+                            semstat:definitionCount 1 ],
+                           [semstat:hasSemanticFeature semstat:OwlIrreflexiveProperty ; 
+                            semstat:definitionCount 1 ];
+           void:sparqlEndpoint <http://onto.beef.org.pl/sparql>.
+_:autos393 semstat:hasStat [semstat:hasSemanticFeature semstat:OwlSameAs ; 
+                            semstat:definitionCount 2585024 ],
+                           [semstat:hasSemanticFeature semstat:OwlDisjointWith ; 
+                            semstat:definitionCount 269 ],
+                           [semstat:hasSemanticFeature semstat:RdfsDomain ; 
+                            semstat:definitionCount 8709 ],
+                           [semstat:hasSemanticFeature semstat:OwlEquivalentClass ; 
+                            semstat:definitionCount 488 ],
+                           [semstat:hasSemanticFeature semstat:OwlEquivalentProperty ; 
+                            semstat:definitionCount 446 ],
+                           [semstat:hasSemanticFeature semstat:OwlInverseOf ; 
+                            semstat:definitionCount 73 ],
+                           [semstat:hasSemanticFeature semstat:RdfsRange ; 
+                            semstat:definitionCount 31566 ],
+                           [semstat:hasSemanticFeature semstat:RdfsSubClassOf ; 
+                            semstat:definitionCount 25006 ],
+                           [semstat:hasSemanticFeature semstat:RdfType ; 
+                            semstat:definitionCount 1811107 ],
+                           [semstat:hasSemanticFeature semstat:OwlFunctionalProperty ; 
+                            semstat:definitionCount 4840  ; 
+                            semstat:usageCount 11523 ],
+                           [semstat:hasSemanticFeature semstat:OwlInverseFunctionalProperty ; 
+                            semstat:definitionCount 22  ; 
+                            semstat:usageCount 352154 ],
+                           [semstat:hasSemanticFeature semstat:OwlSymmetricProperty ; 
+                            semstat:definitionCount 5  ; 
+                            semstat:usageCount 225 ],
+                           [semstat:hasSemanticFeature semstat:OwlTransitiveProperty ; 
+                            semstat:definitionCount 10 ];
+           void:sparqlEndpoint <http://apps.morelab.deusto.es/labman/sparql>.
+_:autos4 semstat:hasStat [semstat:hasSemanticFeature semstat:OwlSameAs ; 
+                          semstat:definitionCount 1556 ],
+                         [semstat:hasSemanticFeature semstat:RdfType ; 
+                          semstat:definitionCount 53818 ],
+                         [semstat:hasSemanticFeature semstat:RdfsDomain ; 
+                          semstat:definitionCount 43 ],
+                         [semstat:hasSemanticFeature semstat:RdfsRange ; 
+                          semstat:definitionCount 30 ],
+                         [semstat:hasSemanticFeature semstat:RdfsSubClassOf ; 
+                          semstat:definitionCount 49 ];
+         void:sparqlEndpoint <http://registry.it.csiro.au/system/query>.
+_:autos421 semstat:hasStat [semstat:hasSemanticFeature semstat:OwlAllDifferent ; 
+                            semstat:definitionCount 128 ],
+                           [semstat:hasSemanticFeature semstat:OwlSameAs ; 
+                            semstat:definitionCount 17031438 ],
+                           [semstat:hasSemanticFeature semstat:OwlDisjointWith ; 
+                            semstat:definitionCount 814 ],
+                           [semstat:hasSemanticFeature semstat:RdfsDomain ; 
+                            semstat:definitionCount 333 ],
+                           [semstat:hasSemanticFeature semstat:OwlEquivalentClass ; 
+                            semstat:definitionCount 50 ],
+                           [semstat:hasSemanticFeature semstat:OwlEquivalentProperty ; 
+                            semstat:definitionCount 10 ],
+                           [semstat:hasSemanticFeature semstat:OwlInverseOf ; 
+                            semstat:definitionCount 27 ],
+                           [semstat:hasSemanticFeature semstat:RdfsRange ; 
+                            semstat:definitionCount 23433 ],
+                           [semstat:hasSemanticFeature semstat:RdfsSubClassOf ; 
+                            semstat:definitionCount 898 ],
+                           [semstat:hasSemanticFeature semstat:RdfType ; 
+                            semstat:definitionCount 36843524 ],
+                           [semstat:hasSemanticFeature semstat:OwlFunctionalProperty ; 
+                            semstat:definitionCount 7  ; 
+                            semstat:usageCount 1574935 ],
+                           [semstat:hasSemanticFeature semstat:OwlInverseFunctionalProperty ; 
+                            semstat:definitionCount 17  ; 
+                            semstat:usageCount 95111 ],
+                           [semstat:hasSemanticFeature semstat:OwlSymmetricProperty ; 
+                            semstat:definitionCount 4  ; 
+                            semstat:usageCount 6735184 ],
+                           [semstat:hasSemanticFeature semstat:OwlTransitiveProperty ; 
+                            semstat:definitionCount 3  ; 
+                            semstat:usageCount 6214640 ];
+           void:sparqlEndpoint <http://data.bnf.fr/sparql>.
+_:autos427 semstat:hasStat [semstat:hasSemanticFeature semstat:OwlSameAs ; 
+                            semstat:definitionCount 4990 ],
+                           [semstat:hasSemanticFeature semstat:OwlDisjointWith ; 
+                            semstat:definitionCount 89 ],
+                           [semstat:hasSemanticFeature semstat:RdfsDomain ; 
+                            semstat:definitionCount 283 ],
+                           [semstat:hasSemanticFeature semstat:OwlEquivalentClass ; 
+                            semstat:definitionCount 10 ],
+                           [semstat:hasSemanticFeature semstat:OwlEquivalentProperty ; 
+                            semstat:definitionCount 1 ],
+                           [semstat:hasSemanticFeature semstat:OwlInverseOf ; 
+                            semstat:definitionCount 26 ],
+                           [semstat:hasSemanticFeature semstat:RdfsRange ; 
+                            semstat:definitionCount 279 ],
+                           [semstat:hasSemanticFeature semstat:RdfsSubClassOf ; 
+                            semstat:definitionCount 83 ],
+                           [semstat:hasSemanticFeature semstat:RdfType ; 
+                            semstat:definitionCount 35230679 ],
+                           [semstat:hasSemanticFeature semstat:OwlFunctionalProperty ; 
+                            semstat:definitionCount 1  ; 
+                            semstat:usageCount 1333931 ],
+                           [semstat:hasSemanticFeature semstat:OwlInverseFunctionalProperty ; 
+                            semstat:definitionCount 4 ];
+           void:sparqlEndpoint <http://serendipity.utpl.edu.ec/lod/sparql>.
+_:autos44 semstat:hasStat [semstat:hasSemanticFeature semstat:RdfsDomain ; 
+                           semstat:definitionCount 21 ],
+                          [semstat:hasSemanticFeature semstat:RdfsRange ; 
+                           semstat:definitionCount 20 ],
+                          [semstat:hasSemanticFeature semstat:RdfsSubClassOf ; 
+                           semstat:definitionCount 15 ],
+                          [semstat:hasSemanticFeature semstat:RdfType ; 
+                           semstat:definitionCount 16832820 ],
+                          [semstat:hasSemanticFeature semstat:OwlSameAs ; 
+                           semstat:definitionCount 794356 ];
+          void:sparqlEndpoint <http://sparql.archives-ouvertes.fr/sparql>.
+_:autos445 semstat:hasStat [semstat:hasSemanticFeature semstat:OwlSameAs ; 
+                            semstat:definitionCount 10778328 ],
+                           [semstat:hasSemanticFeature semstat:OwlDifferentFrom ; 
+                            semstat:definitionCount 126 ],
+                           [semstat:hasSemanticFeature semstat:OwlDisjointWith ; 
+                            semstat:definitionCount 190 ],
+                           [semstat:hasSemanticFeature semstat:RdfsDomain ; 
+                            semstat:definitionCount 4051 ],
+                           [semstat:hasSemanticFeature semstat:OwlEquivalentClass ; 
+                            semstat:definitionCount 551 ],
+                           [semstat:hasSemanticFeature semstat:OwlEquivalentProperty ; 
+                            semstat:definitionCount 470 ],
+                           [semstat:hasSemanticFeature semstat:OwlInverseOf ; 
+                            semstat:definitionCount 190 ],
+                           [semstat:hasSemanticFeature semstat:OwlPropertyChainAxiom ; 
+                            semstat:definitionCount 13 ],
+                           [semstat:hasSemanticFeature semstat:OwlPropertyDisjointWith ; 
+                            semstat:definitionCount 1 ],
+                           [semstat:hasSemanticFeature semstat:RdfsRange ; 
+                            semstat:definitionCount 4097 ],
+                           [semstat:hasSemanticFeature semstat:RdfsSubClassOf ; 
+                            semstat:definitionCount 1844 ],
+                           [semstat:hasSemanticFeature semstat:RdfType ; 
+                            semstat:definitionCount 5756068 ],
+                           [semstat:hasSemanticFeature semstat:OwlFunctionalProperty ; 
+                            semstat:definitionCount 37  ; 
+                            semstat:usageCount 1766748 ],
+                           [semstat:hasSemanticFeature semstat:OwlInverseFunctionalProperty ; 
+                            semstat:definitionCount 12  ; 
+                            semstat:usageCount 1787888 ],
+                           [semstat:hasSemanticFeature semstat:OwlSymmetricProperty ; 
+                            semstat:definitionCount 13  ; 
+                            semstat:usageCount 30355 ],
+                           [semstat:hasSemanticFeature semstat:OwlTransitiveProperty ; 
+                            semstat:definitionCount 14 ];
+           void:sparqlEndpoint <http://ja.dbpedia.org/sparql>.
+_:autos448 semstat:hasStat [semstat:hasSemanticFeature semstat:OwlDisjointWith ; 
+                            semstat:definitionCount 72 ],
+                           [semstat:hasSemanticFeature semstat:RdfsDomain ; 
+                            semstat:definitionCount 269 ],
+                           [semstat:hasSemanticFeature semstat:OwlEquivalentClass ; 
+                            semstat:definitionCount 10 ],
+                           [semstat:hasSemanticFeature semstat:OwlEquivalentProperty ; 
+                            semstat:definitionCount 2 ],
+                           [semstat:hasSemanticFeature semstat:OwlInverseOf ; 
+                            semstat:definitionCount 82 ],
+                           [semstat:hasSemanticFeature semstat:RdfsRange ; 
+                            semstat:definitionCount 252 ],
+                           [semstat:hasSemanticFeature semstat:RdfsSubClassOf ; 
+                            semstat:definitionCount 212 ],
+                           [semstat:hasSemanticFeature semstat:RdfType ; 
+                            semstat:definitionCount 1017691 ],
+                           [semstat:hasSemanticFeature semstat:OwlFunctionalProperty ; 
+                            semstat:definitionCount 6  ; 
+                            semstat:usageCount 27 ],
+                           [semstat:hasSemanticFeature semstat:OwlIrreflexiveProperty ; 
+                            semstat:definitionCount 1 ],
+                           [semstat:hasSemanticFeature semstat:OwlSymmetricProperty ; 
+                            semstat:definitionCount 1 ],
+                           [semstat:hasSemanticFeature semstat:OwlTransitiveProperty ; 
+                            semstat:definitionCount 2 ];
+           void:sparqlEndpoint <http://webenemasuno.linkeddata.es/sparql>.
+_:autos450 semstat:hasStat [semstat:hasSemanticFeature semstat:OwlSameAs ; 
+                            semstat:definitionCount 1383 ],
+                           [semstat:hasSemanticFeature semstat:RdfsDomain ; 
+                            semstat:definitionCount 279 ],
+                           [semstat:hasSemanticFeature semstat:OwlEquivalentClass ; 
+                            semstat:definitionCount 63 ],
+                           [semstat:hasSemanticFeature semstat:OwlEquivalentProperty ; 
+                            semstat:definitionCount 192 ],
+                           [semstat:hasSemanticFeature semstat:RdfsRange ; 
+                            semstat:definitionCount 167 ],
+                           [semstat:hasSemanticFeature semstat:RdfsSubClassOf ; 
+                            semstat:definitionCount 78 ],
+                           [semstat:hasSemanticFeature semstat:RdfType ; 
+                            semstat:definitionCount 5912466 ],
+                           [semstat:hasSemanticFeature semstat:OwlInverseFunctionalProperty ; 
+                            semstat:definitionCount 3 ];
+           void:sparqlEndpoint <http://data.hnm.hu/sparql>.
+_:autos46 semstat:hasStat [semstat:hasSemanticFeature semstat:RdfsSubClassOf ; 
+                           semstat:definitionCount 3 ],
+                          [semstat:hasSemanticFeature semstat:RdfType ; 
+                           semstat:definitionCount 30688663 ];
+          void:sparqlEndpoint <https://hub-rnsr.idref.fr/sparql>.
+_:autos493 semstat:hasStat [semstat:hasSemanticFeature semstat:OwlSameAs ; 
+                            semstat:definitionCount 275239 ],
+                           [semstat:hasSemanticFeature semstat:RdfsDomain ; 
+                            semstat:definitionCount 31 ],
+                           [semstat:hasSemanticFeature semstat:OwlEquivalentClass ; 
+                            semstat:definitionCount 2 ],
+                           [semstat:hasSemanticFeature semstat:RdfsRange ; 
+                            semstat:definitionCount 30 ],
+                           [semstat:hasSemanticFeature semstat:RdfsSubClassOf ; 
+                            semstat:definitionCount 98 ],
+                           [semstat:hasSemanticFeature semstat:RdfType ; 
+                            semstat:definitionCount 7641225 ];
+           void:sparqlEndpoint <http://data.persee.fr/sparql>.
+_:autos494 semstat:hasStat [semstat:hasSemanticFeature semstat:OwlSameAs ; 
+                            semstat:definitionCount 2 ],
+                           [semstat:hasSemanticFeature semstat:RdfsDomain ; 
+                            semstat:definitionCount 279 ],
+                           [semstat:hasSemanticFeature semstat:OwlEquivalentClass ; 
+                            semstat:definitionCount 63 ],
+                           [semstat:hasSemanticFeature semstat:OwlEquivalentProperty ; 
+                            semstat:definitionCount 192 ],
+                           [semstat:hasSemanticFeature semstat:RdfsRange ; 
+                            semstat:definitionCount 167 ],
+                           [semstat:hasSemanticFeature semstat:RdfsSubClassOf ; 
+                            semstat:definitionCount 78 ],
+                           [semstat:hasSemanticFeature semstat:RdfType ; 
+                            semstat:definitionCount 39637230 ],
+                           [semstat:hasSemanticFeature semstat:OwlInverseFunctionalProperty ; 
+                            semstat:definitionCount 3 ];
+           void:sparqlEndpoint <http://kaiko.getalp.org/sparql>.
+_:autos5 semstat:hasStat [semstat:hasSemanticFeature semstat:RdfsSubClassOf ; 
+                          semstat:definitionCount 15 ],
+                         [semstat:hasSemanticFeature semstat:RdfType ; 
+                          semstat:definitionCount 744154334 ],
+                         [semstat:hasSemanticFeature semstat:OwlSameAs ; 
+                          semstat:definitionCount 25261 ],
+                         [semstat:hasSemanticFeature semstat:RdfsDomain ; 
+                          semstat:definitionCount 21 ],
+                         [semstat:hasSemanticFeature semstat:RdfsRange ; 
+                          semstat:definitionCount 20 ];
+         void:sparqlEndpoint <http://ma-graph.org/sparql>.
+_:autos513 semstat:hasStat [semstat:hasSemanticFeature semstat:OwlAllDifferent ; 
+                            semstat:definitionCount 1 ],
+                           [semstat:hasSemanticFeature semstat:OwlDisjointWith ; 
+                            semstat:definitionCount 3 ],
+                           [semstat:hasSemanticFeature semstat:RdfsDomain ; 
+                            semstat:definitionCount 219 ],
+                           [semstat:hasSemanticFeature semstat:OwlEquivalentClass ; 
+                            semstat:definitionCount 23 ],
+                           [semstat:hasSemanticFeature semstat:OwlEquivalentProperty ; 
+                            semstat:definitionCount 6 ],
+                           [semstat:hasSemanticFeature semstat:OwlInverseOf ; 
+                            semstat:definitionCount 25 ],
+                           [semstat:hasSemanticFeature semstat:RdfsRange ; 
+                            semstat:definitionCount 268 ],
+                           [semstat:hasSemanticFeature semstat:RdfsSubClassOf ; 
+                            semstat:definitionCount 335 ],
+                           [semstat:hasSemanticFeature semstat:RdfType ; 
+                            semstat:definitionCount 16556834 ],
+                           [semstat:hasSemanticFeature semstat:OwlWithRestrictions ; 
+                            semstat:definitionCount 3 ],
+                           [semstat:hasSemanticFeature semstat:OwlFunctionalProperty ; 
+                            semstat:definitionCount 1 ],
+                           [semstat:hasSemanticFeature semstat:OwlInverseFunctionalProperty ; 
+                            semstat:definitionCount 2  ; 
+                            semstat:usageCount 860850 ],
+                           [semstat:hasSemanticFeature semstat:OwlTransitiveProperty ; 
+                            semstat:definitionCount 1 ];
+           void:sparqlEndpoint <http://sparql.odw.tw/>.
+_:autos514 semstat:hasStat [semstat:hasSemanticFeature semstat:OwlAllDifferent ; 
+                            semstat:definitionCount 1 ],
+                           [semstat:hasSemanticFeature semstat:OwlDisjointWith ; 
+                            semstat:definitionCount 3 ],
+                           [semstat:hasSemanticFeature semstat:RdfsDomain ; 
+                            semstat:definitionCount 219 ],
+                           [semstat:hasSemanticFeature semstat:OwlEquivalentClass ; 
+                            semstat:definitionCount 23 ],
+                           [semstat:hasSemanticFeature semstat:OwlEquivalentProperty ; 
+                            semstat:definitionCount 6 ],
+                           [semstat:hasSemanticFeature semstat:OwlInverseOf ; 
+                            semstat:definitionCount 25 ],
+                           [semstat:hasSemanticFeature semstat:RdfsRange ; 
+                            semstat:definitionCount 268 ],
+                           [semstat:hasSemanticFeature semstat:RdfsSubClassOf ; 
+                            semstat:definitionCount 335 ],
+                           [semstat:hasSemanticFeature semstat:RdfType ; 
+                            semstat:definitionCount 16556834 ],
+                           [semstat:hasSemanticFeature semstat:OwlWithRestrictions ; 
+                            semstat:definitionCount 3 ],
+                           [semstat:hasSemanticFeature semstat:OwlFunctionalProperty ; 
+                            semstat:definitionCount 1 ],
+                           [semstat:hasSemanticFeature semstat:OwlInverseFunctionalProperty ; 
+                            semstat:definitionCount 2  ; 
+                            semstat:usageCount 860850 ],
+                           [semstat:hasSemanticFeature semstat:OwlTransitiveProperty ; 
+                            semstat:definitionCount 1 ];
+           void:sparqlEndpoint <http://sparql.odw.tw/>.
+_:autos517 semstat:hasStat [semstat:hasSemanticFeature semstat:OwlSameAs ; 
+                            semstat:definitionCount 80658 ],
+                           [semstat:hasSemanticFeature semstat:RdfsDomain ; 
+                            semstat:definitionCount 136 ],
+                           [semstat:hasSemanticFeature semstat:OwlEquivalentClass ; 
+                            semstat:definitionCount 2 ],
+                           [semstat:hasSemanticFeature semstat:OwlEquivalentProperty ; 
+                            semstat:definitionCount 1 ],
+                           [semstat:hasSemanticFeature semstat:OwlInverseOf ; 
+                            semstat:definitionCount 3 ],
+                           [semstat:hasSemanticFeature semstat:RdfsRange ; 
+                            semstat:definitionCount 99 ],
+                           [semstat:hasSemanticFeature semstat:RdfsSubClassOf ; 
+                            semstat:definitionCount 23 ],
+                           [semstat:hasSemanticFeature semstat:RdfType ; 
+                            semstat:definitionCount 3484049 ],
+                           [semstat:hasSemanticFeature semstat:OwlFunctionalProperty ; 
+                            semstat:definitionCount 35  ; 
+                            semstat:usageCount 5500183 ],
+                           [semstat:hasSemanticFeature semstat:OwlInverseFunctionalProperty ; 
+                            semstat:definitionCount 1 ];
+           void:sparqlEndpoint <http://extbi.lab.aau.dk/sparql/>.
+_:autos519 semstat:hasStat [semstat:hasSemanticFeature semstat:OwlSameAs ; 
+                            semstat:definitionCount 2585024 ],
+                           [semstat:hasSemanticFeature semstat:OwlDisjointWith ; 
+                            semstat:definitionCount 269 ],
+                           [semstat:hasSemanticFeature semstat:RdfsDomain ; 
+                            semstat:definitionCount 8709 ],
+                           [semstat:hasSemanticFeature semstat:OwlEquivalentClass ; 
+                            semstat:definitionCount 488 ],
+                           [semstat:hasSemanticFeature semstat:OwlEquivalentProperty ; 
+                            semstat:definitionCount 446 ],
+                           [semstat:hasSemanticFeature semstat:OwlInverseOf ; 
+                            semstat:definitionCount 73 ],
+                           [semstat:hasSemanticFeature semstat:RdfsRange ; 
+                            semstat:definitionCount 31566 ],
+                           [semstat:hasSemanticFeature semstat:RdfsSubClassOf ; 
+                            semstat:definitionCount 25006 ],
+                           [semstat:hasSemanticFeature semstat:RdfType ; 
+                            semstat:definitionCount 1811107 ],
+                           [semstat:hasSemanticFeature semstat:OwlFunctionalProperty ; 
+                            semstat:definitionCount 4840  ; 
+                            semstat:usageCount 11523 ],
+                           [semstat:hasSemanticFeature semstat:OwlInverseFunctionalProperty ; 
+                            semstat:definitionCount 22  ; 
+                            semstat:usageCount 352154 ],
+                           [semstat:hasSemanticFeature semstat:OwlSymmetricProperty ; 
+                            semstat:definitionCount 5  ; 
+                            semstat:usageCount 225 ],
+                           [semstat:hasSemanticFeature semstat:OwlTransitiveProperty ; 
+                            semstat:definitionCount 10 ];
+           void:sparqlEndpoint <http://eu.dbpedia.org/sparql>.
+_:autos547 semstat:hasStat [semstat:hasSemanticFeature semstat:OwlSameAs ; 
+                            semstat:definitionCount 15674890 ],
+                           [semstat:hasSemanticFeature semstat:OwlDisjointWith ; 
+                            semstat:definitionCount 25 ],
+                           [semstat:hasSemanticFeature semstat:RdfsDomain ; 
+                            semstat:definitionCount 2442 ],
+                           [semstat:hasSemanticFeature semstat:OwlEquivalentClass ; 
+                            semstat:definitionCount 410 ],
+                           [semstat:hasSemanticFeature semstat:OwlEquivalentProperty ; 
+                            semstat:definitionCount 221 ],
+                           [semstat:hasSemanticFeature semstat:RdfsRange ; 
+                            semstat:definitionCount 2594 ],
+                           [semstat:hasSemanticFeature semstat:RdfsSubClassOf ; 
+                            semstat:definitionCount 778 ],
+                           [semstat:hasSemanticFeature semstat:RdfType ; 
+                            semstat:definitionCount 15302841 ],
+                           [semstat:hasSemanticFeature semstat:OwlFunctionalProperty ; 
+                            semstat:definitionCount 30  ; 
+                            semstat:usageCount 486532 ];
+           void:sparqlEndpoint <http://pt.dbpedia.org/sparql>.
+_:autos591 semstat:hasStat [semstat:hasSemanticFeature semstat:OwlSameAs ; 
+                            semstat:definitionCount 18853 ],
+                           [semstat:hasSemanticFeature semstat:RdfsDomain ; 
+                            semstat:definitionCount 168 ],
+                           [semstat:hasSemanticFeature semstat:OwlEquivalentClass ; 
+                            semstat:definitionCount 2 ],
+                           [semstat:hasSemanticFeature semstat:OwlEquivalentProperty ; 
+                            semstat:definitionCount 3 ],
+                           [semstat:hasSemanticFeature semstat:RdfsRange ; 
+                            semstat:definitionCount 166 ],
+                           [semstat:hasSemanticFeature semstat:RdfsSubClassOf ; 
+                            semstat:definitionCount 53 ],
+                           [semstat:hasSemanticFeature semstat:RdfType ; 
+                            semstat:definitionCount 1030282 ];
+           void:sparqlEndpoint <http://lod.xdams.org/sparql>.
+_:autos6 semstat:hasStat [semstat:hasSemanticFeature semstat:RdfsSubClassOf ; 
+                          semstat:definitionCount 15 ],
+                         [semstat:hasSemanticFeature semstat:OwlSameAs ; 
+                          semstat:definitionCount 2773730 ],
+                         [semstat:hasSemanticFeature semstat:RdfType ; 
+                          semstat:definitionCount 415410512 ],
+                         [semstat:hasSemanticFeature semstat:RdfsDomain ; 
+                          semstat:definitionCount 21 ],
+                         [semstat:hasSemanticFeature semstat:RdfsRange ; 
+                          semstat:definitionCount 20 ];
+         void:sparqlEndpoint <http://sparql.europeana.eu/>.
+_:autos60 semstat:hasStat [semstat:hasSemanticFeature semstat:OwlDisjointWith ; 
+                           semstat:definitionCount 8 ],
+                          [semstat:hasSemanticFeature semstat:RdfsDomain ; 
+                           semstat:definitionCount 814 ],
+                          [semstat:hasSemanticFeature semstat:OwlEquivalentClass ; 
+                           semstat:definitionCount 71 ],
+                          [semstat:hasSemanticFeature semstat:OwlEquivalentProperty ; 
+                           semstat:definitionCount 194 ],
+                          [semstat:hasSemanticFeature semstat:OwlInverseOf ; 
+                           semstat:definitionCount 446 ],
+                          [semstat:hasSemanticFeature semstat:OwlPropertyChainAxiom ; 
+                           semstat:definitionCount 42 ],
+                          [semstat:hasSemanticFeature semstat:RdfsRange ; 
+                           semstat:definitionCount 741 ],
+                          [semstat:hasSemanticFeature semstat:RdfsSubClassOf ; 
+                           semstat:definitionCount 464 ],
+                          [semstat:hasSemanticFeature semstat:RdfType ; 
+                           semstat:definitionCount 24010130 ],
+                          [semstat:hasSemanticFeature semstat:OwlFunctionalProperty ; 
+                           semstat:definitionCount 2 ],
+                          [semstat:hasSemanticFeature semstat:OwlInverseFunctionalProperty ; 
+                           semstat:definitionCount 5  ; 
+                           semstat:usageCount 12789 ],
+                          [semstat:hasSemanticFeature semstat:OwlSymmetricProperty ; 
+                           semstat:definitionCount 10  ; 
+                           semstat:usageCount 25382 ],
+                          [semstat:hasSemanticFeature semstat:OwlTransitiveProperty ; 
+                           semstat:definitionCount 35  ; 
+                           semstat:usageCount 2648893 ],
+                          [semstat:hasSemanticFeature semstat:OwlSameAs ; 
+                           semstat:definitionCount 570651 ];
+          void:sparqlEndpoint <http://data.doremus.org/sparql>.
+_:autos604 semstat:hasStat [semstat:hasSemanticFeature semstat:OwlSameAs ; 
+                            semstat:definitionCount 27472 ],
+                           [semstat:hasSemanticFeature semstat:OwlDisjointWith ; 
+                            semstat:definitionCount 1 ],
+                           [semstat:hasSemanticFeature semstat:RdfsDomain ; 
+                            semstat:definitionCount 254 ],
+                           [semstat:hasSemanticFeature semstat:OwlEquivalentClass ; 
+                            semstat:definitionCount 93 ],
+                           [semstat:hasSemanticFeature semstat:OwlInverseOf ; 
+                            semstat:definitionCount 6 ],
+                           [semstat:hasSemanticFeature semstat:RdfsRange ; 
+                            semstat:definitionCount 859 ],
+                           [semstat:hasSemanticFeature semstat:RdfsSubClassOf ; 
+                            semstat:definitionCount 91 ],
+                           [semstat:hasSemanticFeature semstat:RdfType ; 
+                            semstat:definitionCount 36930723 ],
+                           [semstat:hasSemanticFeature semstat:OwlFunctionalProperty ; 
+                            semstat:definitionCount 2 ];
+           void:sparqlEndpoint <http://opendata.aragon.es/sparql>.
+_:autos613 semstat:hasStat [semstat:hasSemanticFeature semstat:OwlSameAs ; 
+                            semstat:definitionCount 12572 ],
+                           [semstat:hasSemanticFeature semstat:OwlDifferentFrom ; 
+                            semstat:definitionCount 6 ],
+                           [semstat:hasSemanticFeature semstat:RdfsDomain ; 
+                            semstat:definitionCount 279 ],
+                           [semstat:hasSemanticFeature semstat:OwlEquivalentClass ; 
+                            semstat:definitionCount 63 ],
+                           [semstat:hasSemanticFeature semstat:OwlEquivalentProperty ; 
+                            semstat:definitionCount 192 ],
+                           [semstat:hasSemanticFeature semstat:RdfsRange ; 
+                            semstat:definitionCount 167 ],
+                           [semstat:hasSemanticFeature semstat:RdfsSubClassOf ; 
+                            semstat:definitionCount 99 ],
+                           [semstat:hasSemanticFeature semstat:RdfType ; 
+                            semstat:definitionCount 41241751 ],
+                           [semstat:hasSemanticFeature semstat:OwlInverseFunctionalProperty ; 
+                            semstat:definitionCount 3 ];
+           void:sparqlEndpoint <http://www.influencetracker.com:8890/sparql>.
+_:autos659 semstat:hasStat [semstat:hasSemanticFeature semstat:OwlSameAs ; 
+                            semstat:definitionCount 54500867 ],
+                           [semstat:hasSemanticFeature semstat:RdfsDomain ; 
+                            semstat:definitionCount 16 ],
+                           [semstat:hasSemanticFeature semstat:RdfsRange ; 
+                            semstat:definitionCount 16 ],
+                           [semstat:hasSemanticFeature semstat:RdfsSubClassOf ; 
+                            semstat:definitionCount 47 ],
+                           [semstat:hasSemanticFeature semstat:RdfType ; 
+                            semstat:definitionCount 165855165 ];
+           void:sparqlEndpoint <http://lod.b3kat.de/sparql>.
+_:autos676 semstat:hasStat [semstat:hasSemanticFeature semstat:OwlSameAs ; 
+                            semstat:definitionCount 4461 ],
+                           [semstat:hasSemanticFeature semstat:OwlDisjointUnionOf ; 
+                            semstat:definitionCount 14 ],
+                           [semstat:hasSemanticFeature semstat:OwlDisjointWith ; 
+                            semstat:definitionCount 12 ],
+                           [semstat:hasSemanticFeature semstat:RdfsDomain ; 
+                            semstat:definitionCount 67 ],
+                           [semstat:hasSemanticFeature semstat:OwlEquivalentClass ; 
+                            semstat:definitionCount 1 ],
+                           [semstat:hasSemanticFeature semstat:OwlInverseOf ; 
+                            semstat:definitionCount 23 ],
+                           [semstat:hasSemanticFeature semstat:RdfsRange ; 
+                            semstat:definitionCount 65 ],
+                           [semstat:hasSemanticFeature semstat:RdfsSubClassOf ; 
+                            semstat:definitionCount 57 ],
+                           [semstat:hasSemanticFeature semstat:RdfType ; 
+                            semstat:definitionCount 37696 ],
+                           [semstat:hasSemanticFeature semstat:OwlFunctionalProperty ; 
+                            semstat:definitionCount 42  ; 
+                            semstat:usageCount 90002 ],
+                           [semstat:hasSemanticFeature semstat:OwlInverseFunctionalProperty ; 
+                            semstat:definitionCount 8  ; 
+                            semstat:usageCount 19357 ],
+                           [semstat:hasSemanticFeature semstat:OwlSymmetricProperty ; 
+                            semstat:definitionCount 2  ; 
+                            semstat:usageCount 804 ];
+           void:sparqlEndpoint <http://www.semwebtech.org/mondial/10/sparql>.
+_:autos723 semstat:hasStat [semstat:hasSemanticFeature semstat:OwlSameAs ; 
+                            semstat:definitionCount 28222 ],
+                           [semstat:hasSemanticFeature semstat:RdfsDomain ; 
+                            semstat:definitionCount 874 ],
+                           [semstat:hasSemanticFeature semstat:OwlEquivalentClass ; 
+                            semstat:definitionCount 3 ],
+                           [semstat:hasSemanticFeature semstat:RdfsRange ; 
+                            semstat:definitionCount 818 ],
+                           [semstat:hasSemanticFeature semstat:RdfsSubClassOf ; 
+                            semstat:definitionCount 373 ],
+                           [semstat:hasSemanticFeature semstat:RdfType ; 
+                            semstat:definitionCount 11632761 ];
+           void:sparqlEndpoint <http://data.library.sh.cn:8890/sparql>.
+_:autos726 semstat:hasStat [semstat:hasSemanticFeature semstat:OwlSameAs ; 
+                            semstat:definitionCount 129264 ],
+                           [semstat:hasSemanticFeature semstat:RdfsDomain ; 
+                            semstat:definitionCount 21 ],
+                           [semstat:hasSemanticFeature semstat:RdfsRange ; 
+                            semstat:definitionCount 25 ],
+                           [semstat:hasSemanticFeature semstat:RdfsSubClassOf ; 
+                            semstat:definitionCount 881 ],
+                           [semstat:hasSemanticFeature semstat:RdfType ; 
+                            semstat:definitionCount 2587188 ];
+           void:sparqlEndpoint <http://en.openei.org/sparql>.
+_:autos81 semstat:hasStat [semstat:hasSemanticFeature semstat:OwlSameAs ; 
+                           semstat:definitionCount 130778 ],
+                          [semstat:hasSemanticFeature semstat:RdfType ; 
+                           semstat:definitionCount 2444319 ];
+          void:sparqlEndpoint <https://id.ndl.go.jp/auth/ndla/sparql>.
+_:autos890 semstat:hasStat [semstat:hasSemanticFeature semstat:OwlAllDisjointClasses ; 
                             semstat:definitionCount 2 ],
                            [semstat:hasSemanticFeature semstat:OwlSameAs ; 
                             semstat:definitionCount 2 ],
@@ -305,115 +902,40 @@ _:autos221 semstat:hasStat [semstat:hasSemanticFeature semstat:OwlAllDisjointCla
                            [semstat:hasSemanticFeature semstat:OwlInverseFunctionalProperty ; 
                             semstat:definitionCount 3 ];
            void:sparqlEndpoint <https://slovník.gov.cz/sparql>.
-_:autos222 semstat:hasStat [semstat:hasSemanticFeature semstat:OwlSameAs ; 
-                            semstat:definitionCount 205458 ],
-                           [semstat:hasSemanticFeature semstat:RdfsDomain ; 
-                            semstat:definitionCount 21 ],
-                           [semstat:hasSemanticFeature semstat:RdfsRange ; 
-                            semstat:definitionCount 20 ],
-                           [semstat:hasSemanticFeature semstat:RdfsSubClassOf ; 
-                            semstat:definitionCount 15 ],
-                           [semstat:hasSemanticFeature semstat:RdfType ; 
-                            semstat:definitionCount 248979238 ];
-           void:sparqlEndpoint <https://babelnet.org/sparql/>.
-_:autos278 semstat:hasStat [semstat:hasSemanticFeature semstat:OwlSameAs ; 
-                            semstat:definitionCount 16039 ],
-                           [semstat:hasSemanticFeature semstat:OwlDifferentFrom ; 
-                            semstat:definitionCount 983 ],
-                           [semstat:hasSemanticFeature semstat:RdfsDomain ; 
-                            semstat:definitionCount 21 ],
-                           [semstat:hasSemanticFeature semstat:RdfsRange ; 
-                            semstat:definitionCount 20 ],
-                           [semstat:hasSemanticFeature semstat:RdfsSubClassOf ; 
-                            semstat:definitionCount 15 ],
-                           [semstat:hasSemanticFeature semstat:RdfType ; 
-                            semstat:definitionCount 58477 ];
-           void:sparqlEndpoint <https://sparql.dl.itc.u-tokyo.ac.jp/>.
-_:autos3 semstat:hasStat [semstat:hasSemanticFeature semstat:RdfType ; 
-                          semstat:definitionCount 787115 ],
-                         [semstat:hasSemanticFeature semstat:OwlFunctionalProperty ; 
-                          semstat:definitionCount 10  ; 
-                          semstat:usageCount 273296 ],
-                         [semstat:hasSemanticFeature semstat:OwlSymmetricProperty ; 
-                          semstat:definitionCount 10  ; 
-                          semstat:usageCount 147967 ],
-                         [semstat:hasSemanticFeature semstat:OwlTransitiveProperty ; 
-                          semstat:definitionCount 2  ; 
-                          semstat:usageCount 70 ],
-                         [semstat:hasSemanticFeature semstat:RdfsDomain ; 
-                          semstat:definitionCount 54 ],
-                         [semstat:hasSemanticFeature semstat:OwlInverseOf ; 
-                          semstat:definitionCount 144 ],
-                         [semstat:hasSemanticFeature semstat:RdfsRange ; 
-                          semstat:definitionCount 48 ],
-                         [semstat:hasSemanticFeature semstat:RdfsSubClassOf ; 
-                          semstat:definitionCount 19 ];
-         void:sparqlEndpoint <http://agrovoc.uniroma2.it/sparql>.
-_:autos30 semstat:hasStat [semstat:hasSemanticFeature semstat:OwlAllDisjointClasses ; 
+_:autos90 semstat:hasStat [semstat:hasSemanticFeature semstat:OwlSameAs ; 
+                           semstat:definitionCount 17356 ],
+                          [semstat:hasSemanticFeature semstat:RdfsDomain ; 
+                           semstat:definitionCount 279 ],
+                          [semstat:hasSemanticFeature semstat:OwlEquivalentClass ; 
+                           semstat:definitionCount 64 ],
+                          [semstat:hasSemanticFeature semstat:OwlEquivalentProperty ; 
+                           semstat:definitionCount 193 ],
+                          [semstat:hasSemanticFeature semstat:RdfsRange ; 
+                           semstat:definitionCount 167 ],
+                          [semstat:hasSemanticFeature semstat:RdfsSubClassOf ; 
+                           semstat:definitionCount 78 ],
+                          [semstat:hasSemanticFeature semstat:RdfType ; 
+                           semstat:definitionCount 2222842 ],
+                          [semstat:hasSemanticFeature semstat:OwlInverseFunctionalProperty ; 
                            semstat:definitionCount 3 ];
-          void:sparqlEndpoint <http://dati.camera.it/sparql>.
-_:autos328 semstat:hasStat [semstat:hasSemanticFeature semstat:OwlSameAs ; 
-                            semstat:definitionCount 2773730 ],
-                           [semstat:hasSemanticFeature semstat:RdfsDomain ; 
-                            semstat:definitionCount 21 ],
-                           [semstat:hasSemanticFeature semstat:RdfsRange ; 
-                            semstat:definitionCount 20 ],
-                           [semstat:hasSemanticFeature semstat:RdfsSubClassOf ; 
-                            semstat:definitionCount 15 ],
-                           [semstat:hasSemanticFeature semstat:RdfType ; 
-                            semstat:definitionCount 415410512 ];
-           void:sparqlEndpoint <http://sparql.europeana.eu/>.
-_:autos350 semstat:hasStat [semstat:hasSemanticFeature semstat:RdfType ; 
-                            semstat:definitionCount 541873 ];
-           void:sparqlEndpoint <https://www.nakala.fr/sparql>.
-_:autos38 semstat:hasStat [semstat:hasSemanticFeature semstat:RdfsDomain ; 
+          void:sparqlEndpoint <https://data.gov.cz/sparql>.
+_:autos93 semstat:hasStat [semstat:hasSemanticFeature semstat:OwlSameAs ; 
+                           semstat:definitionCount 1988 ],
+                          [semstat:hasSemanticFeature semstat:RdfsDomain ; 
                            semstat:definitionCount 21 ],
                           [semstat:hasSemanticFeature semstat:RdfsRange ; 
                            semstat:definitionCount 20 ],
                           [semstat:hasSemanticFeature semstat:RdfsSubClassOf ; 
                            semstat:definitionCount 15 ],
                           [semstat:hasSemanticFeature semstat:RdfType ; 
-                           semstat:definitionCount 884 ];
-          void:sparqlEndpoint <https://io.datascience-paris-saclay.fr/sparql>.
-_:autos383 semstat:hasStat [semstat:hasSemanticFeature semstat:OwlSameAs ; 
-                            semstat:definitionCount 866885 ],
-                           [semstat:hasSemanticFeature semstat:RdfsDomain ; 
-                            semstat:definitionCount 21 ],
-                           [semstat:hasSemanticFeature semstat:OwlEquivalentClass ; 
-                            semstat:definitionCount 37 ],
-                           [semstat:hasSemanticFeature semstat:RdfsRange ; 
-                            semstat:definitionCount 20 ],
-                           [semstat:hasSemanticFeature semstat:RdfsSubClassOf ; 
-                            semstat:definitionCount 15 ],
-                           [semstat:hasSemanticFeature semstat:RdfType ; 
-                            semstat:definitionCount 39005369 ];
-           void:sparqlEndpoint <https://isidore.science/sparql>.
-_:autos4 semstat:hasStat [semstat:hasSemanticFeature semstat:OwlSameAs ; 
-                          semstat:definitionCount 1556 ],
-                         [semstat:hasSemanticFeature semstat:RdfType ; 
-                          semstat:definitionCount 53818 ],
-                         [semstat:hasSemanticFeature semstat:RdfsDomain ; 
-                          semstat:definitionCount 43 ],
-                         [semstat:hasSemanticFeature semstat:RdfsRange ; 
-                          semstat:definitionCount 30 ],
-                         [semstat:hasSemanticFeature semstat:RdfsSubClassOf ; 
-                          semstat:definitionCount 49 ];
-         void:sparqlEndpoint <http://registry.it.csiro.au/system/query>.
-_:autos41 semstat:hasStat [semstat:hasSemanticFeature semstat:RdfsDomain ; 
-                           semstat:definitionCount 21 ],
-                          [semstat:hasSemanticFeature semstat:RdfsRange ; 
-                           semstat:definitionCount 20 ],
-                          [semstat:hasSemanticFeature semstat:RdfsSubClassOf ; 
-                           semstat:definitionCount 15 ],
-                          [semstat:hasSemanticFeature semstat:RdfType ; 
-                           semstat:definitionCount 2340000 ],
-                          [semstat:hasSemanticFeature semstat:OwlSameAs ; 
-                           semstat:definitionCount 1988 ];
+                           semstat:definitionCount 2340000 ];
           void:sparqlEndpoint <http://host.geolink.org/sparql>.
-_:autos68 semstat:hasStat [semstat:hasSemanticFeature semstat:RdfType ; 
-                           semstat:definitionCount 110555519 ];
-          void:sparqlEndpoint <http://opencitations.net/sparql>.
-<http://caligraph.org/.well-known/void> semstat:hasStat [semstat:hasSemanticFeature semstat:RdfsDomain ; 
+_:autos96 semstat:hasStat [semstat:hasSemanticFeature semstat:OwlSameAs ; 
+                           semstat:definitionCount 6775 ];
+          void:sparqlEndpoint <http://datos.bcn.cl/sparql>.
+<http://caligraph.org/.well-known/void> semstat:hasStat [semstat:hasSemanticFeature semstat:OwlSameAs ; 
+                                                         semstat:definitionCount 6306410 ],
+                                                        [semstat:hasSemanticFeature semstat:RdfsDomain ; 
                                                          semstat:definitionCount 21 ],
                                                         [semstat:hasSemanticFeature semstat:OwlEquivalentClass ; 
                                                          semstat:definitionCount 763 ],
@@ -424,17 +946,9 @@ _:autos68 semstat:hasStat [semstat:hasSemanticFeature semstat:RdfType ;
                                                         [semstat:hasSemanticFeature semstat:RdfsSubClassOf ; 
                                                          semstat:definitionCount 1146644 ],
                                                         [semstat:hasSemanticFeature semstat:RdfType ; 
-                                                         semstat:definitionCount 65804307 ],
-                                                        [semstat:hasSemanticFeature semstat:OwlSameAs ; 
-                                                         semstat:definitionCount 6306410 ];
+                                                         semstat:definitionCount 65804307 ];
                                         void:sparqlEndpoint <http://caligraph.org/sparql>.
-<http://dati.beniculturali.it/resource/datasetAnagrafeBiblioteche> semstat:hasStat [semstat:hasSemanticFeature semstat:OwlAllDisjointClasses ; 
-                                                                                    semstat:definitionCount 22 ],
-                                                                                   [semstat:hasSemanticFeature semstat:OwlSameAs ; 
-                                                                                    semstat:definitionCount 107386 ],
-                                                                                   [semstat:hasSemanticFeature semstat:OwlDisjointWith ; 
-                                                                                    semstat:definitionCount 24 ],
-                                                                                   [semstat:hasSemanticFeature semstat:RdfsDomain ; 
+<http://dati.beniculturali.it/resource/datasetAnagrafeBiblioteche> semstat:hasStat [semstat:hasSemanticFeature semstat:RdfsDomain ; 
                                                                                     semstat:definitionCount 1175 ],
                                                                                    [semstat:hasSemanticFeature semstat:OwlEquivalentClass ; 
                                                                                     semstat:definitionCount 111 ],
@@ -459,11 +973,15 @@ _:autos68 semstat:hasStat [semstat:hasSemanticFeature semstat:RdfType ;
                                                                                     semstat:definitionCount 1 ],
                                                                                    [semstat:hasSemanticFeature semstat:OwlTransitiveProperty ; 
                                                                                     semstat:definitionCount 8  ; 
-                                                                                    semstat:usageCount 187254 ];
+                                                                                    semstat:usageCount 187254 ],
+                                                                                   [semstat:hasSemanticFeature semstat:OwlAllDisjointClasses ; 
+                                                                                    semstat:definitionCount 22 ],
+                                                                                   [semstat:hasSemanticFeature semstat:OwlSameAs ; 
+                                                                                    semstat:definitionCount 107386 ],
+                                                                                   [semstat:hasSemanticFeature semstat:OwlDisjointWith ; 
+                                                                                    semstat:definitionCount 24 ];
                                                                    void:sparqlEndpoint <http://dati.beniculturali.it/sparql>.
-<http://dbkwik.webdatacommons.org/> semstat:hasStat [semstat:hasSemanticFeature semstat:OwlSameAs ; 
-                                                     semstat:definitionCount 573509 ],
-                                                    [semstat:hasSemanticFeature semstat:RdfsDomain ; 
+<http://dbkwik.webdatacommons.org/> semstat:hasStat [semstat:hasSemanticFeature semstat:RdfsDomain ; 
                                                      semstat:definitionCount 59014 ],
                                                     [semstat:hasSemanticFeature semstat:OwlEquivalentClass ; 
                                                      semstat:definitionCount 423 ],
@@ -476,23 +994,25 @@ _:autos68 semstat:hasStat [semstat:hasSemanticFeature semstat:RdfType ;
                                                     [semstat:hasSemanticFeature semstat:RdfType ; 
                                                      semstat:definitionCount 1734962 ],
                                                     [semstat:hasSemanticFeature semstat:OwlInverseFunctionalProperty ; 
-                                                     semstat:definitionCount 3 ];
+                                                     semstat:definitionCount 3 ],
+                                                    [semstat:hasSemanticFeature semstat:OwlSameAs ; 
+                                                     semstat:definitionCount 573509 ];
                                     void:sparqlEndpoint <http://dbkwik.webdatacommons.org/sparql>.
 <http://dbpedia.org/void/Dataset> semstat:hasStat [semstat:hasSemanticFeature semstat:OwlSameAs ; 
                                                    semstat:definitionCount 33624480 ],
                                                   [semstat:hasSemanticFeature semstat:RdfType ; 
-                                                   semstat:definitionCount 286405045 ],
+                                                   semstat:definitionCount 286405044 ],
                                                   [semstat:hasSemanticFeature semstat:OwlFunctionalProperty ; 
                                                    semstat:definitionCount 160  ; 
                                                    semstat:usageCount 3461431 ],
                                                   [semstat:hasSemanticFeature semstat:OwlInverseFunctionalProperty ; 
                                                    semstat:definitionCount 3 ],
-                                                  [semstat:hasSemanticFeature semstat:OwlDifferentFrom ; 
-                                                   semstat:definitionCount 57623 ],
                                                   [semstat:hasSemanticFeature semstat:OwlSymmetricProperty ; 
                                                    semstat:definitionCount 38 ],
                                                   [semstat:hasSemanticFeature semstat:OwlTransitiveProperty ; 
                                                    semstat:definitionCount 51 ],
+                                                  [semstat:hasSemanticFeature semstat:OwlDifferentFrom ; 
+                                                   semstat:definitionCount 57623 ],
                                                   [semstat:hasSemanticFeature semstat:OwlDisjointWith ; 
                                                    semstat:definitionCount 173 ],
                                                   [semstat:hasSemanticFeature semstat:RdfsDomain ; 
@@ -508,7 +1028,13 @@ _:autos68 semstat:hasStat [semstat:hasSemanticFeature semstat:RdfType ;
                                                   [semstat:hasSemanticFeature semstat:RdfsSubClassOf ; 
                                                    semstat:definitionCount 1191946 ];
                                   void:sparqlEndpoint <http://dbpedia.org/sparql>.
-<http://foodie-vm1.man.poznan.pl/about/id/http/www.bbc.co.uk/music/artists/ed2ac1e9-d51d-4eff-a2c2-85e81abd6360#Dataset> semstat:hasStat [semstat:hasSemanticFeature semstat:RdfType ; 
+<http://foodie-vm1.man.poznan.pl/about/id/http/www.bbc.co.uk/music/artists/ed2ac1e9-d51d-4eff-a2c2-85e81abd6360#Dataset> semstat:hasStat [semstat:hasSemanticFeature semstat:RdfsRange ; 
+                                                                                                                                          semstat:definitionCount 32688 ],
+                                                                                                                                         [semstat:hasSemanticFeature semstat:RdfsSubClassOf ; 
+                                                                                                                                          semstat:definitionCount 26038 ],
+                                                                                                                                         [semstat:hasSemanticFeature semstat:OwlSameAs ; 
+                                                                                                                                          semstat:definitionCount 5749 ],
+                                                                                                                                         [semstat:hasSemanticFeature semstat:RdfType ; 
                                                                                                                                           semstat:definitionCount 256155079 ],
                                                                                                                                          [semstat:hasSemanticFeature semstat:OwlDisjointWith ; 
                                                                                                                                           semstat:definitionCount 265 ],
@@ -519,30 +1045,132 @@ _:autos68 semstat:hasStat [semstat:hasSemanticFeature semstat:RdfType ;
                                                                                                                                          [semstat:hasSemanticFeature semstat:OwlEquivalentProperty ; 
                                                                                                                                           semstat:definitionCount 234 ],
                                                                                                                                          [semstat:hasSemanticFeature semstat:OwlInverseOf ; 
-                                                                                                                                          semstat:definitionCount 231 ],
-                                                                                                                                         [semstat:hasSemanticFeature semstat:OwlSameAs ; 
-                                                                                                                                          semstat:definitionCount 5749 ],
-                                                                                                                                         [semstat:hasSemanticFeature semstat:RdfsRange ; 
-                                                                                                                                          semstat:definitionCount 32688 ],
-                                                                                                                                         [semstat:hasSemanticFeature semstat:RdfsSubClassOf ; 
-                                                                                                                                          semstat:definitionCount 26038 ];
+                                                                                                                                          semstat:definitionCount 231 ];
                                                                                                                          void:sparqlEndpoint <https://www.foodie-cloud.org/sparql>.
-<http://openprovenance.org/model/opmo> semstat:hasStat [semstat:hasSemanticFeature semstat:OwlEquivalentProperty ; 
-                                                        semstat:definitionCount 7660 ],
-                                                       [semstat:hasSemanticFeature semstat:OwlInverseOf ; 
-                                                        semstat:definitionCount 4478 ],
-                                                       [semstat:hasSemanticFeature semstat:OwlPropertyChainAxiom ; 
-                                                        semstat:definitionCount 188 ],
-                                                       [semstat:hasSemanticFeature semstat:OwlPropertyDisjointWith ; 
-                                                        semstat:definitionCount 919 ],
-                                                       [semstat:hasSemanticFeature semstat:RdfsRange ; 
-                                                        semstat:definitionCount 28436 ],
-                                                       [semstat:hasSemanticFeature semstat:RdfsSubClassOf ; 
-                                                        semstat:definitionCount 45217 ],
-                                                       [semstat:hasSemanticFeature semstat:RdfType ; 
+<http://isadb.webdatacommons.org/.well-known/void> semstat:hasStat [semstat:hasSemanticFeature semstat:OwlSameAs ; 
+                                                                    semstat:definitionCount 404550 ],
+                                                                   [semstat:hasSemanticFeature semstat:RdfsDomain ; 
+                                                                    semstat:definitionCount 297 ],
+                                                                   [semstat:hasSemanticFeature semstat:OwlEquivalentClass ; 
+                                                                    semstat:definitionCount 63 ],
+                                                                   [semstat:hasSemanticFeature semstat:OwlEquivalentProperty ; 
+                                                                    semstat:definitionCount 194 ],
+                                                                   [semstat:hasSemanticFeature semstat:RdfsRange ; 
+                                                                    semstat:definitionCount 185 ],
+                                                                   [semstat:hasSemanticFeature semstat:RdfsSubClassOf ; 
+                                                                    semstat:definitionCount 76 ],
+                                                                   [semstat:hasSemanticFeature semstat:RdfType ; 
+                                                                    semstat:definitionCount 101492423 ],
+                                                                   [semstat:hasSemanticFeature semstat:OwlInverseFunctionalProperty ; 
+                                                                    semstat:definitionCount 3 ];
+                                                   void:sparqlEndpoint <http://webisa.webdatacommons.org/sparql>.
+<http://ldf.fi/warsa> semstat:hasStat [semstat:hasSemanticFeature semstat:OwlSameAs ; 
+                                       semstat:definitionCount 1555 ],
+                                      [semstat:hasSemanticFeature semstat:OwlDifferentFrom ; 
+                                       semstat:definitionCount 1024 ],
+                                      [semstat:hasSemanticFeature semstat:OwlDisjointWith ; 
+                                       semstat:definitionCount 1 ],
+                                      [semstat:hasSemanticFeature semstat:RdfsDomain ; 
+                                       semstat:definitionCount 116 ],
+                                      [semstat:hasSemanticFeature semstat:OwlInverseOf ; 
+                                       semstat:definitionCount 1 ],
+                                      [semstat:hasSemanticFeature semstat:RdfsRange ; 
+                                       semstat:definitionCount 104 ],
+                                      [semstat:hasSemanticFeature semstat:RdfsSubClassOf ; 
+                                       semstat:definitionCount 93 ],
+                                      [semstat:hasSemanticFeature semstat:RdfType ; 
+                                       semstat:definitionCount 1803600 ];
+                      void:sparqlEndpoint <http://ldf.fi/warsa/sparql>.
+<http://ldf.fi/ww1lod/void/Dataset> semstat:hasStat [semstat:hasSemanticFeature semstat:OwlSameAs ; 
+                                                     semstat:definitionCount 547 ],
+                                                    [semstat:hasSemanticFeature semstat:OwlDifferentFrom ; 
+                                                     semstat:definitionCount 292 ],
+                                                    [semstat:hasSemanticFeature semstat:OwlDisjointWith ; 
+                                                     semstat:definitionCount 21 ],
+                                                    [semstat:hasSemanticFeature semstat:RdfsDomain ; 
+                                                     semstat:definitionCount 1343 ],
+                                                    [semstat:hasSemanticFeature semstat:OwlEquivalentClass ; 
+                                                     semstat:definitionCount 24 ],
+                                                    [semstat:hasSemanticFeature semstat:OwlEquivalentProperty ; 
+                                                     semstat:definitionCount 2 ],
+                                                    [semstat:hasSemanticFeature semstat:OwlInverseOf ; 
+                                                     semstat:definitionCount 42 ],
+                                                    [semstat:hasSemanticFeature semstat:OwlPropertyChainAxiom ; 
+                                                     semstat:definitionCount 1 ],
+                                                    [semstat:hasSemanticFeature semstat:RdfsRange ; 
+                                                     semstat:definitionCount 1371 ],
+                                                    [semstat:hasSemanticFeature semstat:RdfsSubClassOf ; 
+                                                     semstat:definitionCount 772 ],
+                                                    [semstat:hasSemanticFeature semstat:RdfType ; 
+                                                     semstat:definitionCount 11821 ],
+                                                    [semstat:hasSemanticFeature semstat:OwlFunctionalProperty ; 
+                                                     semstat:definitionCount 7  ; 
+                                                     semstat:usageCount 1 ],
+                                                    [semstat:hasSemanticFeature semstat:OwlInverseFunctionalProperty ; 
+                                                     semstat:definitionCount 12  ; 
+                                                     semstat:usageCount 18 ],
+                                                    [semstat:hasSemanticFeature semstat:OwlSymmetricProperty ; 
+                                                     semstat:definitionCount 18  ; 
+                                                     semstat:usageCount 1741 ],
+                                                    [semstat:hasSemanticFeature semstat:OwlTransitiveProperty ; 
+                                                     semstat:definitionCount 7 ];
+                                    void:sparqlEndpoint <http://ldf.fi/ww1lod/sparql>.
+<http://linked.opendata.cz/resource/dataset/ic/distribution> semstat:hasStat [semstat:hasSemanticFeature semstat:OwlSameAs ; 
+                                                                              semstat:definitionCount 5345991 ],
+                                                                             [semstat:hasSemanticFeature semstat:OwlSameAs ; 
+                                                                              semstat:definitionCount 5345991 ],
+                                                                             [semstat:hasSemanticFeature semstat:OwlDisjointWith ; 
+                                                                              semstat:definitionCount 196 ],
+                                                                             [semstat:hasSemanticFeature semstat:RdfsDomain ; 
+                                                                              semstat:definitionCount 1842 ],
+                                                                             [semstat:hasSemanticFeature semstat:OwlEquivalentClass ; 
+                                                                              semstat:definitionCount 12390 ],
+                                                                             [semstat:hasSemanticFeature semstat:OwlEquivalentProperty ; 
+                                                                              semstat:definitionCount 203 ],
+                                                                             [semstat:hasSemanticFeature semstat:RdfsRange ; 
+                                                                              semstat:definitionCount 1867 ],
+                                                                             [semstat:hasSemanticFeature semstat:OwlDisjointWith ; 
+                                                                              semstat:definitionCount 196 ],
+                                                                             [semstat:hasSemanticFeature semstat:RdfsSubClassOf ; 
+                                                                              semstat:definitionCount 125033 ],
+                                                                             [semstat:hasSemanticFeature semstat:RdfsDomain ; 
+                                                                              semstat:definitionCount 1842 ],
+                                                                             [semstat:hasSemanticFeature semstat:OwlEquivalentClass ; 
+                                                                              semstat:definitionCount 12390 ],
+                                                                             [semstat:hasSemanticFeature semstat:OwlEquivalentProperty ; 
+                                                                              semstat:definitionCount 203 ],
+                                                                             [semstat:hasSemanticFeature semstat:RdfType ; 
+                                                                              semstat:definitionCount 93757095 ],
+                                                                             [semstat:hasSemanticFeature semstat:OwlFunctionalProperty ; 
+                                                                              semstat:definitionCount 21  ; 
+                                                                              semstat:usageCount 925374 ],
+                                                                             [semstat:hasSemanticFeature semstat:OwlInverseFunctionalProperty ; 
+                                                                              semstat:definitionCount 5  ; 
+                                                                              semstat:usageCount 93 ],
+                                                                             [semstat:hasSemanticFeature semstat:RdfsRange ; 
+                                                                              semstat:definitionCount 1867 ],
+                                                                             [semstat:hasSemanticFeature semstat:OwlTransitiveProperty ; 
+                                                                              semstat:definitionCount 2 ],
+                                                                             [semstat:hasSemanticFeature semstat:RdfsSubClassOf ; 
+                                                                              semstat:definitionCount 125033 ],
+                                                                             [semstat:hasSemanticFeature semstat:RdfType ; 
+                                                                              semstat:definitionCount 93757095 ],
+                                                                             [semstat:hasSemanticFeature semstat:OwlFunctionalProperty ; 
+                                                                              semstat:definitionCount 21  ; 
+                                                                              semstat:usageCount 925374 ],
+                                                                             [semstat:hasSemanticFeature semstat:OwlInverseFunctionalProperty ; 
+                                                                              semstat:definitionCount 5  ; 
+                                                                              semstat:usageCount 93 ],
+                                                                             [semstat:hasSemanticFeature semstat:OwlTransitiveProperty ; 
+                                                                              semstat:definitionCount 2 ];
+                                                             void:sparqlEndpoint <http://linked.opendata.cz/sparql>,
+                                                                                 <https://linked.opendata.cz/sparql>.
+<http://openprovenance.org/model/opmo> semstat:hasStat [semstat:hasSemanticFeature semstat:RdfType ; 
                                                         semstat:definitionCount 162109 ],
                                                        [semstat:hasSemanticFeature semstat:OwlWithRestrictions ; 
                                                         semstat:definitionCount 397 ],
+                                                       [semstat:hasSemanticFeature semstat:OwlAllDisjointProperties ; 
+                                                        semstat:definitionCount 12 ],
                                                        [semstat:hasSemanticFeature semstat:OwlAsymmetricProperty ; 
                                                         semstat:definitionCount 176  ; 
                                                         semstat:usageCount 876 ],
@@ -558,20 +1186,12 @@ _:autos68 semstat:hasStat [semstat:hasSemanticFeature semstat:RdfType ;
                                                        [semstat:hasSemanticFeature semstat:OwlReflexiveProperty ; 
                                                         semstat:definitionCount 22  ; 
                                                         semstat:usageCount 6 ],
-                                                       [semstat:hasSemanticFeature semstat:OwlAllDifferent ; 
-                                                        semstat:definitionCount 96 ],
                                                        [semstat:hasSemanticFeature semstat:OwlSymmetricProperty ; 
                                                         semstat:definitionCount 299  ; 
                                                         semstat:usageCount 5180 ],
                                                        [semstat:hasSemanticFeature semstat:OwlTransitiveProperty ; 
                                                         semstat:definitionCount 282  ; 
                                                         semstat:usageCount 1262 ],
-                                                       [semstat:hasSemanticFeature semstat:OwlAllDisjointClasses ; 
-                                                        semstat:definitionCount 203 ],
-                                                       [semstat:hasSemanticFeature semstat:OwlSameAs ; 
-                                                        semstat:definitionCount 1596 ],
-                                                       [semstat:hasSemanticFeature semstat:OwlAllDisjointProperties ; 
-                                                        semstat:definitionCount 12 ],
                                                        [semstat:hasSemanticFeature semstat:OwlDifferentFrom ; 
                                                         semstat:definitionCount 595 ],
                                                        [semstat:hasSemanticFeature semstat:OwlDisjointUnionOf ; 
@@ -581,13 +1201,27 @@ _:autos68 semstat:hasStat [semstat:hasSemanticFeature semstat:RdfType ;
                                                        [semstat:hasSemanticFeature semstat:RdfsDomain ; 
                                                         semstat:definitionCount 28834 ],
                                                        [semstat:hasSemanticFeature semstat:OwlEquivalentClass ; 
-                                                        semstat:definitionCount 4393 ];
+                                                        semstat:definitionCount 4393 ],
+                                                       [semstat:hasSemanticFeature semstat:OwlEquivalentProperty ; 
+                                                        semstat:definitionCount 7660 ],
+                                                       [semstat:hasSemanticFeature semstat:OwlInverseOf ; 
+                                                        semstat:definitionCount 4478 ],
+                                                       [semstat:hasSemanticFeature semstat:OwlPropertyChainAxiom ; 
+                                                        semstat:definitionCount 188 ],
+                                                       [semstat:hasSemanticFeature semstat:OwlAllDifferent ; 
+                                                        semstat:definitionCount 96 ],
+                                                       [semstat:hasSemanticFeature semstat:OwlPropertyDisjointWith ; 
+                                                        semstat:definitionCount 919 ],
+                                                       [semstat:hasSemanticFeature semstat:RdfsRange ; 
+                                                        semstat:definitionCount 28436 ],
+                                                       [semstat:hasSemanticFeature semstat:OwlAllDisjointClasses ; 
+                                                        semstat:definitionCount 203 ],
+                                                       [semstat:hasSemanticFeature semstat:OwlSameAs ; 
+                                                        semstat:definitionCount 1596 ],
+                                                       [semstat:hasSemanticFeature semstat:RdfsSubClassOf ; 
+                                                        semstat:definitionCount 45217 ];
                                        void:sparqlEndpoint <https://lov.linkeddata.es/dataset/lov/sparql>.
-<http://purl.oclc.org/dataset/WorldCat> semstat:hasStat [semstat:hasSemanticFeature semstat:RdfsRange ; 
-                                                         semstat:definitionCount 2914 ],
-                                                        [semstat:hasSemanticFeature semstat:RdfsSubClassOf ; 
-                                                         semstat:definitionCount 885 ],
-                                                        [semstat:hasSemanticFeature semstat:OwlSameAs ; 
+<http://purl.oclc.org/dataset/WorldCat> semstat:hasStat [semstat:hasSemanticFeature semstat:OwlSameAs ; 
                                                          semstat:definitionCount 46911975 ],
                                                         [semstat:hasSemanticFeature semstat:OwlDifferentFrom ; 
                                                          semstat:definitionCount 43530 ],
@@ -598,9 +1232,21 @@ _:autos68 semstat:hasStat [semstat:hasSemanticFeature semstat:RdfType ;
                                                         [semstat:hasSemanticFeature semstat:OwlEquivalentClass ; 
                                                          semstat:definitionCount 470 ],
                                                         [semstat:hasSemanticFeature semstat:OwlEquivalentProperty ; 
-                                                         semstat:definitionCount 395 ];
+                                                         semstat:definitionCount 395 ],
+                                                        [semstat:hasSemanticFeature semstat:RdfsRange ; 
+                                                         semstat:definitionCount 2914 ],
+                                                        [semstat:hasSemanticFeature semstat:RdfsSubClassOf ; 
+                                                         semstat:definitionCount 885 ];
                                         void:sparqlEndpoint <http://sparql.datao.net/sparql>.
-<http://purl.org/query/bioquery#OMA> semstat:hasStat [semstat:hasSemanticFeature semstat:RdfType ; 
+<http://purl.org/query/bioquery#OMA> semstat:hasStat [semstat:hasSemanticFeature semstat:OwlEquivalentClass ; 
+                                                      semstat:definitionCount 5 ],
+                                                     [semstat:hasSemanticFeature semstat:OwlInverseOf ; 
+                                                      semstat:definitionCount 4 ],
+                                                     [semstat:hasSemanticFeature semstat:RdfsRange ; 
+                                                      semstat:definitionCount 45 ],
+                                                     [semstat:hasSemanticFeature semstat:RdfsSubClassOf ; 
+                                                      semstat:definitionCount 50 ],
+                                                     [semstat:hasSemanticFeature semstat:RdfType ; 
                                                       semstat:definitionCount 42399098 ],
                                                      [semstat:hasSemanticFeature semstat:OwlFunctionalProperty ; 
                                                       semstat:definitionCount 1  ; 
@@ -614,17 +1260,114 @@ _:autos68 semstat:hasStat [semstat:hasSemanticFeature semstat:RdfType ;
                                                      [semstat:hasSemanticFeature semstat:OwlDisjointWith ; 
                                                       semstat:definitionCount 4 ],
                                                      [semstat:hasSemanticFeature semstat:RdfsDomain ; 
-                                                      semstat:definitionCount 59 ],
-                                                     [semstat:hasSemanticFeature semstat:OwlEquivalentClass ; 
-                                                      semstat:definitionCount 5 ],
-                                                     [semstat:hasSemanticFeature semstat:OwlInverseOf ; 
-                                                      semstat:definitionCount 4 ],
-                                                     [semstat:hasSemanticFeature semstat:RdfsRange ; 
-                                                      semstat:definitionCount 45 ],
-                                                     [semstat:hasSemanticFeature semstat:RdfsSubClassOf ; 
-                                                      semstat:definitionCount 50 ];
+                                                      semstat:definitionCount 59 ];
                                      void:sparqlEndpoint <https://sparql.omabrowser.org/sparql>.
-<http://rdf.ebi.ac.uk/dataset/expressionatlas/18-05-2017.rdf> semstat:hasStat [semstat:hasSemanticFeature semstat:OwlDisjointUnionOf ; 
+<http://rdf.disgenet.org/v6.0.0/void/geneDiseaseAssociation> semstat:hasStat [semstat:hasSemanticFeature semstat:OwlAllDisjointClasses ; 
+                                                                              semstat:definitionCount 35 ],
+                                                                             [semstat:hasSemanticFeature semstat:OwlSameAs ; 
+                                                                              semstat:definitionCount 2 ],
+                                                                             [semstat:hasSemanticFeature semstat:OwlDisjointWith ; 
+                                                                              semstat:definitionCount 194 ],
+                                                                             [semstat:hasSemanticFeature semstat:RdfsDomain ; 
+                                                                              semstat:definitionCount 415 ],
+                                                                             [semstat:hasSemanticFeature semstat:OwlEquivalentClass ; 
+                                                                              semstat:definitionCount 78333 ],
+                                                                             [semstat:hasSemanticFeature semstat:OwlEquivalentProperty ; 
+                                                                              semstat:definitionCount 192 ],
+                                                                             [semstat:hasSemanticFeature semstat:OwlInverseOf ; 
+                                                                              semstat:definitionCount 117 ],
+                                                                             [semstat:hasSemanticFeature semstat:OwlPropertyChainAxiom ; 
+                                                                              semstat:definitionCount 36 ],
+                                                                             [semstat:hasSemanticFeature semstat:RdfsRange ; 
+                                                                              semstat:definitionCount 400 ],
+                                                                             [semstat:hasSemanticFeature semstat:RdfsSubClassOf ; 
+                                                                              semstat:definitionCount 242014 ],
+                                                                             [semstat:hasSemanticFeature semstat:RdfType ; 
+                                                                              semstat:definitionCount 5940541 ],
+                                                                             [semstat:hasSemanticFeature semstat:OwlWithRestrictions ; 
+                                                                              semstat:definitionCount 3 ],
+                                                                             [semstat:hasSemanticFeature semstat:OwlAsymmetricProperty ; 
+                                                                              semstat:definitionCount 2 ],
+                                                                             [semstat:hasSemanticFeature semstat:OwlFunctionalProperty ; 
+                                                                              semstat:definitionCount 15  ; 
+                                                                              semstat:usageCount 1862930 ],
+                                                                             [semstat:hasSemanticFeature semstat:OwlInverseFunctionalProperty ; 
+                                                                              semstat:definitionCount 11  ; 
+                                                                              semstat:usageCount 492670 ],
+                                                                             [semstat:hasSemanticFeature semstat:OwlIrreflexiveProperty ; 
+                                                                              semstat:definitionCount 3 ],
+                                                                             [semstat:hasSemanticFeature semstat:OwlReflexiveProperty ; 
+                                                                              semstat:definitionCount 3 ],
+                                                                             [semstat:hasSemanticFeature semstat:OwlSymmetricProperty ; 
+                                                                              semstat:definitionCount 40 ],
+                                                                             [semstat:hasSemanticFeature semstat:OwlTransitiveProperty ; 
+                                                                              semstat:definitionCount 50  ; 
+                                                                              semstat:usageCount 117337 ];
+                                                             void:sparqlEndpoint <http://rdf.disgenet.org/sparql/>.
+<http://rdf.ebi.ac.uk/dataset/expressionatlas/18-05-2017.rdf> semstat:hasStat [semstat:hasSemanticFeature semstat:OwlAllDifferent ; 
+                                                                               semstat:definitionCount 112 ],
+                                                                              [semstat:hasSemanticFeature semstat:OwlAllDisjointClasses ; 
+                                                                               semstat:definitionCount 572 ],
+                                                                              [semstat:hasSemanticFeature semstat:OwlSameAs ; 
+                                                                               semstat:definitionCount 2517924 ],
+                                                                              [semstat:hasSemanticFeature semstat:OwlAllDisjointProperties ; 
+                                                                               semstat:definitionCount 2 ],
+                                                                              [semstat:hasSemanticFeature semstat:OwlDisjointUnionOf ; 
+                                                                               semstat:definitionCount 58 ],
+                                                                              [semstat:hasSemanticFeature semstat:OwlDisjointWith ; 
+                                                                               semstat:definitionCount 4813 ],
+                                                                              [semstat:hasSemanticFeature semstat:RdfsDomain ; 
+                                                                               semstat:definitionCount 4293 ],
+                                                                              [semstat:hasSemanticFeature semstat:OwlEquivalentClass ; 
+                                                                               semstat:definitionCount 576697 ],
+                                                                              [semstat:hasSemanticFeature semstat:OwlEquivalentProperty ; 
+                                                                               semstat:definitionCount 755 ],
+                                                                              [semstat:hasSemanticFeature semstat:OwlInverseOf ; 
+                                                                               semstat:definitionCount 2789 ],
+                                                                              [semstat:hasSemanticFeature semstat:OwlPropertyChainAxiom ; 
+                                                                               semstat:definitionCount 3312 ],
+                                                                              [semstat:hasSemanticFeature semstat:OwlPropertyDisjointWith ; 
+                                                                               semstat:definitionCount 55 ],
+                                                                              [semstat:hasSemanticFeature semstat:RdfsRange ; 
+                                                                               semstat:definitionCount 4227 ],
+                                                                              [semstat:hasSemanticFeature semstat:RdfsSubClassOf ; 
+                                                                               semstat:definitionCount 29080813 ],
+                                                                              [semstat:hasSemanticFeature semstat:RdfsSubProperty ; 
+                                                                               semstat:definitionCount 49 ],
+                                                                              [semstat:hasSemanticFeature semstat:RdfType ; 
+                                                                               semstat:definitionCount 1237818444 ],
+                                                                              [semstat:hasSemanticFeature semstat:OwlWithRestrictions ; 
+                                                                               semstat:definitionCount 2402 ],
+                                                                              [semstat:hasSemanticFeature semstat:OwlAsymmetricProperty ; 
+                                                                               semstat:definitionCount 49  ; 
+                                                                               semstat:usageCount 12 ],
+                                                                              [semstat:hasSemanticFeature semstat:OwlAllDifferent ; 
+                                                                               semstat:definitionCount 112 ],
+                                                                              [semstat:hasSemanticFeature semstat:OwlFunctionalProperty ; 
+                                                                               semstat:definitionCount 137  ; 
+                                                                               semstat:usageCount 503716571 ],
+                                                                              [semstat:hasSemanticFeature semstat:OwlInverseFunctionalProperty ; 
+                                                                               semstat:definitionCount 31  ; 
+                                                                               semstat:usageCount 36 ],
+                                                                              [semstat:hasSemanticFeature semstat:OwlAllDisjointClasses ; 
+                                                                               semstat:definitionCount 572 ],
+                                                                              [semstat:hasSemanticFeature semstat:OwlIrreflexiveProperty ; 
+                                                                               semstat:definitionCount 54  ; 
+                                                                               semstat:usageCount 2808661 ],
+                                                                              [semstat:hasSemanticFeature semstat:OwlReflexiveProperty ; 
+                                                                               semstat:definitionCount 20  ; 
+                                                                               semstat:usageCount 437172 ],
+                                                                              [semstat:hasSemanticFeature semstat:OwlSameAs ; 
+                                                                               semstat:definitionCount 2517924 ],
+                                                                              [semstat:hasSemanticFeature semstat:OwlAllDisjointProperties ; 
+                                                                               semstat:definitionCount 2 ],
+                                                                              [semstat:hasSemanticFeature semstat:OwlSymmetricProperty ; 
+                                                                               semstat:definitionCount 160  ; 
+                                                                               semstat:usageCount 865960457 ],
+                                                                              [semstat:hasSemanticFeature semstat:OwlTransitiveProperty ; 
+                                                                               semstat:definitionCount 242  ; 
+                                                                               semstat:usageCount 29740170 ],
+                                                                              [semstat:hasSemanticFeature semstat:OwlDisjointUnionOf ; 
                                                                                semstat:definitionCount 58 ],
                                                                               [semstat:hasSemanticFeature semstat:OwlDisjointWith ; 
                                                                                semstat:definitionCount 4813 ],
@@ -670,16 +1413,51 @@ _:autos68 semstat:hasStat [semstat:hasSemanticFeature semstat:RdfType ;
                                                                                semstat:usageCount 865960457 ],
                                                                               [semstat:hasSemanticFeature semstat:OwlTransitiveProperty ; 
                                                                                semstat:definitionCount 242  ; 
-                                                                               semstat:usageCount 29740170 ],
-                                                                              [semstat:hasSemanticFeature semstat:OwlAllDifferent ; 
-                                                                               semstat:definitionCount 112 ],
-                                                                              [semstat:hasSemanticFeature semstat:OwlAllDisjointClasses ; 
-                                                                               semstat:definitionCount 572 ],
-                                                                              [semstat:hasSemanticFeature semstat:OwlSameAs ; 
-                                                                               semstat:definitionCount 2517924 ],
-                                                                              [semstat:hasSemanticFeature semstat:OwlAllDisjointProperties ; 
-                                                                               semstat:definitionCount 2 ];
-                                                              void:sparqlEndpoint <https://www.ebi.ac.uk/rdf/services/sparql>.
+                                                                               semstat:usageCount 29740170 ];
+                                                              void:sparqlEndpoint <http://www.ebi.ac.uk/rdf/services/atlas/sparql>,
+                                                                                  <https://www.ebi.ac.uk/rdf/services/sparql>.
+<http://rdf.geospecies.org/ont/geospecies#Bio2RDF> semstat:hasStat [semstat:hasSemanticFeature semstat:OwlAllDifferent ; 
+                                                                    semstat:definitionCount 1 ],
+                                                                   [semstat:hasSemanticFeature semstat:OwlSameAs ; 
+                                                                    semstat:definitionCount 213261 ],
+                                                                   [semstat:hasSemanticFeature semstat:OwlDisjointUnionOf ; 
+                                                                    semstat:definitionCount 1 ],
+                                                                   [semstat:hasSemanticFeature semstat:OwlDisjointWith ; 
+                                                                    semstat:definitionCount 19 ],
+                                                                   [semstat:hasSemanticFeature semstat:RdfsDomain ; 
+                                                                    semstat:definitionCount 778 ],
+                                                                   [semstat:hasSemanticFeature semstat:OwlEquivalentClass ; 
+                                                                    semstat:definitionCount 165912 ],
+                                                                   [semstat:hasSemanticFeature semstat:OwlEquivalentProperty ; 
+                                                                    semstat:definitionCount 210 ],
+                                                                   [semstat:hasSemanticFeature semstat:OwlInverseOf ; 
+                                                                    semstat:definitionCount 258 ],
+                                                                   [semstat:hasSemanticFeature semstat:OwlPropertyChainAxiom ; 
+                                                                    semstat:definitionCount 132 ],
+                                                                   [semstat:hasSemanticFeature semstat:OwlPropertyDisjointWith ; 
+                                                                    semstat:definitionCount 2 ],
+                                                                   [semstat:hasSemanticFeature semstat:RdfsRange ; 
+                                                                    semstat:definitionCount 672 ],
+                                                                   [semstat:hasSemanticFeature semstat:RdfsSubClassOf ; 
+                                                                    semstat:definitionCount 1781934 ],
+                                                                   [semstat:hasSemanticFeature semstat:RdfType ; 
+                                                                    semstat:definitionCount 7764344 ],
+                                                                   [semstat:hasSemanticFeature semstat:OwlFunctionalProperty ; 
+                                                                    semstat:definitionCount 12  ; 
+                                                                    semstat:usageCount 273319 ],
+                                                                   [semstat:hasSemanticFeature semstat:OwlInverseFunctionalProperty ; 
+                                                                    semstat:definitionCount 3 ],
+                                                                   [semstat:hasSemanticFeature semstat:OwlIrreflexiveProperty ; 
+                                                                    semstat:definitionCount 4 ],
+                                                                   [semstat:hasSemanticFeature semstat:OwlReflexiveProperty ; 
+                                                                    semstat:definitionCount 1 ],
+                                                                   [semstat:hasSemanticFeature semstat:OwlSymmetricProperty ; 
+                                                                    semstat:definitionCount 23  ; 
+                                                                    semstat:usageCount 150297 ],
+                                                                   [semstat:hasSemanticFeature semstat:OwlTransitiveProperty ; 
+                                                                    semstat:definitionCount 34  ; 
+                                                                    semstat:usageCount 1064 ];
+                                                   void:sparqlEndpoint <http://taxref.mnhn.fr/sparql>.
 <http://rdfdata.eionet.europa.eu/eurostat/void.rdf#ilc_hch12> semstat:hasStat [semstat:hasSemanticFeature semstat:OwlSameAs ; 
                                                                                semstat:definitionCount 478715 ],
                                                                               [semstat:hasSemanticFeature semstat:OwlDisjointWith ; 
@@ -697,7 +1475,7 @@ _:autos68 semstat:hasStat [semstat:hasSemanticFeature semstat:RdfType ;
                                                                               [semstat:hasSemanticFeature semstat:RdfsSubClassOf ; 
                                                                                semstat:definitionCount 1033 ],
                                                                               [semstat:hasSemanticFeature semstat:RdfType ; 
-                                                                               semstat:definitionCount 185029361 ],
+                                                                               semstat:definitionCount 185029366 ],
                                                                               [semstat:hasSemanticFeature semstat:OwlFunctionalProperty ; 
                                                                                semstat:definitionCount 7  ; 
                                                                                semstat:usageCount 81968 ],
@@ -742,6 +1520,22 @@ _:autos68 semstat:hasStat [semstat:hasSemanticFeature semstat:RdfType ;
                                                                   semstat:definitionCount 4  ; 
                                                                   semstat:usageCount 2709 ];
                                                  void:sparqlEndpoint <http://digital-agenda-data.eu/sparql>.
+<http://resource.geolba.ac.at/GeologicTimeScale> semstat:hasStat [semstat:hasSemanticFeature semstat:OwlSameAs ; 
+                                                                  semstat:definitionCount 33 ],
+                                                                 [semstat:hasSemanticFeature semstat:RdfType ; 
+                                                                  semstat:definitionCount 485 ];
+                                                 void:sparqlEndpoint <http://resource.geolba.ac.at/PoolParty/sparql/GeologicTimeScale>.
+<http://resource.geolba.ac.at/GeologicUnit> semstat:hasStat [semstat:hasSemanticFeature semstat:RdfType ; 
+                                                             semstat:definitionCount 2270 ];
+                                            void:sparqlEndpoint <http://resource.geolba.ac.at/PoolParty/sparql/GeologicUnit>.
+<http://resource.geolba.ac.at/lithology> semstat:hasStat [semstat:hasSemanticFeature semstat:OwlSameAs ; 
+                                                          semstat:definitionCount 70 ],
+                                                         [semstat:hasSemanticFeature semstat:RdfType ; 
+                                                          semstat:definitionCount 566 ];
+                                         void:sparqlEndpoint <http://resource.geolba.ac.at/PoolParty/sparql/lithology>.
+<http://resource.geolba.ac.at/tectonicunit> semstat:hasStat [semstat:hasSemanticFeature semstat:RdfType ; 
+                                                             semstat:definitionCount 792 ];
+                                            void:sparqlEndpoint <http://resource.geolba.ac.at/PoolParty/sparql/tectonicunit>.
 <http://resource.geosciml.org/vocabulary/timescale/gts2018> semstat:hasStat [semstat:hasSemanticFeature semstat:OwlSameAs ; 
                                                                              semstat:definitionCount 173 ],
                                                                             [semstat:hasSemanticFeature semstat:RdfsDomain ; 
@@ -753,29 +1547,20 @@ _:autos68 semstat:hasStat [semstat:hasSemanticFeature semstat:RdfType ;
                                                                             [semstat:hasSemanticFeature semstat:RdfType ; 
                                                                              semstat:definitionCount 3509 ];
                                                             void:sparqlEndpoint <http://vocabs.ands.org.au/repository/api/sparql/csiro_international-chronostratigraphic-chart_2018-revised-corrected>.
-<http://sparql.rhea-db.org/Dataset> semstat:hasStat [semstat:hasSemanticFeature semstat:RdfsSubClassOf ; 
+<http://sparql.rhea-db.org/Dataset> semstat:hasStat [semstat:hasSemanticFeature semstat:OwlInverseOf ; 
+                                                     semstat:definitionCount 4 ],
+                                                    [semstat:hasSemanticFeature semstat:RdfsSubClassOf ; 
                                                      semstat:definitionCount 496981 ],
                                                     [semstat:hasSemanticFeature semstat:RdfType ; 
                                                      semstat:definitionCount 221051 ],
                                                     [semstat:hasSemanticFeature semstat:OwlTransitiveProperty ; 
-                                                     semstat:definitionCount 1 ],
-                                                    [semstat:hasSemanticFeature semstat:OwlInverseOf ; 
-                                                     semstat:definitionCount 4 ];
+                                                     semstat:definitionCount 1 ];
                                     void:sparqlEndpoint <https://sparql.rhea-db.org/sparql>.
-<http://uriburner.com/about/id/http/ssl.netidc.com/?a%5B%5D=%3Ca+href%3Dhttps%3A%2F%2Fwww.scorespro.com%2F%3Elivescores%3C%2Fa%3E#Dataset> semstat:hasStat [semstat:hasSemanticFeature semstat:OwlAllDifferent ; 
-                                                                                                                                                            semstat:definitionCount 299 ],
-                                                                                                                                                           [semstat:hasSemanticFeature semstat:OwlAllDisjointClasses ; 
-                                                                                                                                                            semstat:definitionCount 158 ],
-                                                                                                                                                           [semstat:hasSemanticFeature semstat:OwlSameAs ; 
-                                                                                                                                                            semstat:definitionCount 103242 ],
-                                                                                                                                                           [semstat:hasSemanticFeature semstat:OwlDifferentFrom ; 
-                                                                                                                                                            semstat:definitionCount 733 ],
-                                                                                                                                                           [semstat:hasSemanticFeature semstat:OwlDisjointUnionOf ; 
-                                                                                                                                                            semstat:definitionCount 23 ],
-                                                                                                                                                           [semstat:hasSemanticFeature semstat:OwlDisjointWith ; 
-                                                                                                                                                            semstat:definitionCount 3778 ],
-                                                                                                                                                           [semstat:hasSemanticFeature semstat:RdfsDomain ; 
-                                                                                                                                                            semstat:definitionCount 33279 ],
+<http://thes.bncf.firenze.sbn.it/> semstat:hasStat [semstat:hasSemanticFeature semstat:RdfType ; 
+                                                    semstat:definitionCount 65500 ];
+                                   void:sparqlEndpoint <https://digitale.bncf.firenze.sbn.it/openrdf-workbench/repositories/NS/query>.
+<http://uriburner.com/about/id/http/ssl.netidc.com/?a%5B%5D=%3Ca+href%3Dhttps%3A%2F%2Fwww.scorespro.com%2F%3Elivescores%3C%2Fa%3E#Dataset> semstat:hasStat [semstat:hasSemanticFeature semstat:RdfsDomain ; 
+                                                                                                                                                            semstat:definitionCount 33293 ],
                                                                                                                                                            [semstat:hasSemanticFeature semstat:OwlEquivalentClass ; 
                                                                                                                                                             semstat:definitionCount 170836 ],
                                                                                                                                                            [semstat:hasSemanticFeature semstat:OwlEquivalentProperty ; 
@@ -787,32 +1572,95 @@ _:autos68 semstat:hasStat [semstat:hasSemanticFeature semstat:RdfType ;
                                                                                                                                                            [semstat:hasSemanticFeature semstat:OwlPropertyDisjointWith ; 
                                                                                                                                                             semstat:definitionCount 11 ],
                                                                                                                                                            [semstat:hasSemanticFeature semstat:RdfsRange ; 
-                                                                                                                                                            semstat:definitionCount 55297 ],
+                                                                                                                                                            semstat:definitionCount 55311 ],
                                                                                                                                                            [semstat:hasSemanticFeature semstat:RdfsSubClassOf ; 
                                                                                                                                                             semstat:definitionCount 593442 ],
                                                                                                                                                            [semstat:hasSemanticFeature semstat:RdfType ; 
-                                                                                                                                                            semstat:definitionCount 22893086 ],
+                                                                                                                                                            semstat:definitionCount 22901459 ],
                                                                                                                                                            [semstat:hasSemanticFeature semstat:OwlWithRestrictions ; 
                                                                                                                                                             semstat:definitionCount 12 ],
                                                                                                                                                            [semstat:hasSemanticFeature semstat:OwlAsymmetricProperty ; 
                                                                                                                                                             semstat:definitionCount 14 ],
                                                                                                                                                            [semstat:hasSemanticFeature semstat:OwlFunctionalProperty ; 
                                                                                                                                                             semstat:definitionCount 5294  ; 
-                                                                                                                                                            semstat:usageCount 307119 ],
+                                                                                                                                                            semstat:usageCount 307149 ],
                                                                                                                                                            [semstat:hasSemanticFeature semstat:OwlInverseFunctionalProperty ; 
                                                                                                                                                             semstat:definitionCount 99  ; 
-                                                                                                                                                            semstat:usageCount 1989965 ],
+                                                                                                                                                            semstat:usageCount 1990145 ],
                                                                                                                                                            [semstat:hasSemanticFeature semstat:OwlIrreflexiveProperty ; 
                                                                                                                                                             semstat:definitionCount 20 ],
                                                                                                                                                            [semstat:hasSemanticFeature semstat:OwlReflexiveProperty ; 
                                                                                                                                                             semstat:definitionCount 12 ],
                                                                                                                                                            [semstat:hasSemanticFeature semstat:OwlSymmetricProperty ; 
                                                                                                                                                             semstat:definitionCount 102  ; 
-                                                                                                                                                            semstat:usageCount 344599 ],
+                                                                                                                                                            semstat:usageCount 344786 ],
                                                                                                                                                            [semstat:hasSemanticFeature semstat:OwlTransitiveProperty ; 
                                                                                                                                                             semstat:definitionCount 124  ; 
-                                                                                                                                                            semstat:usageCount 942965 ];
-                                                                                                                                           void:sparqlEndpoint <http://uriburner.com/sparql>.
+                                                                                                                                                            semstat:usageCount 943042 ],
+                                                                                                                                                           [semstat:hasSemanticFeature semstat:OwlAllDifferent ; 
+                                                                                                                                                            semstat:definitionCount 299 ],
+                                                                                                                                                           [semstat:hasSemanticFeature semstat:OwlAllDisjointClasses ; 
+                                                                                                                                                            semstat:definitionCount 158 ],
+                                                                                                                                                           [semstat:hasSemanticFeature semstat:OwlSameAs ; 
+                                                                                                                                                            semstat:definitionCount 103319 ],
+                                                                                                                                                           [semstat:hasSemanticFeature semstat:OwlAllDifferent ; 
+                                                                                                                                                            semstat:definitionCount 299 ],
+                                                                                                                                                           [semstat:hasSemanticFeature semstat:OwlAllDisjointClasses ; 
+                                                                                                                                                            semstat:definitionCount 158 ],
+                                                                                                                                                           [semstat:hasSemanticFeature semstat:OwlSameAs ; 
+                                                                                                                                                            semstat:definitionCount 103319 ],
+                                                                                                                                                           [semstat:hasSemanticFeature semstat:OwlDifferentFrom ; 
+                                                                                                                                                            semstat:definitionCount 733 ],
+                                                                                                                                                           [semstat:hasSemanticFeature semstat:OwlDifferentFrom ; 
+                                                                                                                                                            semstat:definitionCount 733 ],
+                                                                                                                                                           [semstat:hasSemanticFeature semstat:OwlDisjointUnionOf ; 
+                                                                                                                                                            semstat:definitionCount 23 ],
+                                                                                                                                                           [semstat:hasSemanticFeature semstat:OwlDisjointWith ; 
+                                                                                                                                                            semstat:definitionCount 3778 ],
+                                                                                                                                                           [semstat:hasSemanticFeature semstat:RdfsDomain ; 
+                                                                                                                                                            semstat:definitionCount 33293 ],
+                                                                                                                                                           [semstat:hasSemanticFeature semstat:OwlEquivalentClass ; 
+                                                                                                                                                            semstat:definitionCount 170836 ],
+                                                                                                                                                           [semstat:hasSemanticFeature semstat:OwlEquivalentProperty ; 
+                                                                                                                                                            semstat:definitionCount 4473 ],
+                                                                                                                                                           [semstat:hasSemanticFeature semstat:OwlInverseOf ; 
+                                                                                                                                                            semstat:definitionCount 2402 ],
+                                                                                                                                                           [semstat:hasSemanticFeature semstat:OwlPropertyChainAxiom ; 
+                                                                                                                                                            semstat:definitionCount 173 ],
+                                                                                                                                                           [semstat:hasSemanticFeature semstat:OwlPropertyDisjointWith ; 
+                                                                                                                                                            semstat:definitionCount 11 ],
+                                                                                                                                                           [semstat:hasSemanticFeature semstat:RdfsRange ; 
+                                                                                                                                                            semstat:definitionCount 55311 ],
+                                                                                                                                                           [semstat:hasSemanticFeature semstat:RdfsSubClassOf ; 
+                                                                                                                                                            semstat:definitionCount 593442 ],
+                                                                                                                                                           [semstat:hasSemanticFeature semstat:RdfType ; 
+                                                                                                                                                            semstat:definitionCount 22901459 ],
+                                                                                                                                                           [semstat:hasSemanticFeature semstat:OwlDisjointUnionOf ; 
+                                                                                                                                                            semstat:definitionCount 23 ],
+                                                                                                                                                           [semstat:hasSemanticFeature semstat:OwlWithRestrictions ; 
+                                                                                                                                                            semstat:definitionCount 12 ],
+                                                                                                                                                           [semstat:hasSemanticFeature semstat:OwlAsymmetricProperty ; 
+                                                                                                                                                            semstat:definitionCount 14 ],
+                                                                                                                                                           [semstat:hasSemanticFeature semstat:OwlFunctionalProperty ; 
+                                                                                                                                                            semstat:definitionCount 5294  ; 
+                                                                                                                                                            semstat:usageCount 307149 ],
+                                                                                                                                                           [semstat:hasSemanticFeature semstat:OwlInverseFunctionalProperty ; 
+                                                                                                                                                            semstat:definitionCount 99  ; 
+                                                                                                                                                            semstat:usageCount 1990145 ],
+                                                                                                                                                           [semstat:hasSemanticFeature semstat:OwlIrreflexiveProperty ; 
+                                                                                                                                                            semstat:definitionCount 20 ],
+                                                                                                                                                           [semstat:hasSemanticFeature semstat:OwlReflexiveProperty ; 
+                                                                                                                                                            semstat:definitionCount 12 ],
+                                                                                                                                                           [semstat:hasSemanticFeature semstat:OwlSymmetricProperty ; 
+                                                                                                                                                            semstat:definitionCount 102  ; 
+                                                                                                                                                            semstat:usageCount 344786 ],
+                                                                                                                                                           [semstat:hasSemanticFeature semstat:OwlTransitiveProperty ; 
+                                                                                                                                                            semstat:definitionCount 124  ; 
+                                                                                                                                                            semstat:usageCount 943042 ],
+                                                                                                                                                           [semstat:hasSemanticFeature semstat:OwlDisjointWith ; 
+                                                                                                                                                            semstat:definitionCount 3778 ];
+                                                                                                                                           void:sparqlEndpoint <http://linkeddata.uriburner.com/sparql>,
+                                                                                                                                                               <http://uriburner.com/sparql>.
 <http://vocab.getty.edu/dataset/aat> semstat:hasStat [semstat:hasSemanticFeature semstat:OwlAllDisjointClasses ; 
                                                       semstat:definitionCount 1 ],
                                                      [semstat:hasSemanticFeature semstat:OwlDisjointWith ; 
@@ -828,33 +1676,80 @@ _:autos68 semstat:hasStat [semstat:hasSemanticFeature semstat:RdfType ;
                                                      [semstat:hasSemanticFeature semstat:RdfsSubClassOf ; 
                                                       semstat:definitionCount 136 ];
                                      void:sparqlEndpoint <http://vocab.getty.edu/sparql>.
+<http://vocabulary.semantic-web.at/AustrianSkiTeam> semstat:hasStat [semstat:hasSemanticFeature semstat:OwlSameAs ; 
+                                                                     semstat:definitionCount 49 ],
+                                                                    [semstat:hasSemanticFeature semstat:OwlDisjointWith ; 
+                                                                     semstat:definitionCount 3 ],
+                                                                    [semstat:hasSemanticFeature semstat:RdfsDomain ; 
+                                                                     semstat:definitionCount 21 ],
+                                                                    [semstat:hasSemanticFeature semstat:OwlInverseOf ; 
+                                                                     semstat:definitionCount 32 ],
+                                                                    [semstat:hasSemanticFeature semstat:RdfsRange ; 
+                                                                     semstat:definitionCount 22 ],
+                                                                    [semstat:hasSemanticFeature semstat:RdfsSubClassOf ; 
+                                                                     semstat:definitionCount 218 ],
+                                                                    [semstat:hasSemanticFeature semstat:RdfType ; 
+                                                                     semstat:definitionCount 2745 ],
+                                                                    [semstat:hasSemanticFeature semstat:OwlFunctionalProperty ; 
+                                                                     semstat:definitionCount 1 ],
+                                                                    [semstat:hasSemanticFeature semstat:OwlSymmetricProperty ; 
+                                                                     semstat:definitionCount 4  ; 
+                                                                     semstat:usageCount 1202 ],
+                                                                    [semstat:hasSemanticFeature semstat:OwlTransitiveProperty ; 
+                                                                     semstat:definitionCount 3  ; 
+                                                                     semstat:usageCount 584 ];
+                                                    void:sparqlEndpoint <http://vocabulary.semantic-web.at/PoolParty/sparql/AustrianSkiTeam>.
+<http://vocabulary.semantic-web.at/OpenData> semstat:hasStat [semstat:hasSemanticFeature semstat:OwlSameAs ; 
+                                                              semstat:definitionCount 1 ],
+                                                             [semstat:hasSemanticFeature semstat:RdfType ; 
+                                                              semstat:definitionCount 412 ];
+                                             void:sparqlEndpoint <http://vocabulary.semantic-web.at/PoolParty/sparql/OpenData>.
+<http://vocabulary.semantic-web.at/semweb> semstat:hasStat [semstat:hasSemanticFeature semstat:OwlSameAs ; 
+                                                            semstat:definitionCount 32 ],
+                                                           [semstat:hasSemanticFeature semstat:RdfType ; 
+                                                            semstat:definitionCount 14829 ];
+                                           void:sparqlEndpoint <http://vocabulary.semantic-web.at/PoolParty/sparql/semweb>.
 <http://www.openphacts.org/aef380b9-8ad6-4d07-8f0e-212f20555d1c> semstat:hasStat [semstat:hasSemanticFeature semstat:OwlSameAs ; 
                                                                                   semstat:definitionCount 113480 ],
                                                                                  [semstat:hasSemanticFeature semstat:RdfsDomain ; 
                                                                                   semstat:definitionCount 297 ],
                                                                                  [semstat:hasSemanticFeature semstat:OwlEquivalentClass ; 
-                                                                                  semstat:definitionCount 153 ],
+                                                                                  semstat:definitionCount 81 ],
                                                                                  [semstat:hasSemanticFeature semstat:OwlEquivalentProperty ; 
                                                                                   semstat:definitionCount 194 ],
                                                                                  [semstat:hasSemanticFeature semstat:OwlInverseOf ; 
-                                                                                  semstat:definitionCount 2 ],
+                                                                                  semstat:definitionCount 4 ],
                                                                                  [semstat:hasSemanticFeature semstat:RdfsRange ; 
-                                                                                  semstat:definitionCount 192 ],
+                                                                                  semstat:definitionCount 185 ],
                                                                                  [semstat:hasSemanticFeature semstat:RdfsSubClassOf ; 
                                                                                   semstat:definitionCount 94 ],
                                                                                  [semstat:hasSemanticFeature semstat:RdfType ; 
-                                                                                  semstat:definitionCount 35714258 ],
+                                                                                  semstat:definitionCount 35714315 ],
+                                                                                 [semstat:hasSemanticFeature semstat:OwlSameAs ; 
+                                                                                  semstat:definitionCount 113480 ],
+                                                                                 [semstat:hasSemanticFeature semstat:OwlInverseFunctionalProperty ; 
+                                                                                  semstat:definitionCount 3  ; 
+                                                                                  semstat:usageCount 2 ],
+                                                                                 [semstat:hasSemanticFeature semstat:RdfsDomain ; 
+                                                                                  semstat:definitionCount 306 ],
+                                                                                 [semstat:hasSemanticFeature semstat:OwlEquivalentClass ; 
+                                                                                  semstat:definitionCount 189 ],
+                                                                                 [semstat:hasSemanticFeature semstat:OwlEquivalentProperty ; 
+                                                                                  semstat:definitionCount 194 ],
+                                                                                 [semstat:hasSemanticFeature semstat:OwlInverseOf ; 
+                                                                                  semstat:definitionCount 4 ],
+                                                                                 [semstat:hasSemanticFeature semstat:RdfsRange ; 
+                                                                                  semstat:definitionCount 185 ],
+                                                                                 [semstat:hasSemanticFeature semstat:RdfsSubClassOf ; 
+                                                                                  semstat:definitionCount 102 ],
+                                                                                 [semstat:hasSemanticFeature semstat:RdfType ; 
+                                                                                  semstat:definitionCount 35714315 ],
                                                                                  [semstat:hasSemanticFeature semstat:OwlInverseFunctionalProperty ; 
                                                                                   semstat:definitionCount 3  ; 
                                                                                   semstat:usageCount 2 ];
-                                                                 void:sparqlEndpoint <http://data.allie.dbcls.jp/sparql/>.
-<http://www.southgreen.fr/agrold/Dataset> semstat:hasStat [semstat:hasSemanticFeature semstat:OwlAllDifferent ; 
-                                                           semstat:definitionCount 2 ],
-                                                          [semstat:hasSemanticFeature semstat:OwlAllDisjointClasses ; 
-                                                           semstat:definitionCount 19 ],
-                                                          [semstat:hasSemanticFeature semstat:OwlSameAs ; 
-                                                           semstat:definitionCount 87676 ],
-                                                          [semstat:hasSemanticFeature semstat:OwlDisjointWith ; 
+                                                                 void:sparqlEndpoint <http://data.allie.dbcls.jp/sparql>,
+                                                                                     <http://data.allie.dbcls.jp/sparql/>.
+<http://www.southgreen.fr/agrold/Dataset> semstat:hasStat [semstat:hasSemanticFeature semstat:OwlDisjointWith ; 
                                                            semstat:definitionCount 207 ],
                                                           [semstat:hasSemanticFeature semstat:RdfsDomain ; 
                                                            semstat:definitionCount 350 ],
@@ -889,7 +1784,13 @@ _:autos68 semstat:hasStat [semstat:hasSemanticFeature semstat:RdfType ;
                                                            semstat:definitionCount 39  ; 
                                                            semstat:usageCount 58685501 ],
                                                           [semstat:hasSemanticFeature semstat:OwlTransitiveProperty ; 
-                                                           semstat:definitionCount 45 ];
+                                                           semstat:definitionCount 45 ],
+                                                          [semstat:hasSemanticFeature semstat:OwlAllDifferent ; 
+                                                           semstat:definitionCount 2 ],
+                                                          [semstat:hasSemanticFeature semstat:OwlAllDisjointClasses ; 
+                                                           semstat:definitionCount 19 ],
+                                                          [semstat:hasSemanticFeature semstat:OwlSameAs ; 
+                                                           semstat:definitionCount 87676 ];
                                           void:sparqlEndpoint <http://sparql.southgreen.fr/>.
 <https://data.cssz.cz/resource/dataset/ukazatele-pracovni-neschopnosti-podle-pohlavi-a-diagnozy/distribution/rdf> semstat:hasStat [semstat:hasSemanticFeature semstat:OwlSameAs ; 
                                                                                                                                    semstat:definitionCount 521 ],
@@ -907,25 +1808,27 @@ _:autos68 semstat:hasStat [semstat:hasSemanticFeature semstat:RdfType ;
                                          [semstat:hasSemanticFeature semstat:RdfType ; 
                                           semstat:definitionCount 2938956 ];
                          void:sparqlEndpoint <http://data.americanartcollaborative.org/sparql>.
-<https://ld.geo.admin.ch/data/swissBOUNDARIES3D:cantons2020> semstat:hasStat [semstat:hasSemanticFeature semstat:RdfsDomain ; 
+<https://ld.geo.admin.ch/data/swissBOUNDARIES3D:cantons2020> semstat:hasStat [semstat:hasSemanticFeature semstat:OwlSameAs ; 
+                                                                              semstat:definitionCount 27680 ],
+                                                                             [semstat:hasSemanticFeature semstat:RdfsDomain ; 
                                                                               semstat:definitionCount 21 ],
                                                                              [semstat:hasSemanticFeature semstat:RdfsRange ; 
                                                                               semstat:definitionCount 26 ],
                                                                              [semstat:hasSemanticFeature semstat:RdfsSubClassOf ; 
                                                                               semstat:definitionCount 15 ],
                                                                              [semstat:hasSemanticFeature semstat:RdfType ; 
-                                                                              semstat:definitionCount 151531 ],
-                                                                             [semstat:hasSemanticFeature semstat:OwlSameAs ; 
-                                                                              semstat:definitionCount 27680 ];
+                                                                              semstat:definitionCount 151531 ];
                                                              void:sparqlEndpoint <https://sparql.geo.admin.ch/sparql>.
-<https://w3id.org/scholarlydata/dataset/iswc2019-alignments> semstat:hasStat [semstat:hasSemanticFeature semstat:RdfsDomain ; 
+<https://w3id.org/scholarlydata/dataset/iswc2019-alignments> semstat:hasStat [semstat:hasSemanticFeature semstat:OwlSameAs ; 
+                                                                              semstat:definitionCount 37620 ],
+                                                                             [semstat:hasSemanticFeature semstat:OwlDisjointWith ; 
+                                                                              semstat:definitionCount 10461 ],
+                                                                             [semstat:hasSemanticFeature semstat:RdfsDomain ; 
                                                                               semstat:definitionCount 3240 ],
                                                                              [semstat:hasSemanticFeature semstat:OwlEquivalentClass ; 
                                                                               semstat:definitionCount 6514 ],
                                                                              [semstat:hasSemanticFeature semstat:OwlEquivalentProperty ; 
                                                                               semstat:definitionCount 765 ],
-                                                                             [semstat:hasSemanticFeature semstat:OwlSameAs ; 
-                                                                              semstat:definitionCount 37620 ],
                                                                              [semstat:hasSemanticFeature semstat:OwlInverseOf ; 
                                                                               semstat:definitionCount 65 ],
                                                                              [semstat:hasSemanticFeature semstat:RdfsRange ; 
@@ -936,7 +1839,5 @@ _:autos68 semstat:hasStat [semstat:hasSemanticFeature semstat:RdfType ;
                                                                               semstat:definitionCount 627898 ],
                                                                              [semstat:hasSemanticFeature semstat:OwlFunctionalProperty ; 
                                                                               semstat:definitionCount 2  ; 
-                                                                              semstat:usageCount 11498 ],
-                                                                             [semstat:hasSemanticFeature semstat:OwlDisjointWith ; 
-                                                                              semstat:definitionCount 10461 ];
+                                                                              semstat:usageCount 11498 ];
                                                              void:sparqlEndpoint <http://www.scholarlydata.org/sparql>.

@@ -1,5 +1,7 @@
 using System;
+using System.Collections.Generic;
 using System.Linq;
+using System.Text.Json;
 using System.Threading.Tasks;
 using VDS.RDF;
 using VDS.RDF.Query;
@@ -588,11 +590,12 @@ namespace UnitTests
         [Fact]
         public void TestName()
         {
-            var endpoints = System.IO.File.ReadAllLines(@"C:\dev\dotnet\OntoSemStatsWeb\UnitTests\endpoints");
+            var endpoints = System.IO.File.ReadAllLines(@"C:\dev\dotnet\OntoSemStatsWeb\UnitTests\endpoints").Distinct();
             var g = new Graph();
             g.NamespaceMap.AddNamespace("semstat", new Uri("http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#"));
             g.NamespaceMap.AddNamespace("void", new Uri("http://rdfs.org/ns/void#"));
             var obj = new Object();
+            var failedEndpoints = new List<string>();
             // foreach (var endpoint in endpoints)
             Parallel.ForEach(endpoints, endpoint =>
             {
@@ -649,10 +652,56 @@ namespace UnitTests
                 catch (System.Exception ex)
                 {
                     Console.WriteLine(ex);
+                    lock (obj)
+                    {
+                        failedEndpoints.Add(endpoint);
+                    }
                 }
             });
             var writer = new CompressingTurtleWriter{PrettyPrintMode = true};
             writer.Save(g, @"C:\dev\dotnet\OntoSemStatsWeb\UnitTests\results.ttl");
+            Console.WriteLine("saved!");
+            foreach (var endpoint in failedEndpoints)
+            {
+                Console.WriteLine(endpoint);
+            }
+        }
+        [Fact]
+        public void GetSparqlEndpointFromLODCloud()
+        {
+            var results = new List<string>();
+            var jsonString = System.IO.File.ReadAllText(@"C:\dev\dotnet\OntoSemStatsWeb\OntoSemStatsJS\lod-data.json");
+            using (var document = JsonDocument.Parse(jsonString))
+            {
+                var root = document.RootElement;
+                foreach (var datasetName in root.EnumerateObject())
+                {
+                    var dataset = root.GetProperty(datasetName.Name);
+                    var sparql = dataset.GetProperty("sparql");
+                    var count = sparql.GetArrayLength();
+                    if (count <= 0) continue;
+                    foreach (var endpoint in sparql.EnumerateArray())
+                    {
+                        var status = endpoint.GetProperty("status");
+                        if (status.GetString() == "OK")
+                        {
+                            var accessUrl = endpoint.GetProperty("access_url");
+                            results.Add(accessUrl.GetString());
+                        }
+                    }
+                }
+            }
+            System.IO.File.WriteAllLines(@"C:\dev\dotnet\OntoSemStatsWeb\UnitTests\endpoints2", results);
+        }
+
+        [Fact]
+        public void TestName2()
+        {
+            var g = new Graph();
+            g.LoadFromFile(@"C:\dev\dotnet\OntoSemStatsWeb\UnitTests\results.ttl");
+            var sparqlEndpoint = g.CreateUriNode("void:sparqlEndpoint");
+            var count = g.GetTriplesWithPredicate(sparqlEndpoint).Count();
+            Console.WriteLine(count);
         }
     }
 }
