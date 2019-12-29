@@ -766,7 +766,19 @@ namespace UnitTests
             // http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#RdfsSubProperty : 98
             // http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#OwlReflexiveProperty : 94
             // http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#OwlAllDisjointProperties : 16
-
+            Console.WriteLine("---------------------------------------");
+            var query2 = dict.Where(x => x.Value.ContainsKey("usage")).Select(x => new {x.Key, usage = x.Value["usage"]}).OrderByDescending(x => x.usage);
+            foreach (var q in query2)
+            {
+                Console.WriteLine($"{q.Key} : {q.usage}");
+            }
+            // http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#OwlSymmetricProperty : 1822213443
+            // http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#OwlFunctionalProperty : 1038751396
+            // http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#OwlTransitiveProperty : 94358694
+            // http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#OwlInverseFunctionalProperty : 9774073
+            // http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#OwlIrreflexiveProperty : 5619379
+            // http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#OwlReflexiveProperty : 874350
+            // http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#OwlAsymmetricProperty : 1075
         }
     }
 }
