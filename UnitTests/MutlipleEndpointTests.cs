@@ -702,6 +702,44 @@ namespace UnitTests
             var sparqlEndpoint = g.CreateUriNode("void:sparqlEndpoint");
             var count = g.GetTriplesWithPredicate(sparqlEndpoint).Count();
             Console.WriteLine(count);
+            var triples = g.GetTriplesWithPredicate(g.CreateUriNode("semstat:hasSemanticFeature"));
+            var dict = new Dictionary<string, Dictionary<string, long>>();
+            foreach (var triple in triples)
+            {
+                var feature = ((IUriNode)triple.Object).Uri.ToString();
+                if (!dict.ContainsKey(feature))
+                {
+                    dict[feature] = new Dictionary<string, long>
+                    {
+                        {"count" , 1}
+                    };
+                }
+                else
+                {
+                    dict[feature]["count"]++;
+                }
+                var definition = (ILiteralNode)g.GetTriplesWithSubjectPredicate(triple.Subject, g.CreateUriNode("semstat:definitionCount")).First().Object;
+                dict[feature]["definition"] = dict[feature].ContainsKey("definition") ? int.Parse(definition.Value) + dict[feature]["definition"] : int.Parse(definition.Value);
+                var usage = (ILiteralNode)g.GetTriplesWithSubjectPredicate(triple.Subject, g.CreateUriNode("semstat:usageCount")).FirstOrDefault()?.Object;
+                if (usage != null)
+                {
+                    dict[feature]["usage"] = dict[feature].ContainsKey("usage") ? int.Parse(usage.Value) + dict[feature]["usage"] : int.Parse(usage.Value);
+                }
+            }
+            var writerOptions = new JsonWriterOptions
+            {
+                Indented = true
+            };
+            using (var fs = System.IO.File.Create(@"C:\dev\dotnet\OntoSemStatsWeb\UnitTests\stats.json"))
+            using (var writer = new Utf8JsonWriter(fs, writerOptions))
+            {                
+                JsonSerializer.Serialize(writer, dict);
+            }
+            var query = dict.Select(x => new {x.Key, definition = x.Value["definition"]}).OrderByDescending(x => x.definition);
+            foreach (var q in query)
+            {
+                Console.WriteLine($"{q.Key} : {q.definition}");
+            }
         }
     }
 }
