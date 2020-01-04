@@ -17,19 +17,9 @@ namespace OntoSemStatsWeb.Controllers
         [HttpGet]
         public async Task<IActionResult> Get(string endpoint)
         {
-            // var g = new Graph();
-            // g.Assert(
-            //     g.CreateUriNode(new Uri("http://example.org/Test1")), 
-            //     g.CreateUriNode(new Uri("http://example.org/get")), 
-            //     g.CreateUriNode(new Uri("http://example.org/Test2")));
-            // var res = new SemStatsResult 
-            // {
-            //     Date = DateTime.Now,
-            //     ErrorMessage = null,
-            //     Instance = g
-            // };
-            var res = await Task<SemStatsResult>.Factory.StartNew(() => 
-                    SemStatsResult.Get(endpoint));
+            var res = new SemStatsResult {Endpoint = endpoint};
+            await Task<SemStatsResult>.Factory.StartNew(() => 
+                    res.Get());
             if (!string.IsNullOrWhiteSpace(res.ErrorMessage))
             {
                 return BadRequest(res.ErrorMessage);

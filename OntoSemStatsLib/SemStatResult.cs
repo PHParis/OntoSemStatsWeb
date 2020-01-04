@@ -1,6 +1,8 @@
 using System;
+using System.ComponentModel.DataAnnotations;
 using System.IO;
 using System.Linq;
+using System.Xml.Linq;
 using VDS.RDF;
 using VDS.RDF.Query;
 using VDS.RDF.Writing;
@@ -10,6 +12,8 @@ namespace OntoSemStatsLib
     public class SemStatsResult
     {
         public string ErrorMessage {get;set;}
+        [Required]
+        public string Endpoint {get;set;}
         /// <summary>
         /// Date of generation.
         /// </summary>
@@ -17,6 +21,7 @@ namespace OntoSemStatsLib
         public DateTime Date {get;set;}
 
         public IGraph Instance {get;set;}
+        public string Svg {get;set;}
 
         public string ToTurtle()
         {
@@ -47,22 +52,42 @@ namespace OntoSemStatsLib
             return VDS.RDF.Writing.StringWriter.Write(Instance, wr);
         }
 
-        public static SemStatsResult Get(string endpoint)
+        private void GenerateSvg()
         {
-            var result = new SemStatsResult();
-            if (string.IsNullOrWhiteSpace(endpoint))
+            var gs = new GraphVizGenerator("svg", @"C:\Program Files (x86)\Graphviz2.38\bin");
+            var fn = @"C:\dev\dotnet\OntoSemStatsWeb\UnitTests\tmp_" + DateTime.Now.Ticks + ".svg";
+            gs.Generate(Instance, fn, false);
+            var text = System.IO.File.ReadAllText(fn);
+            var doc = XDocument.Parse(text);  
+            Svg = doc.Root.ToString();
+        }
+
+        public void Clear()
+        {
+            this.ErrorMessage = null;
+            this.Svg = null;
+            if (this.Instance != null)
             {
-                result.ErrorMessage = "You must provide a valid SPARQL endpoint URI!";
-                return result;
+                this.Instance.Dispose();
+            }
+        }
+
+        public SemStatsResult Get()
+        {
+            this.Clear();
+            if (string.IsNullOrWhiteSpace(this.Endpoint))
+            {
+                this.ErrorMessage = "You must provide a valid SPARQL endpoint URI!";
+                return this;
             }
             var g = new Graph();
             g.NamespaceMap.AddNamespace("semstat", new Uri("http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#"));
             g.NamespaceMap.AddNamespace("void", new Uri("http://rdfs.org/ns/void#"));
-            result.Instance = g;
-            result.Date = DateTime.Now;
+            this.Instance = g;
+            this.Date = DateTime.Now;
             try
             {
-                var remoteEndpoint = new SparqlRemoteEndpoint(new Uri(endpoint));
+                var remoteEndpoint = new SparqlRemoteEndpoint(new Uri(this.Endpoint));
                 var dsRes = remoteEndpoint.QueryWithResultSet("PREFIX void:<http://rdfs.org/ns/void#> SELECT ?ds WHERE { ?ds a void:Dataset . }");
                 INode ds;
                 if (dsRes.IsEmpty)
@@ -93,7 +118,7 @@ namespace OntoSemStatsLib
                            
                     var stat = g.CreateBlankNode();                  
                     g.Assert(ds, g.CreateUriNode("semstat:hasStat"), stat);
-                    g.Assert(ds, g.CreateUriNode("void:sparqlEndpoint"), g.CreateUriNode(new Uri(endpoint)));
+                    g.Assert(ds, g.CreateUriNode("void:sparqlEndpoint"), g.CreateUriNode(new Uri(this.Endpoint)));
                     g.Assert(stat, g.CreateUriNode("semstat:hasSemanticFeature"), g.CreateUriNode(feature));
                     g.Assert(stat, g.CreateUriNode("semstat:definitionCount"), 
                         g.CreateLiteralNode(definitionsCount.ToString(), 
@@ -105,12 +130,16 @@ namespace OntoSemStatsLib
                             new Uri("http://www.w3.org/2001/XMLSchema#integer")));
                     }
                 }
+                if (!g.IsEmpty)
+                {
+                    this.GenerateSvg();
+                }
             }
             catch (System.Exception ex)
             {
-                result.ErrorMessage = ex.Message;
+                this.ErrorMessage = ex.Message;
             }
-            return result;
+            return this;
         }
         static string[] queries = new[] {
             @"PREFIX :<http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#>

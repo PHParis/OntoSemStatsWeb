@@ -1,7 +1,7 @@
 ﻿@page "/"
 
-@using OntoSemStatsWeb.Data
-@inject SparqlService SparqlService
+@using OntoSemStatsLib
+@* @inject SparqlService SparqlService *@
 
 <h1>Enter your endpoint</h1>
 <!-- 
@@ -9,12 +9,12 @@
 
 <button class="btn btn-primary" @onclick="IncrementCount">Click me</button> -->
 
-<EditForm Model="@ontologyResult" OnValidSubmit="@HandleValidSubmit">
+<EditForm Model="@semStatsResult" OnValidSubmit="@HandleValidSubmit">
     <DataAnnotationsValidator />
     <ValidationSummary />
     <p>
-    <label for="SparqlEndpointUri">Sparql Endpoint Uri: </label>
-    <InputText id="SparqlEndpointUri" @bind-Value="ontologyResult.SparqlEndpointUri" />
+    <label for="SparqlEndpointUri">SPARQL endpoint URI: </label>
+    <InputText id="SparqlEndpointUri" @bind-Value="semStatsResult.Endpoint" />
     </p>
     <button type="submit">Submit</button>
 </EditForm>
@@ -24,6 +24,13 @@
 </div>
 
 <div>
+    @if (semStatsResult != null && !string.IsNullOrWhiteSpace(semStatsResult.Svg))
+    {
+        @semStatsResult.Svg
+    }
+</div>
+
+@* <div>
     @if (ontologyResult.Result != null && ontologyResult.Result.Any())
     {
         <table class="table">
@@ -47,7 +54,7 @@
         </table>
     }
     
-</div>
+</div> *@
 
 
 @code {
@@ -56,13 +63,21 @@
     {
         forecasts = await SparqlService.GetDataAsync("http://dbpedia.org/sparql");
     } */
-    private OntologyResult ontologyResult = new OntologyResult();
     private string Message = "";
+    private SemStatsResult semStatsResult = new SemStatsResult();
+    private async Task HandleValidSubmit()
+    {
+        Message = "Please wait while processing...";
+        await Task<SemStatsResult>.Factory.StartNew(() => 
+            semStatsResult.Get());
+        Message = "";
+    }
+    /*private OntologyResult ontologyResult = new OntologyResult();
     private async Task HandleValidSubmit()
     {
         Message = "Please wait while processing...";
         Console.WriteLine("OnValidSubmit");
         await SparqlService.GetDataAsync(ontologyResult);
         Message = "";
-    }
+    }*/
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text.Json;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 using VDS.RDF;
 using VDS.RDF.Query;
 using VDS.RDF.Writing;
@@ -779,6 +780,24 @@ namespace UnitTests
             // http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#OwlIrreflexiveProperty : 5619379
             // http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#OwlReflexiveProperty : 874350
             // http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#OwlAsymmetricProperty : 1075
+        }
+
+        [Fact]
+        public async Task GraphViz()
+        {
+            
+            var g = new Graph();
+            g.Assert(
+                g.CreateUriNode(new Uri("http://example.org/Test1")), 
+                g.CreateUriNode(new Uri("http://example.org/get")), 
+                g.CreateUriNode(new Uri("http://example.org/Test2")));
+
+            var gs = new GraphVizGenerator("svg", @"C:\Program Files (x86)\Graphviz2.38\bin");
+            var fn = @"C:\dev\dotnet\OntoSemStatsWeb\UnitTests\img.svg";
+            gs.Generate(g, fn, false);
+            var text = await System.IO.File.ReadAllTextAsync(fn);
+            var doc = XDocument.Parse(text);  
+            Console.WriteLine(doc.Root.ToString());
         }
     }
 }
