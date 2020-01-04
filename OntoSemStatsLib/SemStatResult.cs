@@ -56,6 +56,8 @@ namespace OntoSemStatsLib
                 return result;
             }
             var g = new Graph();
+            g.NamespaceMap.AddNamespace("semstat", new Uri("http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#"));
+            g.NamespaceMap.AddNamespace("void", new Uri("http://rdfs.org/ns/void#"));
             result.Instance = g;
             result.Date = DateTime.Now;
             try
@@ -106,7 +108,7 @@ namespace OntoSemStatsLib
             }
             catch (System.Exception ex)
             {
-                result.ErrorMessage = ex.ToString();
+                result.ErrorMessage = ex.Message;
             }
             return result;
         }
