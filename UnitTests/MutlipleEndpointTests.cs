@@ -847,6 +847,7 @@ namespace UnitTests
                 writer.Close();
                 gvz.Close();
             }
+            // System.IO.File.Delete(filename);
         }
     }
 }
