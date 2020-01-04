@@ -34,7 +34,7 @@ namespace OntoSemStatsWeb
             services.AddControllers(options =>
             {
                 options.RespectBrowserAcceptHeader = true; // false by default
-                options.OutputFormatters.Insert(0, new TurtleOutputFormatter());
+                options.OutputFormatters.Insert(0, new RdfOutputFormatter());
             }); // XXX
             // services.AddRazorPages().AddRazorRuntimeCompilation(); https://docs.microsoft.com/en-us/aspnet/core/mvc/views/view-compilation?view=aspnetcore-3.0#runtime-compilation
         }
