@@ -10,6 +10,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using OntoSemStatsWeb.Data;
+using OntoSemStatsWeb.Formatters;
 
 namespace OntoSemStatsWeb
 {
@@ -30,7 +31,11 @@ namespace OntoSemStatsWeb
             services.AddServerSideBlazor();
             services.AddSingleton<WeatherForecastService>();
             services.AddSingleton<SparqlService>();
-            services.AddControllers(); // XXX
+            services.AddControllers(options =>
+            {
+                options.RespectBrowserAcceptHeader = true; // false by default
+                options.OutputFormatters.Insert(0, new TurtleOutputFormatter());
+            }); // XXX
             // services.AddRazorPages().AddRazorRuntimeCompilation(); https://docs.microsoft.com/en-us/aspnet/core/mvc/views/view-compilation?view=aspnetcore-3.0#runtime-compilation
         }
 
