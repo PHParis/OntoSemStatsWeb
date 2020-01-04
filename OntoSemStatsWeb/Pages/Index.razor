@@ -1,6 +1,7 @@
 ﻿@page "/"
 
 @using OntoSemStatsLib
+@inject IJSRuntime JSRuntime
 @* @inject SparqlService SparqlService *@
 
 <h1>Enter your endpoint</h1>
@@ -26,12 +27,13 @@
 <div>
     @if (semStatsResult != null && !string.IsNullOrWhiteSpace(semStatsResult.Svg))
     {
-        @semStatsResult.Svg
+        <button @onclick="DownloadFile">Download</button>
+        @((MarkupString)semStatsResult.Svg)
     }
 </div>
 
-@* <div>
-    @if (ontologyResult.Result != null && ontologyResult.Result.Any())
+<div>
+    @if (semStatsResult.Result != null && semStatsResult.Result.Any())
     {
         <table class="table">
             <thead>
@@ -42,7 +44,7 @@
               </tr>
             </thead>
             <tbody>
-        @foreach (var result in ontologyResult.Result)
+        @foreach (var result in semStatsResult.Result)
         {
             <tr>
                 <td>@result.Key</td>
@@ -54,7 +56,7 @@
         </table>
     }
     
-</div> *@
+</div>
 
 
 @code {
@@ -71,6 +73,17 @@
         await Task<SemStatsResult>.Factory.StartNew(() => 
             semStatsResult.Get());
         Message = "";
+    }
+    
+    // https://wellsb.com/csharp/aspnet/blazor-jsinterop-save-file/
+    public async void DownloadFile()
+    {
+        var fileName = "instance.ttl";
+        await JSRuntime.InvokeAsync<object>(
+            "FileSaveAs",
+            fileName,
+            semStatsResult.ToTurtle()
+        );
     }
     /*private OntologyResult ontologyResult = new OntologyResult();
     private async Task HandleValidSubmit()

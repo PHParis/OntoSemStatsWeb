@@ -1,9 +1,12 @@
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Text.Json;
 using System.Threading.Tasks;
 using System.Xml.Linq;
+using OntoSemStatsLib;
 using VDS.RDF;
 using VDS.RDF.Query;
 using VDS.RDF.Writing;
@@ -785,12 +788,9 @@ namespace UnitTests
         [Fact]
         public async Task GraphViz()
         {
-            
-            var g = new Graph();
-            g.Assert(
-                g.CreateUriNode(new Uri("http://example.org/Test1")), 
-                g.CreateUriNode(new Uri("http://example.org/get")), 
-                g.CreateUriNode(new Uri("http://example.org/Test2")));
+            var res = new SemStatsResult{Endpoint = "http://dbpedia.org/sparql"};
+            res.Get();
+            var g = res.Instance;
 
             var gs = new GraphVizGenerator("svg", @"C:\Program Files (x86)\Graphviz2.38\bin");
             var fn = @"C:\dev\dotnet\OntoSemStatsWeb\UnitTests\img.svg";
@@ -798,6 +798,55 @@ namespace UnitTests
             var text = await System.IO.File.ReadAllTextAsync(fn);
             var doc = XDocument.Parse(text);  
             Console.WriteLine(doc.Root.ToString());
+        }
+
+        [Fact]
+        public async Task GraphViz2()
+        {
+            var filename = @"C:\dev\dotnet\OntoSemStatsWeb\OntoSemStatsJS\img.svg";
+            var res = new SemStatsResult{Endpoint = "http://dbpedia.org/sparql"};
+            res.Get();
+            var g = res.Instance;
+            var _format = "svg";
+            var _graphvizdir = @"C:\Program Files (x86)\Graphviz2.38\bin\";
+            ProcessStartInfo start = new ProcessStartInfo();
+            if (!_graphvizdir.Equals(String.Empty)) {
+                start.FileName = _graphvizdir + "dot.exe";
+            } else {
+                start.FileName = "dot.exe";
+            }
+            start.Arguments = "-Kneato -Goverlap=false -T" + _format;// + " -Lg";
+            start.UseShellExecute = false;
+            start.RedirectStandardInput = true;
+            start.RedirectStandardOutput = true;
+
+            // Prepare the GraphVizWriter and Streams
+            GraphVizWriter gvzwriter = new GraphVizWriter();
+            using (BinaryWriter writer = new BinaryWriter(new FileStream(filename, FileMode.Create)))
+            {
+                // Start the Process
+                Process gvz = new Process();
+                gvz.StartInfo = start;
+                gvz.Start();
+
+                // Write to the Standard Input
+                gvzwriter.Save(g, gvz.StandardInput);
+
+                // Read the Standard Output
+                byte[] buffer = new byte[4096];
+                using (BinaryReader reader = new BinaryReader(gvz.StandardOutput.BaseStream))
+                {
+                    while (true)
+                    {
+                        int read = reader.Read(buffer, 0, buffer.Length);
+                        if (read == 0) break;
+                        writer.Write(buffer, 0, read);
+                    }
+                    reader.Close();
+                }
+                writer.Close();
+                gvz.Close();
+            }
         }
     }
 }

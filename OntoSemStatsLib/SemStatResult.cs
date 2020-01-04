@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.IO;
 using System.Linq;
@@ -19,6 +20,7 @@ namespace OntoSemStatsLib
         /// </summary>
         /// <value></value>
         public DateTime Date {get;set;}
+        public Dictionary<string, Dictionary<string, string>> Result { get; set; }
 
         public IGraph Instance {get;set;}
         public string Svg {get;set;}
@@ -70,6 +72,7 @@ namespace OntoSemStatsLib
             {
                 this.Instance.Dispose();
             }
+            this.Result = new Dictionary<string, Dictionary<string, string>>();
         }
 
         public SemStatsResult Get()
@@ -123,11 +126,17 @@ namespace OntoSemStatsLib
                     g.Assert(stat, g.CreateUriNode("semstat:definitionCount"), 
                         g.CreateLiteralNode(definitionsCount.ToString(), 
                         new Uri("http://www.w3.org/2001/XMLSchema#integer")));
+                    var lastPart = feature.AbsoluteUri.Split("#").Last();
+                    this.Result[lastPart] = new Dictionary<string, string>()
+                    {
+                        {"definitionsCount", definitionsCount.ToString()}
+                    };
                     if (triples > 0)
                     {                        
                         g.Assert(stat, g.CreateUriNode("semstat:usageCount"), 
                             g.CreateLiteralNode(triples.ToString(), 
                             new Uri("http://www.w3.org/2001/XMLSchema#integer")));
+                        this.Result[lastPart].Add("triples", triples.ToString());
                     }
                 }
                 if (!g.IsEmpty)
