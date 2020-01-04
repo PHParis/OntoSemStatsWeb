@@ -30,6 +30,7 @@ namespace OntoSemStatsWeb
             services.AddServerSideBlazor();
             services.AddSingleton<WeatherForecastService>();
             services.AddSingleton<SparqlService>();
+            services.AddControllers(); // XXX
             // services.AddRazorPages().AddRazorRuntimeCompilation(); https://docs.microsoft.com/en-us/aspnet/core/mvc/views/view-compilation?view=aspnetcore-3.0#runtime-compilation
         }
 
@@ -56,6 +57,7 @@ namespace OntoSemStatsWeb
             {
                 endpoints.MapBlazorHub();
                 endpoints.MapFallbackToPage("/_Host");
+                endpoints.MapControllers(); // XXX
             });
         }
     }
