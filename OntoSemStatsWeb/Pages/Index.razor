@@ -3,6 +3,7 @@
 @using OntoSemStatsLib
 @inject IJSRuntime JSRuntime
 @* @inject SparqlService SparqlService *@
+@inject IConfiguration Configuration
 
 <h1>Enter your endpoint</h1>
 <!-- 
@@ -77,6 +78,8 @@
     {
         Message = "Please wait while processing...";
         semStatsResult.SvgNeeded = true;
+        semStatsResult.TmpDir= Configuration.GetValue<string>("tmpdir");
+        semStatsResult.Graphvizdir = Configuration.GetValue<string>("graphviz");
         await Task<SemStatsResult>.Factory.StartNew(() => 
             semStatsResult.Get());
         Message = "";

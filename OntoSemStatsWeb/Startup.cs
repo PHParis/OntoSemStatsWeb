@@ -30,7 +30,8 @@ namespace OntoSemStatsWeb
             services.AddRazorPages();
             services.AddServerSideBlazor();
             services.AddSingleton<WeatherForecastService>();
-            services.AddSingleton<SparqlService>();
+            // services.AddSingleton<SparqlService>();
+            services.AddSingleton<IConfiguration>(Configuration);
             services.AddControllers(options =>
             {
                 options.RespectBrowserAcceptHeader = true; // false by default
