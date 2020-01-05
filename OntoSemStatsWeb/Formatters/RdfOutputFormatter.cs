@@ -41,7 +41,7 @@ namespace OntoSemStatsWeb.Formatters
 
             Func<string, SemStatsResult, string> selectSerialization = (ct, sr) => ct switch
             {
-                _ when ct.Contains("rdf") => sr.ToRdfXmlWriter(),
+                _ when ct.Contains("rdf") => sr.ToRdfXml(),
                 _ when ct.Contains("triples") => sr.ToNTriples(),
                 _ when ct.Contains("n3") => sr.ToNotation3(),
                 _ when ct.Contains("ld") => sr.ToJsonLd(),

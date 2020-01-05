@@ -4,6 +4,10 @@
     <ProjectReference Include="..\OntoSemStatsLib\OntoSemStatsLib.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="CommandLineParser" Version="2.7.82" />
+  </ItemGroup>
+
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>

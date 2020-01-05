@@ -49,7 +49,7 @@ namespace OntoSemStatsLib
             return VDS.RDF.Writing.StringWriter.Write(store, wr);
         }
 
-        public string ToRdfXmlWriter()
+        public string ToRdfXml()
         {
             var wr = new RdfXmlWriter();
             return VDS.RDF.Writing.StringWriter.Write(Instance, wr);
