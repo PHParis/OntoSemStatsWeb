@@ -68,13 +68,13 @@ namespace OntoSemStatsLib
             try
             {
                 ProcessStartInfo start = new ProcessStartInfo();
-                if (!_graphvizdir.Equals(String.Empty))
+                if (!string.IsNullOrWhiteSpace(_graphvizdir))
                 {
-                    start.FileName = _graphvizdir + "dot.exe";
+                    start.FileName = _graphvizdir + "dot";
                 }
                 else
                 {
-                    start.FileName = "dot.exe";
+                    start.FileName = "dot";
                 }
                 start.Arguments = "-Ktwopi -Goverlap=false -T" + _format;// + " -Lg";
                 start.UseShellExecute = false;

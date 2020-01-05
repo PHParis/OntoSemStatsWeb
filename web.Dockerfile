@@ -7,16 +7,21 @@ COPY /OntoSemStatsWeb/. ./
 RUN dotnet build
 RUN dotnet publish -c Release -o out
 
-FROM mcr.microsoft.com/dotnet/core/runtime:3.1 as runtime
+FROM mcr.microsoft.com/dotnet/core/aspnet:3.1 as runtime
+RUN apt-get update -y && apt-get install graphviz -y
+# RUN apk add --update --no-cache \
+#     graphviz \
+#     ttf-freefont ttf-ubuntu-font-family
 WORKDIR /app
 COPY --from=build /OntoSemStatsWeb/out ./
 ENTRYPOINT ["dotnet", "OntoSemStatsWeb.dll"]
 # BUILD:
-# docker build -f cmd.Dockerfile -t semstatscmd .
+# docker build -f web.Dockerfile -t semstatsweb .
+# docker run -p 8000:80 -v ${PWD}:/data -it --rm semstatsweb
+
 # Pour les volumes selon le systeme d'exploitation : https://stackoverflow.com/a/41489151
 # docker run -v ${PWD}:/data --rm -it semstatscmd -e http://dbpedia.org/sparql -o /data/semstat_dbpedia.ttl -f ttl
 # docker run -it --rm -p 8000:80 --name aspnetcore_sample mcr.microsoft.com/dotnet/core/samples:aspnetapp
-
 
 # BUILD:
 # docker build -f cmd.Dockerfile -t semstatsweb.
