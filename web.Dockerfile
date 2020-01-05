@@ -1,7 +1,28 @@
-FROM mcr.microsoft.com/dotnet/core/sdk:3.1 AS build-env
+FROM mcr.microsoft.com/dotnet/core/sdk:3.1 AS build
 
 COPY /. ./
 RUN dotnet build
+WORKDIR /OntoSemStatsWeb
+RUN dotnet publish -c Release -o ../web
+WORKDIR /OntoSemStatsCmd
+RUN dotnet publish -c Release -o ../cmd
+
+FROM mcr.microsoft.com/dotnet/core/runtime:3.1 as runtime
+WORKDIR /webapp
+COPY --from=build /web ./
+WORKDIR /cmdapp
+COPY --from=build /cmd ./
+ENTRYPOINT ["dotnet", "OntoSemStatsCmd.dll"]
+# BUILD:
+# docker build -f cmd.Dockerfile -t semstatsweb.
+# docker run --name test --rm -it semstatsweb
+# docker run -it --rm -p 8000:80 --name aspnetcore_sample mcr.microsoft.com/dotnet/core/samples:aspnetapp
+
+# CMD ["/bin/echo", "Available commands: OntoSemStatsCmd.dll OntoSemStatsWeb.dll"]
+
+# faire relase des apps
+
+# ensuite environnement mcr.microsoft.com/dotnet/core/runtime:3.1
 
 # #PlantUml
 # WORKDIR /PlantUml.Net
@@ -18,7 +39,7 @@ RUN dotnet build
 # COPY /LOD-CM-LIB/*.csproj ./
 # RUN dotnet restore
 # RUN dotnet restore
-
+                                          
 # # Copy everything else and build
 # COPY /LOD-CM-LIB/. ./
 
