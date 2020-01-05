@@ -13,6 +13,9 @@ namespace OntoSemStatsLib
 {
     public class SemStatsResult
     {
+        public bool SvgNeeded { get; set; } = false;
+        public string Graphvizdir { get; set; }
+        public string TmpDir { get; set; }
         public string ErrorMessage { get; set; }
         [Required]
         public string Endpoint { get; set; }
@@ -58,10 +61,10 @@ namespace OntoSemStatsLib
         private string GenerateSvg()
         {
             // var gs = new GraphVizGenerator("svg", @"C:\Program Files (x86)\Graphviz2.38\bin");
-            var filename = @"C:\dev\dotnet\OntoSemStatsWeb\UnitTests\tmp_" + DateTime.Now.Ticks + ".svg";
+            var filename = System.IO.Path.Combine(this.TmpDir, "tmp_" + DateTime.Now.Ticks + ".svg"); //@"C:\dev\dotnet\OntoSemStatsWeb\UnitTests\tmp_" + DateTime.Now.Ticks + ".svg";
             // gs.Generate(Instance, fn, false);
             var _format = "svg";
-            var _graphvizdir = @"C:\Program Files (x86)\Graphviz2.38\bin\";
+            var _graphvizdir = this.Graphvizdir;//@"C:\Program Files (x86)\Graphviz2.38\bin\";
             try
             {
                 ProcessStartInfo start = new ProcessStartInfo();
@@ -110,10 +113,13 @@ namespace OntoSemStatsLib
                 doc.Root.SetAttributeValue("width", "100%");
                 Svg = doc.Root.ToString();
                 System.IO.File.Delete(filename);
-
             }
             catch (System.Exception ex)
             {
+                if (System.IO.File.Exists(filename))
+                {
+                    System.IO.File.Delete(filename);
+                }
                 return ex.Message;
             }
             return null;
@@ -194,7 +200,7 @@ namespace OntoSemStatsLib
                         this.Result[lastPart].Add("triples", triples.ToString());
                     }
                 }
-                if (!g.IsEmpty)
+                if (!g.IsEmpty && this.SvgNeeded)
                 {
                     this.ErrorMessage = this.GenerateSvg();
                 }

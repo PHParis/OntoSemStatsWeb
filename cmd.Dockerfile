@@ -13,7 +13,8 @@ COPY --from=build /OntoSemStatsCmd/out ./
 ENTRYPOINT ["dotnet", "OntoSemStatsCmd.dll"]
 # BUILD:
 # docker build -f cmd.Dockerfile -t semstatscmd .
-# docker run --rm -it semstatscmd
+# Pour les volumes selon le systeme d'exploitation : https://stackoverflow.com/a/41489151
+# docker run -v ${PWD}:/data --rm -it semstatscmd -e http://dbpedia.org/sparql -o /data/semstat_dbpedia.ttl -f ttl
 # docker run -it --rm -p 8000:80 --name aspnetcore_sample mcr.microsoft.com/dotnet/core/samples:aspnetapp
 
 # CMD ["/bin/echo", "Available commands: OntoSemStatsCmd.dll OntoSemStatsWeb.dll"]

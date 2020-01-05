@@ -76,6 +76,7 @@
     private async Task HandleValidSubmit()
     {
         Message = "Please wait while processing...";
+        semStatsResult.SvgNeeded = true;
         await Task<SemStatsResult>.Factory.StartNew(() => 
             semStatsResult.Get());
         Message = "";

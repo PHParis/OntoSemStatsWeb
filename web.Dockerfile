@@ -1,18 +1,23 @@
 FROM mcr.microsoft.com/dotnet/core/sdk:3.1 AS build
 
-COPY /. ./
-RUN dotnet build
+WORKDIR /OntoSemStatsLib
+COPY /OntoSemStatsLib/. ./
 WORKDIR /OntoSemStatsWeb
-RUN dotnet publish -c Release -o ../web
-WORKDIR /OntoSemStatsCmd
-RUN dotnet publish -c Release -o ../cmd
+COPY /OntoSemStatsWeb/. ./
+RUN dotnet build
+RUN dotnet publish -c Release -o out
 
 FROM mcr.microsoft.com/dotnet/core/runtime:3.1 as runtime
-WORKDIR /webapp
-COPY --from=build /web ./
-WORKDIR /cmdapp
-COPY --from=build /cmd ./
-ENTRYPOINT ["dotnet", "OntoSemStatsCmd.dll"]
+WORKDIR /app
+COPY --from=build /OntoSemStatsWeb/out ./
+ENTRYPOINT ["dotnet", "OntoSemStatsWeb.dll"]
+# BUILD:
+# docker build -f cmd.Dockerfile -t semstatscmd .
+# Pour les volumes selon le systeme d'exploitation : https://stackoverflow.com/a/41489151
+# docker run -v ${PWD}:/data --rm -it semstatscmd -e http://dbpedia.org/sparql -o /data/semstat_dbpedia.ttl -f ttl
+# docker run -it --rm -p 8000:80 --name aspnetcore_sample mcr.microsoft.com/dotnet/core/samples:aspnetapp
+
+
 # BUILD:
 # docker build -f cmd.Dockerfile -t semstatsweb.
 # docker run --name test --rm -it semstatsweb
