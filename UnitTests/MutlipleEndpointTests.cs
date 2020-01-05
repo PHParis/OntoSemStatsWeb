@@ -815,7 +815,7 @@ namespace UnitTests
             } else {
                 start.FileName = "dot.exe";
             }
-            start.Arguments = "-Kneato -Goverlap=false -T" + _format;// + " -Lg";
+            start.Arguments = "-Ktwopi -Goverlap=false -T" + _format;// + " -Lg";
             start.UseShellExecute = false;
             start.RedirectStandardInput = true;
             start.RedirectStandardOutput = true;
@@ -847,6 +847,10 @@ namespace UnitTests
                 writer.Close();
                 gvz.Close();
             }
+            var text = System.IO.File.ReadAllText(filename);
+            var doc = XDocument.Parse(text);
+            doc.Root.SetAttributeValue("width", "100%");
+            Console.WriteLine(doc.Root.Attribute("width").Value);
             // System.IO.File.Delete(filename);
         }
     }

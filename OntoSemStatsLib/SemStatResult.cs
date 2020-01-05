@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Xml.Linq;
@@ -12,18 +13,18 @@ namespace OntoSemStatsLib
 {
     public class SemStatsResult
     {
-        public string ErrorMessage {get;set;}
+        public string ErrorMessage { get; set; }
         [Required]
-        public string Endpoint {get;set;}
+        public string Endpoint { get; set; }
         /// <summary>
         /// Date of generation.
         /// </summary>
         /// <value></value>
-        public DateTime Date {get;set;}
+        public DateTime Date { get; set; }
         public Dictionary<string, Dictionary<string, string>> Result { get; set; }
 
-        public IGraph Instance {get;set;}
-        public string Svg {get;set;}
+        public IGraph Instance { get; set; }
+        public string Svg { get; set; }
 
         public string ToTurtle()
         {
@@ -31,17 +32,17 @@ namespace OntoSemStatsLib
             return VDS.RDF.Writing.StringWriter.Write(Instance, wr);
         }
         public string ToNTriples()
-        {            
+        {
             var wr = new NTriplesWriter();
             return VDS.RDF.Writing.StringWriter.Write(Instance, wr);
         }
         public string ToNotation3()
-        {            
+        {
             var wr = new Notation3Writer();
             return VDS.RDF.Writing.StringWriter.Write(Instance, wr);
         }
         public string ToJsonLd()
-        {            
+        {
             var wr = new JsonLdWriter();
             var store = new TripleStore();
             store.Add(Instance);
@@ -54,14 +55,68 @@ namespace OntoSemStatsLib
             return VDS.RDF.Writing.StringWriter.Write(Instance, wr);
         }
 
-        private void GenerateSvg()
+        private string GenerateSvg()
         {
-            var gs = new GraphVizGenerator("svg", @"C:\Program Files (x86)\Graphviz2.38\bin");
-            var fn = @"C:\dev\dotnet\OntoSemStatsWeb\UnitTests\tmp_" + DateTime.Now.Ticks + ".svg";
-            gs.Generate(Instance, fn, false);
-            var text = System.IO.File.ReadAllText(fn);
-            var doc = XDocument.Parse(text);  
-            Svg = doc.Root.ToString();
+            // var gs = new GraphVizGenerator("svg", @"C:\Program Files (x86)\Graphviz2.38\bin");
+            var filename = @"C:\dev\dotnet\OntoSemStatsWeb\UnitTests\tmp_" + DateTime.Now.Ticks + ".svg";
+            // gs.Generate(Instance, fn, false);
+            var _format = "svg";
+            var _graphvizdir = @"C:\Program Files (x86)\Graphviz2.38\bin\";
+            try
+            {
+                ProcessStartInfo start = new ProcessStartInfo();
+                if (!_graphvizdir.Equals(String.Empty))
+                {
+                    start.FileName = _graphvizdir + "dot.exe";
+                }
+                else
+                {
+                    start.FileName = "dot.exe";
+                }
+                start.Arguments = "-Ktwopi -Goverlap=false -T" + _format;// + " -Lg";
+                start.UseShellExecute = false;
+                start.RedirectStandardInput = true;
+                start.RedirectStandardOutput = true;
+
+                // Prepare the GraphVizWriter and Streams
+                GraphVizWriter gvzwriter = new GraphVizWriter();
+                using (BinaryWriter writer = new BinaryWriter(new FileStream(filename, FileMode.Create)))
+                {
+                    // Start the Process
+                    Process gvz = new Process();
+                    gvz.StartInfo = start;
+                    gvz.Start();
+
+                    // Write to the Standard Input
+                    gvzwriter.Save(this.Instance, gvz.StandardInput);
+
+                    // Read the Standard Output
+                    byte[] buffer = new byte[4096];
+                    using (BinaryReader reader = new BinaryReader(gvz.StandardOutput.BaseStream))
+                    {
+                        while (true)
+                        {
+                            int read = reader.Read(buffer, 0, buffer.Length);
+                            if (read == 0) break;
+                            writer.Write(buffer, 0, read);
+                        }
+                        reader.Close();
+                    }
+                    writer.Close();
+                    gvz.Close();
+                }
+                var text = System.IO.File.ReadAllText(filename);
+                var doc = XDocument.Parse(text);
+                doc.Root.SetAttributeValue("width", "100%");
+                Svg = doc.Root.ToString();
+                System.IO.File.Delete(filename);
+
+            }
+            catch (System.Exception ex)
+            {
+                return ex.Message;
+            }
+            return null;
         }
 
         public void Clear()
@@ -118,13 +173,13 @@ namespace OntoSemStatsLib
                     }
                     var feature = ((IUriNode)results.First()["feature"]).Uri;
                     var triples = results.First().Variables.Contains("triples") ? int.Parse(((ILiteralNode)results.First()["triples"]).Value) : 0;
-                           
-                    var stat = g.CreateBlankNode();                  
+
+                    var stat = g.CreateBlankNode();
                     g.Assert(ds, g.CreateUriNode("semstat:hasStat"), stat);
                     g.Assert(ds, g.CreateUriNode("void:sparqlEndpoint"), g.CreateUriNode(new Uri(this.Endpoint)));
                     g.Assert(stat, g.CreateUriNode("semstat:hasSemanticFeature"), g.CreateUriNode(feature));
-                    g.Assert(stat, g.CreateUriNode("semstat:definitionCount"), 
-                        g.CreateLiteralNode(definitionsCount.ToString(), 
+                    g.Assert(stat, g.CreateUriNode("semstat:definitionCount"),
+                        g.CreateLiteralNode(definitionsCount.ToString(),
                         new Uri("http://www.w3.org/2001/XMLSchema#integer")));
                     var lastPart = feature.AbsoluteUri.Split("#").Last();
                     this.Result[lastPart] = new Dictionary<string, string>()
@@ -132,16 +187,16 @@ namespace OntoSemStatsLib
                         {"definitionsCount", definitionsCount.ToString()}
                     };
                     if (triples > 0)
-                    {                        
-                        g.Assert(stat, g.CreateUriNode("semstat:usageCount"), 
-                            g.CreateLiteralNode(triples.ToString(), 
+                    {
+                        g.Assert(stat, g.CreateUriNode("semstat:usageCount"),
+                            g.CreateLiteralNode(triples.ToString(),
                             new Uri("http://www.w3.org/2001/XMLSchema#integer")));
                         this.Result[lastPart].Add("triples", triples.ToString());
                     }
                 }
                 if (!g.IsEmpty)
                 {
-                    this.GenerateSvg();
+                    this.ErrorMessage = this.GenerateSvg();
                 }
             }
             catch (System.Exception ex)

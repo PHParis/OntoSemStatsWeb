@@ -25,10 +25,9 @@
 </div>
 
 <div>
-    @if (semStatsResult != null && !string.IsNullOrWhiteSpace(semStatsResult.Svg))
+    @if (semStatsResult != null && semStatsResult.Instance != null && !semStatsResult.Instance.IsEmpty)
     {
         <button @onclick="DownloadFile">Download</button>
-        @((MarkupString)semStatsResult.Svg)
     }
 </div>
 
@@ -58,6 +57,13 @@
     
 </div>
 
+<div>
+    @if (semStatsResult != null && !string.IsNullOrWhiteSpace(semStatsResult.Svg))
+    {
+        @((MarkupString)semStatsResult.Svg)
+    }
+</div>
+
 
 @code {
 
@@ -74,7 +80,7 @@
             semStatsResult.Get());
         Message = "";
     }
-    
+
     // https://wellsb.com/csharp/aspnet/blazor-jsinterop-save-file/
     public async void DownloadFile()
     {
