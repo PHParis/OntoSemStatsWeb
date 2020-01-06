@@ -425,3 +425,5 @@ MigrationBackup/
 
 *.svg
 *.ttl
+*.txt
+*.zip

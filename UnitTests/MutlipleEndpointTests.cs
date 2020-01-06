@@ -17,7 +17,7 @@ namespace UnitTests
     public class MutlipleEndpointTests
     {
         static string[] queries = new[] {
-            @"PREFIX :<http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#>
+            @"PREFIX :<http://AAAAAA/ontologies/OntoSemStats.owl#>
             PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#>
             PREFIX owl:<http://www.w3.org/2002/07/owl#>
             SELECT ?definitionsCount ?feature
@@ -34,7 +34,7 @@ namespace UnitTests
                     }
                 }
             }",
-            @"PREFIX :<http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#>
+            @"PREFIX :<http://AAAAAA/ontologies/OntoSemStats.owl#>
             PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#>
             PREFIX owl:<http://www.w3.org/2002/07/owl#>
             SELECT ?definitionsCount ?feature
@@ -51,7 +51,7 @@ namespace UnitTests
                     }
                 }
             }",
-            @"PREFIX :<http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#>
+            @"PREFIX :<http://AAAAAA/ontologies/OntoSemStats.owl#>
             PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#>
             PREFIX owl:<http://www.w3.org/2002/07/owl#>
             SELECT ?definitionsCount ?feature
@@ -68,7 +68,7 @@ namespace UnitTests
                     }
                 }
             }",
-            @"PREFIX :<http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#>
+            @"PREFIX :<http://AAAAAA/ontologies/OntoSemStats.owl#>
             PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#>
             PREFIX owl:<http://www.w3.org/2002/07/owl#>
             SELECT ?definitionsCount ?feature
@@ -85,7 +85,7 @@ namespace UnitTests
                     }
                 }
             }",
-            @"PREFIX :<http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#>
+            @"PREFIX :<http://AAAAAA/ontologies/OntoSemStats.owl#>
             PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#>
             PREFIX owl:<http://www.w3.org/2002/07/owl#>
             SELECT ?definitionsCount ?feature
@@ -102,7 +102,7 @@ namespace UnitTests
                     }
                 }
             }",
-            @"PREFIX :<http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#>
+            @"PREFIX :<http://AAAAAA/ontologies/OntoSemStats.owl#>
             PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#>
             PREFIX owl:<http://www.w3.org/2002/07/owl#>
             SELECT ?definitionsCount ?feature
@@ -119,7 +119,7 @@ namespace UnitTests
                     }
                 }
             }",
-            @"PREFIX :<http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#>
+            @"PREFIX :<http://AAAAAA/ontologies/OntoSemStats.owl#>
             PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#>
             PREFIX owl:<http://www.w3.org/2002/07/owl#>
             SELECT ?definitionsCount ?feature
@@ -136,7 +136,7 @@ namespace UnitTests
                     }
                 }
             }",
-            @"PREFIX :<http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#>
+            @"PREFIX :<http://AAAAAA/ontologies/OntoSemStats.owl#>
             PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#>
             PREFIX owl:<http://www.w3.org/2002/07/owl#>
             SELECT ?definitionsCount ?feature
@@ -153,7 +153,7 @@ namespace UnitTests
                     }
                 }
             }",
-            @"PREFIX :<http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#>
+            @"PREFIX :<http://AAAAAA/ontologies/OntoSemStats.owl#>
             PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#>
             PREFIX owl:<http://www.w3.org/2002/07/owl#>
             SELECT ?definitionsCount ?feature
@@ -170,7 +170,7 @@ namespace UnitTests
                     }
                 }
             }",
-            @"PREFIX :<http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#>
+            @"PREFIX :<http://AAAAAA/ontologies/OntoSemStats.owl#>
             PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#>
             PREFIX owl:<http://www.w3.org/2002/07/owl#>
             SELECT ?definitionsCount ?feature
@@ -187,7 +187,7 @@ namespace UnitTests
                     }
                 }
             }",
-            @"PREFIX :<http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#>
+            @"PREFIX :<http://AAAAAA/ontologies/OntoSemStats.owl#>
             PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#>
             PREFIX owl:<http://www.w3.org/2002/07/owl#>
             SELECT ?definitionsCount ?feature
@@ -204,7 +204,7 @@ namespace UnitTests
                     }
                 }
             }",
-            @"PREFIX :<http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#>
+            @"PREFIX :<http://AAAAAA/ontologies/OntoSemStats.owl#>
             PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#>
             PREFIX owl:<http://www.w3.org/2002/07/owl#>
             SELECT ?definitionsCount ?feature
@@ -221,7 +221,7 @@ namespace UnitTests
                     }
                 }
             }",
-            @"PREFIX :<http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#>
+            @"PREFIX :<http://AAAAAA/ontologies/OntoSemStats.owl#>
             PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#>
             PREFIX owl:<http://www.w3.org/2002/07/owl#>
             SELECT ?definitionsCount ?feature
@@ -238,7 +238,7 @@ namespace UnitTests
                     }
                 }
             }",
-            @"PREFIX :<http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#>
+            @"PREFIX :<http://AAAAAA/ontologies/OntoSemStats.owl#>
             PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#>
             PREFIX owl:<http://www.w3.org/2002/07/owl#>
             SELECT ?definitionsCount ?feature
@@ -255,7 +255,7 @@ namespace UnitTests
                     }
                 }
             }",
-            @"PREFIX :<http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#>
+            @"PREFIX :<http://AAAAAA/ontologies/OntoSemStats.owl#>
             PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#>
             PREFIX owl:<http://www.w3.org/2002/07/owl#>
             PREFIX void:<http://rdfs.org/ns/void#>
@@ -273,7 +273,7 @@ namespace UnitTests
                     }
                 }
             }",
-            @"PREFIX :<http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#>
+            @"PREFIX :<http://AAAAAA/ontologies/OntoSemStats.owl#>
             PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#>
             PREFIX owl:<http://www.w3.org/2002/07/owl#>
             SELECT ?definitionsCount ?feature
@@ -290,7 +290,7 @@ namespace UnitTests
                     }
                 }
             }",
-            @"PREFIX :<http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#>
+            @"PREFIX :<http://AAAAAA/ontologies/OntoSemStats.owl#>
             PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#>
             PREFIX owl:<http://www.w3.org/2002/07/owl#>
             SELECT ?definitionsCount ?feature
@@ -307,7 +307,7 @@ namespace UnitTests
                     }
                 }
             }",
-            @"PREFIX :<http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#>
+            @"PREFIX :<http://AAAAAA/ontologies/OntoSemStats.owl#>
             PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#>
             PREFIX owl:<http://www.w3.org/2002/07/owl#>
             SELECT ?definitionsCount ?feature
@@ -324,7 +324,7 @@ namespace UnitTests
                     }
                 }
             }",
-            @"PREFIX :<http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#>
+            @"PREFIX :<http://AAAAAA/ontologies/OntoSemStats.owl#>
             PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#>
             PREFIX owl:<http://www.w3.org/2002/07/owl#>
             SELECT ?definitionsCount ?feature
@@ -341,7 +341,7 @@ namespace UnitTests
                     }
                 }
             }",
-            @"PREFIX :<http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#>
+            @"PREFIX :<http://AAAAAA/ontologies/OntoSemStats.owl#>
             PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#>
             PREFIX owl:<http://www.w3.org/2002/07/owl#>
             SELECT ?definitionsCount ?feature
@@ -358,7 +358,7 @@ namespace UnitTests
                     }
                 }
             }",
-            @"PREFIX :<http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#>
+            @"PREFIX :<http://AAAAAA/ontologies/OntoSemStats.owl#>
             PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#>
             PREFIX owl:<http://www.w3.org/2002/07/owl#>
             SELECT ?definitionsCount ?triples ?feature
@@ -391,7 +391,7 @@ namespace UnitTests
                     }
                 }
             }",
-            @"PREFIX :<http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#>
+            @"PREFIX :<http://AAAAAA/ontologies/OntoSemStats.owl#>
             PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#>
             PREFIX owl:<http://www.w3.org/2002/07/owl#>
             SELECT ?definitionsCount ?triples ?feature
@@ -424,7 +424,7 @@ namespace UnitTests
                     }
                 }
             }",
-            @"PREFIX :<http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#>
+            @"PREFIX :<http://AAAAAA/ontologies/OntoSemStats.owl#>
             PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#>
             PREFIX owl:<http://www.w3.org/2002/07/owl#>
             SELECT ?definitionsCount ?triples ?feature
@@ -457,7 +457,7 @@ namespace UnitTests
                     }
                 }
             }",
-            @"PREFIX :<http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#>
+            @"PREFIX :<http://AAAAAA/ontologies/OntoSemStats.owl#>
             PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#>
             PREFIX owl:<http://www.w3.org/2002/07/owl#>
             SELECT ?definitionsCount ?triples ?feature
@@ -490,7 +490,7 @@ namespace UnitTests
                     }
                 }
             }",
-            @"PREFIX :<http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#>
+            @"PREFIX :<http://AAAAAA/ontologies/OntoSemStats.owl#>
             PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#>
             PREFIX owl:<http://www.w3.org/2002/07/owl#>
             SELECT ?definitionsCount ?triples ?feature
@@ -523,7 +523,7 @@ namespace UnitTests
                     }
                 }
             }",
-            @"PREFIX :<http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#> 
+            @"PREFIX :<http://AAAAAA/ontologies/OntoSemStats.owl#> 
             PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#> 
             PREFIX owl:<http://www.w3.org/2002/07/owl#> 
             SELECT ?definitionsCount ?triples ?feature 
@@ -557,7 +557,7 @@ namespace UnitTests
                 }
             }"
             ,
-            @"PREFIX :<http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#>
+            @"PREFIX :<http://AAAAAA/ontologies/OntoSemStats.owl#>
             PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#>
             PREFIX owl:<http://www.w3.org/2002/07/owl#>
             SELECT ?definitionsCount ?triples ?feature
@@ -596,7 +596,7 @@ namespace UnitTests
         {
             var endpoints = System.IO.File.ReadAllLines(@"C:\dev\dotnet\OntoSemStatsWeb\UnitTests\endpoints").Distinct();
             var g = new Graph();
-            g.NamespaceMap.AddNamespace("semstat", new Uri("http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#"));
+            g.NamespaceMap.AddNamespace("semstat", new Uri("http://AAAAAA/ontologies/OntoSemStats.owl#"));
             g.NamespaceMap.AddNamespace("void", new Uri("http://rdfs.org/ns/void#"));
             var obj = new Object();
             var failedEndpoints = new List<string>();
@@ -745,44 +745,44 @@ namespace UnitTests
                 Console.WriteLine($"{q.Key} : {q.definition}");
             }
             // 95
-            // http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#RdfType : 6520629404
-            // http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#OwlSameAs : 239059721
-            // http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#RdfsSubClassOf : 70336931
-            // http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#OwlEquivalentClass : 2435379
-            // http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#RdfsRange : 420953
-            // http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#RdfsDomain : 227241
-            // http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#OwlDifferentFrom : 105677
-            // http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#OwlEquivalentProperty : 45131
-            // http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#OwlDisjointWith : 36667
-            // http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#OwlFunctionalProperty : 23133
-            // http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#OwlInverseOf : 17824
-            // http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#OwlPropertyChainAxiom : 7430
-            // http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#OwlWithRestrictions : 5243
-            // http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#OwlAllDisjointClasses : 1751
-            // http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#OwlTransitiveProperty : 1334
-            // http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#OwlSymmetricProperty : 1073
-            // http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#OwlPropertyDisjointWith : 1054
-            // http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#OwlAllDifferent : 1051
-            // http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#OwlInverseFunctionalProperty : 640
-            // http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#OwlAsymmetricProperty : 334
-            // http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#OwlIrreflexiveProperty : 320
-            // http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#OwlDisjointUnionOf : 226
-            // http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#RdfsSubProperty : 98
-            // http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#OwlReflexiveProperty : 94
-            // http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#OwlAllDisjointProperties : 16
+            // http://AAAAAA/ontologies/OntoSemStats.owl#RdfType : 6520629404
+            // http://AAAAAA/ontologies/OntoSemStats.owl#OwlSameAs : 239059721
+            // http://AAAAAA/ontologies/OntoSemStats.owl#RdfsSubClassOf : 70336931
+            // http://AAAAAA/ontologies/OntoSemStats.owl#OwlEquivalentClass : 2435379
+            // http://AAAAAA/ontologies/OntoSemStats.owl#RdfsRange : 420953
+            // http://AAAAAA/ontologies/OntoSemStats.owl#RdfsDomain : 227241
+            // http://AAAAAA/ontologies/OntoSemStats.owl#OwlDifferentFrom : 105677
+            // http://AAAAAA/ontologies/OntoSemStats.owl#OwlEquivalentProperty : 45131
+            // http://AAAAAA/ontologies/OntoSemStats.owl#OwlDisjointWith : 36667
+            // http://AAAAAA/ontologies/OntoSemStats.owl#OwlFunctionalProperty : 23133
+            // http://AAAAAA/ontologies/OntoSemStats.owl#OwlInverseOf : 17824
+            // http://AAAAAA/ontologies/OntoSemStats.owl#OwlPropertyChainAxiom : 7430
+            // http://AAAAAA/ontologies/OntoSemStats.owl#OwlWithRestrictions : 5243
+            // http://AAAAAA/ontologies/OntoSemStats.owl#OwlAllDisjointClasses : 1751
+            // http://AAAAAA/ontologies/OntoSemStats.owl#OwlTransitiveProperty : 1334
+            // http://AAAAAA/ontologies/OntoSemStats.owl#OwlSymmetricProperty : 1073
+            // http://AAAAAA/ontologies/OntoSemStats.owl#OwlPropertyDisjointWith : 1054
+            // http://AAAAAA/ontologies/OntoSemStats.owl#OwlAllDifferent : 1051
+            // http://AAAAAA/ontologies/OntoSemStats.owl#OwlInverseFunctionalProperty : 640
+            // http://AAAAAA/ontologies/OntoSemStats.owl#OwlAsymmetricProperty : 334
+            // http://AAAAAA/ontologies/OntoSemStats.owl#OwlIrreflexiveProperty : 320
+            // http://AAAAAA/ontologies/OntoSemStats.owl#OwlDisjointUnionOf : 226
+            // http://AAAAAA/ontologies/OntoSemStats.owl#RdfsSubProperty : 98
+            // http://AAAAAA/ontologies/OntoSemStats.owl#OwlReflexiveProperty : 94
+            // http://AAAAAA/ontologies/OntoSemStats.owl#OwlAllDisjointProperties : 16
             Console.WriteLine("---------------------------------------");
             var query2 = dict.Where(x => x.Value.ContainsKey("usage")).Select(x => new {x.Key, usage = x.Value["usage"]}).OrderByDescending(x => x.usage);
             foreach (var q in query2)
             {
                 Console.WriteLine($"{q.Key} : {q.usage}");
             }
-            // http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#OwlSymmetricProperty : 1822213443
-            // http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#OwlFunctionalProperty : 1038751396
-            // http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#OwlTransitiveProperty : 94358694
-            // http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#OwlInverseFunctionalProperty : 9774073
-            // http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#OwlIrreflexiveProperty : 5619379
-            // http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#OwlReflexiveProperty : 874350
-            // http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#OwlAsymmetricProperty : 1075
+            // http://AAAAAA/ontologies/OntoSemStats.owl#OwlSymmetricProperty : 1822213443
+            // http://AAAAAA/ontologies/OntoSemStats.owl#OwlFunctionalProperty : 1038751396
+            // http://AAAAAA/ontologies/OntoSemStats.owl#OwlTransitiveProperty : 94358694
+            // http://AAAAAA/ontologies/OntoSemStats.owl#OwlInverseFunctionalProperty : 9774073
+            // http://AAAAAA/ontologies/OntoSemStats.owl#OwlIrreflexiveProperty : 5619379
+            // http://AAAAAA/ontologies/OntoSemStats.owl#OwlReflexiveProperty : 874350
+            // http://AAAAAA/ontologies/OntoSemStats.owl#OwlAsymmetricProperty : 1075
         }
 
         [Fact]

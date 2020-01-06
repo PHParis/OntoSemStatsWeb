@@ -83,11 +83,11 @@ function displayNTriples(data, i) {
         return;
     }
     var n_triples_results = document.getElementById('n_triples_results');
-    n_triples_results.innerHTML += "<br>_:b" + i + " a &lt;http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#Stat&gt; . <br>";
-    n_triples_results.innerHTML += "_:b" + i + " &lt;http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#hasSemanticFeature&gt; &lt;" + data["?feature"].value + " . <br>";
-    n_triples_results.innerHTML += "_:b" + i + " &lt;http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#definitionCount&gt; " + data["?definitionsCount"].value + " . <br>";
+    n_triples_results.innerHTML += "<br>_:b" + i + " a &lt;http://AAAAAA/ontologies/OntoSemStats.owl#Stat&gt; . <br>";
+    n_triples_results.innerHTML += "_:b" + i + " &lt;http://AAAAAA/ontologies/OntoSemStats.owl#hasSemanticFeature&gt; &lt;" + data["?feature"].value + " . <br>";
+    n_triples_results.innerHTML += "_:b" + i + " &lt;http://AAAAAA/ontologies/OntoSemStats.owl#definitionCount&gt; " + data["?definitionsCount"].value + " . <br>";
     if (typeof data["?triples"] !== 'undefined') {
-        n_triples_results.innerHTML += "_:b" + i + " &lt;http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#usageCount&gt; " + data["?triples"].value + " .<br>";
+        n_triples_results.innerHTML += "_:b" + i + " &lt;http://AAAAAA/ontologies/OntoSemStats.owl#usageCount&gt; " + data["?triples"].value + " .<br>";
     }    
 }
 

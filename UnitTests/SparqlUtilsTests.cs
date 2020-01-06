@@ -14,8 +14,6 @@
 // {
 //     public class UnitTest1
 //     {
-//         // TODO: penser à tester si deux Inodes identiques appartenant à deux graphes différents sont considérés comme les mêmes ????
-//         // TODO: y a t il un moyen plus simple de naviguer entre les propriétés et de charger les données manquantes éventuellement ??? Voir exemple de foaf ci-dessous
 
 //         [Fact]
 //         public async Task LoadFromUri()

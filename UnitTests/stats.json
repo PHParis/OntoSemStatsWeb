@@ -1,108 +1,108 @@
 {
-  "http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#RdfType": {
+  "http://AAAAAA/ontologies/OntoSemStats.owl#RdfType": {
     "count": 89,
     "definition": 6520629404
   },
-  "http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#OwlFunctionalProperty": {
+  "http://AAAAAA/ontologies/OntoSemStats.owl#OwlFunctionalProperty": {
     "count": 36,
     "definition": 23133,
     "usage": 1038751396
   },
-  "http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#OwlSymmetricProperty": {
+  "http://AAAAAA/ontologies/OntoSemStats.owl#OwlSymmetricProperty": {
     "count": 25,
     "definition": 1073,
     "usage": 1822213443
   },
-  "http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#OwlTransitiveProperty": {
+  "http://AAAAAA/ontologies/OntoSemStats.owl#OwlTransitiveProperty": {
     "count": 29,
     "definition": 1334,
     "usage": 94358694
   },
-  "http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#RdfsDomain": {
+  "http://AAAAAA/ontologies/OntoSemStats.owl#RdfsDomain": {
     "count": 77,
     "definition": 227241
   },
-  "http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#OwlInverseOf": {
+  "http://AAAAAA/ontologies/OntoSemStats.owl#OwlInverseOf": {
     "count": 41,
     "definition": 17824
   },
-  "http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#RdfsRange": {
+  "http://AAAAAA/ontologies/OntoSemStats.owl#RdfsRange": {
     "count": 77,
     "definition": 420953
   },
-  "http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#RdfsSubClassOf": {
+  "http://AAAAAA/ontologies/OntoSemStats.owl#RdfsSubClassOf": {
     "count": 79,
     "definition": 70336931
   },
-  "http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#OwlAllDisjointClasses": {
+  "http://AAAAAA/ontologies/OntoSemStats.owl#OwlAllDisjointClasses": {
     "count": 13,
     "definition": 1751
   },
-  "http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#OwlSameAs": {
+  "http://AAAAAA/ontologies/OntoSemStats.owl#OwlSameAs": {
     "count": 75,
     "definition": 239059721
   },
-  "http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#OwlDisjointWith": {
+  "http://AAAAAA/ontologies/OntoSemStats.owl#OwlDisjointWith": {
     "count": 42,
     "definition": 36667
   },
-  "http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#OwlEquivalentClass": {
+  "http://AAAAAA/ontologies/OntoSemStats.owl#OwlEquivalentClass": {
     "count": 56,
     "definition": 2435379
   },
-  "http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#OwlEquivalentProperty": {
+  "http://AAAAAA/ontologies/OntoSemStats.owl#OwlEquivalentProperty": {
     "count": 47,
     "definition": 45131
   },
-  "http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#OwlDifferentFrom": {
+  "http://AAAAAA/ontologies/OntoSemStats.owl#OwlDifferentFrom": {
     "count": 11,
     "definition": 105677
   },
-  "http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#OwlAsymmetricProperty": {
+  "http://AAAAAA/ontologies/OntoSemStats.owl#OwlAsymmetricProperty": {
     "count": 10,
     "definition": 334,
     "usage": 1075
   },
-  "http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#OwlIrreflexiveProperty": {
+  "http://AAAAAA/ontologies/OntoSemStats.owl#OwlIrreflexiveProperty": {
     "count": 12,
     "definition": 320,
     "usage": 5619379
   },
-  "http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#OwlPropertyChainAxiom": {
+  "http://AAAAAA/ontologies/OntoSemStats.owl#OwlPropertyChainAxiom": {
     "count": 15,
     "definition": 7430
   },
-  "http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#OwlWithRestrictions": {
+  "http://AAAAAA/ontologies/OntoSemStats.owl#OwlWithRestrictions": {
     "count": 10,
     "definition": 5243
   },
-  "http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#OwlInverseFunctionalProperty": {
+  "http://AAAAAA/ontologies/OntoSemStats.owl#OwlInverseFunctionalProperty": {
     "count": 38,
     "definition": 640,
     "usage": 9774073
   },
-  "http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#OwlDisjointUnionOf": {
+  "http://AAAAAA/ontologies/OntoSemStats.owl#OwlDisjointUnionOf": {
     "count": 8,
     "definition": 226
   },
-  "http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#OwlAllDifferent": {
+  "http://AAAAAA/ontologies/OntoSemStats.owl#OwlAllDifferent": {
     "count": 10,
     "definition": 1051
   },
-  "http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#OwlPropertyDisjointWith": {
+  "http://AAAAAA/ontologies/OntoSemStats.owl#OwlPropertyDisjointWith": {
     "count": 7,
     "definition": 1054
   },
-  "http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#OwlAllDisjointProperties": {
+  "http://AAAAAA/ontologies/OntoSemStats.owl#OwlAllDisjointProperties": {
     "count": 3,
     "definition": 16
   },
-  "http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#OwlReflexiveProperty": {
+  "http://AAAAAA/ontologies/OntoSemStats.owl#OwlReflexiveProperty": {
     "count": 9,
     "definition": 94,
     "usage": 874350
   },
-  "http://cedric.cnam.fr/isid/ontologies/OntoSemStats.owl#RdfsSubProperty": {
+  "http://AAAAAA/ontologies/OntoSemStats.owl#RdfsSubProperty": {
     "count": 2,
     "definition": 98
   }
