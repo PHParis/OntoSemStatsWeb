@@ -7,16 +7,24 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>OntoSemStatsWeb</title>
     <base href="~/" />
-    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css" />
-    <link href="css/site.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    @* <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css" />
+    <link href="css/site.css" rel="stylesheet" /> *@
 </head>
 <body>
     <app>
         @(await Html.RenderComponentAsync<App>(RenderMode.ServerPrerendered))
     </app>
+    <br>
 
+    @* TODO: replace email *@
+    <footer class="page-footer font-small">
+        <div class="container text-center">&copy;2020 - OntoSemStats - <a href="mailto:XXX" target="_blank">Contact</a></div>
+    </footer>
     <script src="_framework/blazor.server.js"></script>
     <script src="js/SaveFile.js"></script>
 </body>

@@ -18,6 +18,7 @@ namespace OntoSemStatsLib
         public string TmpDir { get; set; }
         public string ErrorMessage { get; set; }
         [Required]
+        [DataType(DataType.Url)]
         public string Endpoint { get; set; }
         /// <summary>
         /// Date of generation.
@@ -207,7 +208,19 @@ namespace OntoSemStatsLib
             }
             catch (System.Exception ex)
             {
-                this.ErrorMessage = ex.Message;
+                this.ErrorMessage = ex.Message.Trim();
+                if (!this.ErrorMessage.EndsWith("."))
+                {
+                    this.ErrorMessage += ". ";
+                }
+                if (ex.InnerException != null && !string.IsNullOrWhiteSpace(ex.InnerException.Message))
+                {
+                    this.ErrorMessage += ex.InnerException.Message;
+                }
+                if (!this.ErrorMessage.EndsWith("."))
+                {
+                    this.ErrorMessage += ". ";
+                }
             }
             return this;
         }

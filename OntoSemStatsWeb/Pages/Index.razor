@@ -5,37 +5,81 @@
 @* @inject SparqlService SparqlService *@
 @inject IConfiguration Configuration
 
-<h1>Enter your endpoint</h1>
-<!-- 
-<p>This component demonstrates fetching data from a service.</p>
+<main>
+    <div class="container">
+        <div class="text-center">
+            <h1>OntoSemStats</h1>
+            <h2>Welcome!</h2>
+        </div>            
+        <article>
+            <header class="font-weight-bold">What is OntoSemStats?</header>
+            <p>
+                @* TODO: replace real URL *@
+                <a href="ANONYMOUS" target="_blank" rel="noopener noreferrer">OntoSemStats</a>
+            is an ontology. Its purpose is to provide <span class="font-italic">statistics about semantics usage</span> of a given knowledge graph.
+            </p>
+            <p>The present web application is here to bring you the <span class="font-italic">instantiated
+            ontology for a given SPARQL endpoint</span>.
+            </p>
+            <h6 class="font-bold">But why would I use that?</h6>
+            For many tasks, different tools can be used. Each tool may have pros and cons, but
+            very often they can use different technics to fullfil their purpose.
+            What if one of those tool has better results than any other 
+            but heavily rely on semantics?
+            Then, as a user, you must manually ensure that expected semantic features are defined and/or 
+            used in the given knowledge graph.
+            <br>
+            That's where we can <span class="font-italic">release you from this burden</span> by given you information you expect to have!
+        </article>
+        <br>
+        <div class="container">
+            <header class="font-weight-bold">Let's try it!</header>
+            @* <form>
+                <div class="form-group">
+                    <label for="endpoint">Enter the SPARQL endpoint URI: </label>
+                    <input type="url" class="form-control" name="endpoint" id="endpoint" required
+                        placeholder="http://dbpedia.org/sparql">
+                </div>
+                <button id="queryEndpoint" type="submit" class="btn btn-primary">Let's go!</button>
+            </form> *@
+            <EditForm Model="@semStatsResult" OnValidSubmit="@HandleValidSubmit">
+                <div class="form-group">
+                <DataAnnotationsValidator />
+                <ValidationSummary class="alert alert-danger" role="alert" />
+                <p>
+                <label for="SparqlEndpointUri">Enter the SPARQL endpoint URI: </label>
+                <InputText id="SparqlEndpointUri" class="form-control" type="url" required @bind-Value="semStatsResult.Endpoint" />
+                </p>
+                </div>
+                <button type="submit" class="btn btn-primary">Let's go!</button>
+            </EditForm>
+        </div>
 
-<button class="btn btn-primary" @onclick="IncrementCount">Click me</button> -->
+    </div>
+    <br>
+@if (!string.IsNullOrWhiteSpace(Message))
+{
+    <div class="container alert alert-success" role="alert" >
+        @Message
+    </div>
+}
 
-<EditForm Model="@semStatsResult" OnValidSubmit="@HandleValidSubmit">
-    <DataAnnotationsValidator />
-    <ValidationSummary />
-    <p>
-    <label for="SparqlEndpointUri">SPARQL endpoint URI: </label>
-    <InputText id="SparqlEndpointUri" @bind-Value="semStatsResult.Endpoint" />
-    </p>
-    <button type="submit">Submit</button>
-</EditForm>
-
-<div>
-    @Message
-</div>
-<div>
+<br>
+@if (!string.IsNullOrWhiteSpace(semStatsResult.ErrorMessage))
+{
+<div class="container alert alert-danger" role="alert">
     @semStatsResult.ErrorMessage
 </div>
+}
 
-<div>
+<div class="container">
     @if (semStatsResult != null && semStatsResult.Instance != null && !semStatsResult.Instance.IsEmpty)
     {
-        <button @onclick="DownloadFile">Download</button>
+        <button @onclick="DownloadFile" class="btn btn-primary">Download result</button>
     }
 </div>
-
-<div>
+<br>
+<div class="container">
     @if (semStatsResult.Result != null && semStatsResult.Result.Any())
     {
         <table class="table">
@@ -60,14 +104,15 @@
     }
     
 </div>
-
-<div>
+<br>
+<div class="container">
     @if (semStatsResult != null && !string.IsNullOrWhiteSpace(semStatsResult.Svg))
     {
         @((MarkupString)semStatsResult.Svg)
     }
 </div>
 
+</main>
 
 @code {
 
@@ -80,6 +125,7 @@
     private async Task HandleValidSubmit()
     {
         Message = "Please wait while processing...";
+        semStatsResult.Clear();
         semStatsResult.SvgNeeded = true;
         semStatsResult.TmpDir= Configuration.GetValue<string>("tmpdir");
         semStatsResult.Graphvizdir = Configuration.GetValue<string>("graphviz");
