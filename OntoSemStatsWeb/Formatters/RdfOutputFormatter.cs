@@ -35,7 +35,6 @@ namespace OntoSemStatsWeb.Formatters
         public override async Task WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
         {
             IServiceProvider serviceProvider = context.HttpContext.RequestServices;
-            // var logger = serviceProvider.GetService(typeof(ILogger<VcardOutputFormatter>)) as ILogger;
 
             var response = context.HttpContext.Response;            
 
@@ -53,7 +52,6 @@ namespace OntoSemStatsWeb.Formatters
             {
                 foreach (SemStatsResult semStat in context.Object as IEnumerable<SemStatsResult>)
                 {
-                    // FormatVcard(buffer, semStat, logger);
                     var str = selectSerialization(response.ContentType, semStat);
                     buffer.AppendLine(str);
                 }
@@ -62,8 +60,7 @@ namespace OntoSemStatsWeb.Formatters
             {
                 var semStat = context.Object as SemStatsResult;
                 var str = selectSerialization(response.ContentType, semStat);
-                buffer.AppendLine(str);
-                // FormatVcard(buffer, semStat, logger);                
+                buffer.AppendLine(str);              
             }
             await response.WriteAsync(buffer.ToString());
         }

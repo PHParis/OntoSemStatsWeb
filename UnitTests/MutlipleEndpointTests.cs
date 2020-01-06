@@ -801,7 +801,7 @@ namespace UnitTests
         }
 
         [Fact]
-        public async Task GraphViz2()
+        public void GraphViz2()
         {
             var filename = @"C:\dev\dotnet\OntoSemStatsWeb\OntoSemStatsJS\img.svg";
             var res = new SemStatsResult{Endpoint = "http://dbpedia.org/sparql"};

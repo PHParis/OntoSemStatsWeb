@@ -2,7 +2,6 @@
 
 @using OntoSemStatsLib
 @inject IJSRuntime JSRuntime
-@* @inject SparqlService SparqlService *@
 @inject IConfiguration Configuration
 
 <main>
@@ -34,21 +33,13 @@
         <br>
         <div class="container">
             <header class="font-weight-bold">Let's try it!</header>
-            @* <form>
-                <div class="form-group">
-                    <label for="endpoint">Enter the SPARQL endpoint URI: </label>
-                    <input type="url" class="form-control" name="endpoint" id="endpoint" required
-                        placeholder="http://dbpedia.org/sparql">
-                </div>
-                <button id="queryEndpoint" type="submit" class="btn btn-primary">Let's go!</button>
-            </form> *@
             <EditForm Model="@semStatsResult" OnValidSubmit="@HandleValidSubmit">
                 <div class="form-group">
                 <DataAnnotationsValidator />
                 <ValidationSummary class="alert alert-danger" role="alert" />
                 <p>
                 <label for="SparqlEndpointUri">Enter the SPARQL endpoint URI: </label>
-                <InputText id="SparqlEndpointUri" class="form-control" type="url" required @bind-Value="semStatsResult.Endpoint" />
+                <InputText id="SparqlEndpointUri" placeholder="http://dbpedia.org/sparql" class="form-control" type="url" required @bind-Value="semStatsResult.Endpoint" />
                 </p>
                 </div>
                 <button type="submit" class="btn btn-primary">Let's go!</button>
@@ -115,11 +106,6 @@
 </main>
 
 @code {
-
-    /*protected override async Task OnInitializedAsync()
-    {
-        forecasts = await SparqlService.GetDataAsync("http://dbpedia.org/sparql");
-    } */
     private string Message = "";
     private SemStatsResult semStatsResult = new SemStatsResult();
     private async Task HandleValidSubmit()
@@ -144,12 +130,4 @@
             semStatsResult.ToTurtle()
         );
     }
-    /*private OntologyResult ontologyResult = new OntologyResult();
-    private async Task HandleValidSubmit()
-    {
-        Message = "Please wait while processing...";
-        Console.WriteLine("OnValidSubmit");
-        await SparqlService.GetDataAsync(ontologyResult);
-        Message = "";
-    }*/
 }

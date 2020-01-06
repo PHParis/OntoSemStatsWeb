@@ -1,9 +1,6 @@
-using System;
-using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using OntoSemStatsLib;
-using VDS.RDF;
 
 namespace OntoSemStatsWeb.Controllers
 {

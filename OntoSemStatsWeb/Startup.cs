@@ -1,15 +1,8 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using OntoSemStatsWeb.Data;
 using OntoSemStatsWeb.Formatters;
 
 namespace OntoSemStatsWeb
@@ -29,14 +22,12 @@ namespace OntoSemStatsWeb
         {
             services.AddRazorPages();
             services.AddServerSideBlazor();
-            services.AddSingleton<WeatherForecastService>();
-            // services.AddSingleton<SparqlService>();
             services.AddSingleton<IConfiguration>(Configuration);
             services.AddControllers(options =>
             {
                 options.RespectBrowserAcceptHeader = true; // false by default
                 options.OutputFormatters.Insert(0, new RdfOutputFormatter());
-            }); // XXX
+            });
             // services.AddRazorPages().AddRazorRuntimeCompilation(); https://docs.microsoft.com/en-us/aspnet/core/mvc/views/view-compilation?view=aspnetcore-3.0#runtime-compilation
         }
 
@@ -63,7 +54,7 @@ namespace OntoSemStatsWeb
             {
                 endpoints.MapBlazorHub();
                 endpoints.MapFallbackToPage("/_Host");
-                endpoints.MapControllers(); // XXX
+                endpoints.MapControllers();
             });
         }
     }
