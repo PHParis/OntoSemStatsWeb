@@ -9,10 +9,9 @@ RUN dotnet publish -c Release -o out
 
 FROM mcr.microsoft.com/dotnet/core/aspnet:3.1 as runtime
 RUN apt-get update -y && apt-get install graphviz -y
-WORKDIR /data
+WORKDIR /app
 COPY --from=build /OntoSemStatsWeb/out ./
-# ENTRYPOINT ["dotnet", "OntoSemStatsWeb.dll"]
-CMD ASPNETCORE_URLS=http://*:$PORT dotnet OntoSemStatsWeb.dll
+ENTRYPOINT ["dotnet", "OntoSemStatsWeb.dll"]
 
 # BUILD:
 # docker build -f web.Dockerfile -t semstatsweb .
