@@ -62,7 +62,8 @@ namespace OntoSemStatsLib
         private string GenerateSvg()
         {
             // var gs = new GraphVizGenerator("svg", @"C:\Program Files (x86)\Graphviz2.38\bin");
-            var filename = System.IO.Path.Combine(this.TmpDir, "tmp_" + DateTime.Now.Ticks + ".svg"); //@"C:\dev\dotnet\OntoSemStatsWeb\UnitTests\tmp_" + DateTime.Now.Ticks + ".svg";
+            var filename = System.IO.Path.Combine(string.IsNullOrWhiteSpace(this.TmpDir) ? System.Environment.CurrentDirectory : this.TmpDir, 
+                "tmp_" + DateTime.Now.Ticks + ".svg"); //@"C:\dev\dotnet\OntoSemStatsWeb\UnitTests\tmp_" + DateTime.Now.Ticks + ".svg";
             // gs.Generate(Instance, fn, false);
             var _format = "svg";
             var _graphvizdir = this.Graphvizdir;//@"C:\Program Files (x86)\Graphviz2.38\bin\";
