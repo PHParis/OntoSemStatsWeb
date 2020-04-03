@@ -62,7 +62,7 @@ namespace OntoSemStatsLib
         private string GenerateSvg()
         {
             // var gs = new GraphVizGenerator("svg", @"C:\Program Files (x86)\Graphviz2.38\bin");
-            var filename = System.IO.Path.Combine(string.IsNullOrWhiteSpace(this.TmpDir) ? System.Environment.CurrentDirectory : this.TmpDir, 
+            var filename = System.IO.Path.Combine(string.IsNullOrWhiteSpace(this.TmpDir) ? System.Environment.CurrentDirectory : this.TmpDir,
                 "tmp_" + DateTime.Now.Ticks + ".svg"); //@"C:\dev\dotnet\OntoSemStatsWeb\UnitTests\tmp_" + DateTime.Now.Ticks + ".svg";
             // gs.Generate(Instance, fn, false);
             var _format = "svg";
@@ -166,41 +166,45 @@ namespace OntoSemStatsLib
                 }
                 foreach (var selectQuery in queries)
                 {
-                    var results = remoteEndpoint.QueryWithResultSet(selectQuery);
-                    if (results.IsEmpty)
+                    try
                     {
-                        // return false;
-                        continue;
-                    }
-                    // ?definitionsCount ?triples ?feature
-                    var definitionsCount = int.Parse(((ILiteralNode)results.First()["definitionsCount"]).Value);
-                    if (definitionsCount <= 0)
-                    {
-                        // return false;
-                        continue;
-                    }
-                    var feature = ((IUriNode)results.First()["feature"]).Uri;
-                    var triples = results.First().Variables.Contains("triples") ? int.Parse(((ILiteralNode)results.First()["triples"]).Value) : 0;
+                        var results = remoteEndpoint.QueryWithResultSet(selectQuery);
+                        if (results.IsEmpty)
+                        {
+                            // return false;
+                            continue;
+                        }
+                        // ?definitionsCount ?triples ?feature
+                        var definitionsCount = int.Parse(((ILiteralNode)results.First()["definitionsCount"]).Value);
+                        if (definitionsCount <= 0)
+                        {
+                            // return false;
+                            continue;
+                        }
+                        var feature = ((IUriNode)results.First()["feature"]).Uri;
+                        var triples = results.First().Variables.Contains("triples") ? int.Parse(((ILiteralNode)results.First()["triples"]).Value) : 0;
 
-                    var stat = g.CreateBlankNode();
-                    g.Assert(ds, g.CreateUriNode("semstat:hasStat"), stat);
-                    g.Assert(ds, g.CreateUriNode("void:sparqlEndpoint"), g.CreateUriNode(new Uri(this.Endpoint)));
-                    g.Assert(stat, g.CreateUriNode("semstat:hasSemanticFeature"), g.CreateUriNode(feature));
-                    g.Assert(stat, g.CreateUriNode("semstat:definitionCount"),
-                        g.CreateLiteralNode(definitionsCount.ToString(),
-                        new Uri("http://www.w3.org/2001/XMLSchema#integer")));
-                    var lastPart = feature.AbsoluteUri.Split("#").Last();
-                    this.Result[lastPart] = new Dictionary<string, string>()
+                        var stat = g.CreateBlankNode();
+                        g.Assert(ds, g.CreateUriNode("semstat:hasStat"), stat);
+                        g.Assert(ds, g.CreateUriNode("void:sparqlEndpoint"), g.CreateUriNode(new Uri(this.Endpoint)));
+                        g.Assert(stat, g.CreateUriNode("semstat:hasSemanticFeature"), g.CreateUriNode(feature));
+                        g.Assert(stat, g.CreateUriNode("semstat:definitionCount"),
+                            g.CreateLiteralNode(definitionsCount.ToString(),
+                            new Uri("http://www.w3.org/2001/XMLSchema#integer")));
+                        var lastPart = feature.AbsoluteUri.Split("#").Last();
+                        this.Result[lastPart] = new Dictionary<string, string>()
                     {
                         {"definitionsCount", definitionsCount.ToString()}
                     };
-                    if (triples > 0)
-                    {
-                        g.Assert(stat, g.CreateUriNode("semstat:usageCount"),
-                            g.CreateLiteralNode(triples.ToString(),
-                            new Uri("http://www.w3.org/2001/XMLSchema#integer")));
-                        this.Result[lastPart].Add("triples", triples.ToString());
+                        if (triples > 0)
+                        {
+                            g.Assert(stat, g.CreateUriNode("semstat:usageCount"),
+                                g.CreateLiteralNode(triples.ToString(),
+                                new Uri("http://www.w3.org/2001/XMLSchema#integer")));
+                            this.Result[lastPart].Add("triples", triples.ToString());
+                        }
                     }
+                    catch { }
                 }
                 if (!g.IsEmpty && this.SvgNeeded)
                 {
