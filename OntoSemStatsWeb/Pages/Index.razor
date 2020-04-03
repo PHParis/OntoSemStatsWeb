@@ -56,6 +56,18 @@
 }
 
 <br>
+@if (semStatsResult.Errors != null && semStatsResult.Errors.Any())
+{
+<div class="container alert alert-danger" role="alert">
+    <ul>        
+    @foreach(var er in semStatsResult.Errors)
+    {
+        <li>@er.match: @er.errorMessage</li>
+    }
+    </ul>
+</div>
+}
+
 @if (!string.IsNullOrWhiteSpace(semStatsResult.ErrorMessage))
 {
 <div class="container alert alert-danger" role="alert">

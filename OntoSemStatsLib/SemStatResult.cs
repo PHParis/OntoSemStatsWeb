@@ -8,6 +8,7 @@ using System.Xml.Linq;
 using VDS.RDF;
 using VDS.RDF.Query;
 using VDS.RDF.Writing;
+using System.Text.RegularExpressions;
 
 namespace OntoSemStatsLib
 {
@@ -26,6 +27,8 @@ namespace OntoSemStatsLib
         /// <value></value>
         public DateTime Date { get; set; }
         public Dictionary<string, Dictionary<string, string>> Result { get; set; }
+
+        public List<(string match, string errorMessage)> Errors {get;set;}
 
         public IGraph Instance { get; set; }
         public string Svg { get; set; }
@@ -151,6 +154,7 @@ namespace OntoSemStatsLib
             g.NamespaceMap.AddNamespace("void", new Uri("http://rdfs.org/ns/void#"));
             this.Instance = g;
             this.Date = DateTime.Now;
+            var pattern = @"\s:\w+\s";
             try
             {
                 var remoteEndpoint = new SparqlRemoteEndpoint(new Uri(this.Endpoint));
@@ -164,6 +168,7 @@ namespace OntoSemStatsLib
                 {
                     ds = (IUriNode)dsRes.First()["ds"];
                 }
+                Errors = new List<(string, string)>();
                 foreach (var selectQuery in queries)
                 {
                     try
@@ -204,7 +209,29 @@ namespace OntoSemStatsLib
                             this.Result[lastPart].Add("triples", triples.ToString());
                         }
                     }
-                    catch { }
+                    catch (Exception ex)
+                    {
+                        var m = Regex.Match(selectQuery, pattern, RegexOptions.IgnoreCase);
+                        var errorMessage = "Error: Unknown.";
+                        var match = "Unkown";
+                        if (m.Success)
+                        {
+                            match = m.Value.Trim();
+                            if (ex.InnerException != null && !string.IsNullOrWhiteSpace(ex.InnerException.Message))
+                            {
+                                errorMessage = ex.InnerException.Message;
+                            }
+                            else
+                            {
+                                errorMessage = ex.Message.Trim();
+                            }
+                            if (!errorMessage.EndsWith("."))
+                            {
+                                errorMessage += ". ";
+                            }
+                        }
+                        Errors.Add((match, errorMessage));
+                    }
                 }
                 if (!g.IsEmpty && this.SvgNeeded)
                 {
